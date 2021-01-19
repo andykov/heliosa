@@ -1,0 +1,204 @@
+.btn {
+  display: inline-flex;
+  position: relative;
+  white-space: nowrap;
+  text-decoration: none;
+  line-height: 1;
+  border: 1px solid transparent;
+  min-width: 200px;
+  background-color: $btn-color-black;
+  padding: 23px 30px;
+  border-radius: 0px;
+  font-size: $btn-font-size;
+  font-weight: $font-medium;
+  color: $white;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  transition: all $transition-time;
+
+  &:not(&--link) {
+    justify-content: center;
+  }
+
+  @include fontSmooth;
+
+  &:hover,
+  &:active {
+    background-color: $btn-color-hover;
+    color: $black;
+    text-decoration: none;
+  }
+
+  .icon {
+    color: inherit;
+    flex-shrink: 0;
+  }
+
+  &--link {
+    min-width: auto;
+    vertical-align: baseline;
+    color: $link-color;
+    padding: 0 15px 0 0;
+    border: none !important;
+    background: transparent !important;
+    box-shadow: none !important;
+    font-size: 18px;
+    font-weight: $font-normal;
+    line-height: 1;
+    text-transform: none;
+    letter-spacing: normal;
+    text-align: left;
+
+    &::after {
+      content: '';
+      position: absolute;
+      right: 0;
+      top: 50%;
+      width: 8px;
+      height: 8px;
+      border-bottom: 1px solid currentColor;
+      border-right: 1px solid currentColor;
+      transform: translateY(-70%) rotate(45deg);
+      transition: border-color 0.3s;
+    }
+
+    &.active {
+      &:after {
+        transform: translateY(-35%) rotate(-135deg);
+      }
+    }
+
+    &:hover,
+    &:active,
+    &:focus {
+      color: $link-color-hover !important;
+      outline: none;
+    }
+  }
+
+  &--sm {
+    min-width: 150px;
+    padding: 15.5px 25px;
+  }
+}
+
+.btn--gray {
+  background-color: $btn-color-gray;
+  color: $black;
+
+  &:visited {
+    background-color: $btn-color-gray;
+    color: $black;
+  }
+
+  &:hover,
+  &:active {
+    background-color: $btn-color-black;
+    color: $white;
+  }
+}
+
+.btn--white {
+  background-color: $btn-color-white;
+  color: $black;
+
+  &:visited {
+    background-color: $btn-color-white;
+    color: $gray;
+  }
+
+  &:hover,
+  &:active {
+    background-color: $btn-color-black;
+    color: $white;
+  }
+
+  &.btn--outline {
+    background-color: transparent;
+    color: $black;
+    border-color: rgba($color: $black, $alpha: 0.3);
+
+    &:visited {
+      background-color: $btn-color-white;
+      color: $gray;
+    }
+
+    &:hover,
+    &:active {
+      background-color: $btn-color-black;
+      color: $white;
+    }
+  }
+}
+
+.btn--transp {
+  background-color: transparent;
+  color: $white;
+  border-color: rgba($color: $white, $alpha: 0.3);
+
+  &:visited {
+    background-color: $btn-color-white;
+    color: $gray;
+  }
+
+  &:hover,
+  &:active {
+    background-color: $btn-color-white;
+    color: $black;
+  }
+}
+
+.btn--disabled,
+.btn:disabled,
+.btn[disabled] {
+  cursor: not-allowed;
+  background-color: $btn-color-gray;
+  color: $gray;
+  box-shadow: none;
+  opacity: 0.6;
+
+  @at-root a.btn--disabled {
+    pointer-events: none;
+  }
+
+  &:visited {
+    color: $gray;
+  }
+}
+
+// .btn--md {
+//   font-size: var($--btn-md);
+// }
+
+// .btn--lg {
+//   font-size: var($--btn-lg);
+// }
+
+.btn--fw {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+.btn--fw-mobile {
+  @include md-max {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+/* buttons group */
+.btns {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: calc(-1 * 10px);
+
+  > * {
+    margin-right: 10px;
+    margin-bottom: 10px;
+
+    &:last-of-type {
+      margin-right: 0;
+    }
+  }
+}

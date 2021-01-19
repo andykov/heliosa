@@ -1,0 +1,215 @@
+$tile-img-offset-xs: 30px;
+$tile-img-offset-lg: 50px;
+$tile-img-offset-xl: 60px;
+
+.tiles {
+  &--revers {
+    .tile:nth-child(odd) {
+      > :first-child {
+        @include md {
+          margin-right: 120px;
+        }
+      }
+
+      .tile__img {
+        &--square {
+          // @include md {
+          //   margin-right: 50px;
+          // }
+          // @include lg {
+          //   margin-right: 80px;
+          // }
+          // @include xl {
+          //   margin-right: 140px;
+          // }
+
+          > img,
+          > picture {
+            margin: 0 $tile-img-offset-xs $tile-img-offset-xs 0;
+            @include lg {
+              margin: 0 $tile-img-offset-lg $tile-img-offset-lg 0;
+            }
+            @include xl {
+              margin: 0 $tile-img-offset-xl $tile-img-offset-xl 0;
+            }
+          }
+
+          &:after {
+            margin: $tile-img-offset-xs 0 0 $tile-img-offset-xs;
+            @include lg {
+              margin: $tile-img-offset-lg 0 0 $tile-img-offset-lg;
+            }
+            @include xl {
+              margin: $tile-img-offset-xl 0 0 $tile-img-offset-xl;
+            }
+          }
+        }
+      }
+    }
+    .tile:nth-child(even) {
+      @include md {
+        flex-direction: row-reverse;
+      }
+
+      > :first-child {
+        @include md {
+          margin-left: 120px;
+        }
+      }
+
+      .tile__img {
+        &--square {
+          @include md {
+            margin-left: 50px;
+          }
+          @include lg {
+            margin-left: 80px;
+          }
+          @include xl {
+            margin-left: 140px;
+          }
+
+          > img,
+          > picture {
+            margin: 0 0 $tile-img-offset-xs $tile-img-offset-xs;
+            @include lg {
+              margin: 0 0 $tile-img-offset-lg $tile-img-offset-lg;
+            }
+            @include xl {
+              margin: 0 0 $tile-img-offset-xl $tile-img-offset-xl;
+            }
+          }
+
+          &:after {
+            margin: $tile-img-offset-xs $tile-img-offset-xs 0 0;
+            @include lg {
+              margin: $tile-img-offset-lg $tile-img-offset-lg 0 0;
+            }
+            @include xl {
+              margin: $tile-img-offset-xl $tile-img-offset-xl 0 0;
+            }
+          }
+        }
+      }
+
+      .tile__text {
+        @include xl {
+          margin-left: 80px;
+        }
+      }
+    }
+  }
+}
+
+.tile {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  @include md {
+    flex-direction: row;
+  }
+  @include lg {
+    justify-content: space-between;
+  }
+
+  &:not(:last-child) {
+    margin-bottom: 60px;
+    @include md {
+      margin-bottom: 90px;
+    }
+    @include lg {
+      margin-bottom: 120px;
+    }
+  }
+
+  &__text {
+    max-width: 440px;
+    font-size: 18px;
+    color: #4b4b4b;
+  }
+
+  &__title {
+    font-size: 28px;
+    font-weight: $font-bold;
+    line-height: 1;
+    color: #1c1c1c;
+  }
+  &__img {
+    flex-shrink: 0;
+    max-width: calc((640 / 1200) * 100%);
+
+    &--square {
+      width: 100%;
+      max-width: 300px;
+      position: relative;
+
+      @include sm-max {
+        margin-bottom: 40px;
+      }
+      @include lg {
+        max-width: 510px;
+      }
+
+      // .tile__img-shadow {
+      //   opacity: 0;
+      //   width: 100%;
+      //   height: 100%;
+      //   background-color: $gray-light;
+      //   transition-delay: 200ms;
+      //   position: absolute;
+      //   top: 30px;
+      //   right: 0;
+      //   bottom: 0;
+      //   z-index: -1;
+      //   &[data-sal='slide-down-left'] {
+      //     left: -60px;
+      //   }
+      //   &[data-sal='slide-down-right'] {
+      //     left: 60px;
+      //   }
+      // }
+
+      &:before {
+        display: block;
+        content: '';
+        width: 100%;
+        padding-top: (1 / 1) * 100%;
+      }
+
+      > img,
+      > picture {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        margin: auto;
+        background-color: $gray;
+      }
+
+      // &.sal-animate {
+      //   &[data-sal='slide-up-right'] {
+      //     &:after {
+      //       opacity: 1;
+      //       // transform: none;
+      //     }
+      //   }
+      // }
+
+      &:after {
+        content: '';
+        // width: 100%;
+        // height: 100%;
+        background-color: $gray-light;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: -1;
+      }
+    }
+  }
+}

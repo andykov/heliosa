@@ -1,0 +1,39 @@
+.online-stores {
+  &__title {
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    @include lg {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 0 100px;
+    }
+  }
+
+  li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 60px;
+    border-top: 1px solid #dedede;
+    border-bottom: 1px solid #dedede;
+    margin-top: -1px;
+
+    span {
+      color: #747474;
+    }
+
+    a {
+      text-decoration: underline;
+      text-align: right;
+
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+}

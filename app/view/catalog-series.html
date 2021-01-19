@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="">
+  <head>
+    <meta charset="utf-8" />
+    <title>OptimizedHTML 5</title>
+    <meta name="description" content="Startup HTML template OptimizedHTML 5" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" href="img/favicon.png" />
+    <meta property="og:image" content="img/dest/preview.jpg" />
+    <link rel="stylesheet" href="/css/app.min.css" />
+  </head>
+  <body>
+    @@include('modules/_header-site.html')
+    <main class="page">
+      @@include('modules/catalog/_catalog-nav-category.html')
+      <section class="page-section">
+        <div class="container">
+          <h1>Продукция</h1>
+          <div class="catalog catalog--series">
+            <div class="catalog__list">
+              @@include('modules/catalog/_card-series.html')
+              @@include('modules/catalog/_card-series.html')
+              @@include('modules/catalog/_card-series.html')
+              @@include('modules/catalog/_card-series.html')
+              @@include('modules/catalog/_card-series.html')
+              @@include('modules/catalog/_card-series.html')
+              @@include('modules/catalog/_card-series.html')
+              @@include('modules/catalog/_card-series.html')
+              @@include('modules/catalog/_card-series.html')
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    @@include('modules/_footer.html')
+    <script src="js/main.min.js"></script>
+  </body>
+</html>

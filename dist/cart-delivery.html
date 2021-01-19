@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="">
+  <head>
+    <meta charset="utf-8" />
+    <title>OptimizedHTML 5</title>
+    <meta name="description" content="Startup HTML template OptimizedHTML 5" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" href="img/favicon.png" />
+    <meta property="og:image" content="img/dest/preview.jpg" />
+    <link rel="stylesheet" href="/css/vendor/splide-core.min.css" />
+    <link rel="stylesheet" href="/css/app.min.css" />
+  </head>
+  <body>
+    <header class="header">
+  <div class="header-top">
+    <div class="container">
+      <div class="header-top__inner">
+        <span class="company-ru">Официальный сайт Star Progetti в России</span>
+        <a href="starprogetti.com" class="company-web">starprogetti.com</a>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="header__main">
+      <div class="header__logo">
+        <a href="">
+          <img
+            src="img/logo-black.png"
+            alt="Heliosa"
+            srcset="img/logo-black@2x.png 2x"
+          />
+        </a>
+      </div>
+
+      <div class="header__nav">
+        <nav class="nav">
+          <button class="mobile-nav-close">
+            <svg class="icon icon--blue" width="19" height="19">
+              <use xlink:href="img/icons.svg#icon-close"></use>
+            </svg>
+          </button>
+          <ul class="nav__list">
+  <li><a href="catalog-category.html" class="active">Каталог</a></li>
+  <li><a href="faq.html">Поддержка</a></li>
+  <li><a href="about.html">О комании</a></li>
+  <li><a href="contacts.html">Контакты</a></li>
+  <li>
+    <a href="index.html" class="semibold">Основной сайт</a>
+  </li>
+</ul>
+
+        </nav>
+
+        <div class="header__nav-user">
+          <a href="">
+            <svg class="icon icon--blue" width="13" height="13">
+              <use xlink:href="img/icons.svg#icon-user"></use>
+            </svg>
+          </a>
+          <a href="">
+            <svg class="icon icon--blue" width="21" height="15">
+              <use xlink:href="img/icons.svg#icon-compare"></use>
+            </svg>
+            <span class="header-counter">2</span>
+          </a>
+          <a href="">
+            <svg class="icon icon--blue" width="14" height="13">
+              <use xlink:href="img/icons.svg#icon-cart"></use>
+            </svg>
+            <span class="header-counter">33</span>
+          </a>
+        </div>
+        <button class="mobile-nav-trigger">
+          <span class="burger"></span>
+        </button>
+      </div>
+
+      <div class="header__search">
+        <form class="search-form" action="">
+          <input type="text" class="search-form__input" placeholder="Поиск" />
+        </form>
+      </div>
+    </div>
+  </div>
+</header>
+
+    <main class="page">
+      <div class="page-head">
+        <div class="container">
+          <div class="container-narrow">
+          <h1 class="page-head__title">Корзина</h1>
+        </div>
+      </div>
+      <div class="container">
+        <div class="cart-delivery">
+          <div class="cart-delivery__form">
+            <form action="">
+              <fieldset class="form-personal-data">
+                <legend>Личные данные</legend>
+                <div class="form-personal-data__group">
+                  <label class="field-text field-text--error">
+                    <span class="field-text__input-wrap">
+                      <span class="field-text__help-text"
+                        >Поле обязательно для заполнения</span
+                      >
+                      <input class="field-text__input" type="text" placeholder="Имя*" />
+                    </span>
+                  </label>
+                  <label class="field-text">
+                    <span class="field-text__input-wrap">
+                      <span class="field-text__help-text"
+                        >Поле обязательно для заполнения</span
+                      >
+                      <input class="field-text__input" type="text" placeholder="Фамилия*" />
+                    </span>
+                  </label>
+                  <label class="field-text">
+                    <span class="field-text__input-wrap">
+                      <span class="field-text__help-text"
+                        >Поле обязательно для заполнения</span
+                      >
+                      <input class="field-text__input" type="text" placeholder="Телефон*" />
+                    </span>
+                  </label>
+                  <label class="field-text">
+                    <span class="field-text__input-wrap">
+                      <span class="field-text__help-text"
+                        >Поле обязательно для заполнения</span
+                      >
+                      <input class="field-text__input" type="email" placeholder="E–mail*" />
+                    </span>
+                  </label>
+              </div>
+              </fieldset>
+              <fieldset class="form-delivery">
+                <legend>Способ доставки</legend>
+                <div class="form-delivery__group">
+                  <div class="field-wrap">
+                    <div class="field-radio">
+                      <label class="field-radio__name">
+                        <input class="field-radio__input" type="radio" name="delivery" checked />
+                        <span class="field-radio__name-text"
+                          >Доставка по адресу</span
+                        >
+                      </label>
+                      <div class="field-radio__info"
+                          >Доставим за 1–2 дня</div
+                        >
+                    </div>
+                    <span class="field-wrap__price">1 000 ₽</span>
+                  </div>
+                  <div class="field-wrap">
+                    <div class="field-radio">
+                      <label class="field-radio__name">
+                        <input class="field-radio__input" type="radio" name="delivery" />
+                        <span class="field-radio__name-text"
+                          >Доставка до пункта выдачи</span
+                        >
+                      </label>
+                      <div class="field-radio__info"
+                          >Доставим за 3–4 дня</div
+                        >
+                    </div>
+                    <span class="field-wrap__price">300 ₽</span>
+                  </div>
+                  <div class="field-wrap">
+                    <div class="field-radio">
+                      <label class="field-radio__name">
+                        <input class="field-radio__input" type="radio" name="delivery" />
+                        <span class="field-radio__name-text"
+                          >Доставка почтой</span
+                        >
+                      </label>
+                      <div class="field-radio__info"
+                          >Доставим за 7–9 дней</div
+                        >
+                    </div>
+                    <span class="field-wrap__price">300 ₽</span>
+                  </div>
+                </div>
+              </fieldset>
+              <fieldset class="form-type-payment">
+                <legend>Способ оплаты</legend>
+                <div class="form-type-payment__group">
+                  <div class="field-wrap">
+                    <div class="field-radio">
+                      <label class="field-radio__name">
+                        <input class="field-radio__input" type="radio" name="payment" checked />
+                        <span class="field-radio__name-text"
+                          >При получении</span
+                        >
+                      </label>
+                      <div class="field-radio__info"
+                          >Курьеру или в пункте выдачи при получении</div>
+                    </div>
+                  </div>
+                  <div class="field-wrap">
+                    <div class="field-radio">
+                      <label class="field-radio__name">
+                        <input class="field-radio__input" type="radio" name="payment" />
+                        <span class="field-radio__name-text"
+                          >Онлайн банковской картой</span
+                        >
+                      </label>
+                      <div class="field-radio__info">
+                        <ul class="payment-icons">
+                          <li><img src="img/icons/icon-pay-visa.png" alt=""></li>
+                          <li><img src="img/icons/icon-pay-mc.png" alt=""></li>
+                          <li><img src="img/icons/icon-pay-mir.png" alt=""></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </fieldset>
+              <button type="submit" class="btn">Отправить заказ</button>
+            </form>
+          </div>
+          <div class="cart-delivery__aside">
+            <div class="cart-total">
+              <div class="cart-total__title">Ваш заказ</div>
+              <ul class="cart-total__list">
+                <li class="cart-total-product">
+                  <div class="cart-total-product__img">
+                    <img src="img/content/product-cart.png" alt="">
+                  </div>
+                  <div class="cart-total-product__name">
+                    <span>Heliosa 44 2kW/IPX5/WHT</span>
+                    <span>Белый</span>
+                  </div>
+                  <span class="cart-total-product__amount">х1</span>
+                  <span class="cart-total-product__price">14 500 ₽</span>
+                </li>
+                <li class="cart-total-product">
+                  <div class="cart-total-product__img">
+                    <img src="img/content/product-cart.png" alt="">
+                  </div>
+                  <div class="cart-total-product__name">
+                    <span>Heliosa 44 2kW/IPX5/WHT</span>
+                    <span>Белый</span>
+                  </div>
+                  <span class="cart-total-product__amount">х1</span>
+                  <span class="cart-total-product__price">14 500 ₽</span>
+                </li>
+                <li class="cart-total-product">
+                  <div class="cart-total-product__img">
+                    <img src="img/content/product-cart.png" alt="">
+                  </div>
+                  <div class="cart-total-product__name">
+                    <span>Heliosa 44 2kW/IPX5/WHT</span>
+                    <span>Белый</span>
+                  </div>
+                  <span class="cart-total-product__amount">х1</span>
+                  <span class="cart-total-product__price">14 500 ₽</span>
+                </li>
+              </ul>
+              <a href="">Изменить заказ</a>
+              <ul class="cart-total__detail">
+                <li>
+                  <span>Сумма заказа</span>
+                  <span>58 000 ₽</span>
+                </li>
+                <li>
+                  <span>Доставка</span>
+                  <span>300 ₽</span>
+                </li>
+              </ul>
+              <div class="cart-total__payment">
+                <span>Итог к  оплате</span>
+                <span>58 300 ₽</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer class="footer">
+  <div class="container">
+    <div class="footer__inner">
+      <div class="footer__contacts">
+        <a href="" class="footer__logo">
+          <img
+            src="img/logo-white.png"
+            alt="Heliosa"
+            srcset="img/logo-white@2x.png 2x"
+          />
+        </a>
+        <ul class="contacts">
+          <li><a href="tel:+78005558095">+7 (800) 555-80-95</a></li>
+          <li><a href="mailto:sale@heliosa-rus.ru">sale@heliosa-rus.ru.</a></li>
+        </ul>
+        <div class="social">
+          <a href="" class="social__link">
+            <svg width="16" height="10">
+              <use xlink:href="img/icons.svg#social-vk"></use>
+            </svg>
+          </a>
+          <a href="" class="social__link">
+            <svg width="7" height="14">
+              <use xlink:href="img/icons.svg#social-fb"></use>
+            </svg>
+          </a>
+          <a href="" class="social__link">
+            <svg width="16" height="16">
+              <use xlink:href="img/icons.svg#social-inst"></use>
+            </svg>
+          </a>
+        </div>
+      </div>
+      <div class="footer__links">
+        <div class="footer-nav">
+          <span>Продукция</span>
+          <ul>
+            <li><a href="">Настенные обогреватели</a></li>
+            <li><a href="">Напольные обогреватели</a></li>
+            <li><a href="">Аксессуары</a></li>
+          </ul>
+        </div>
+        <div class="footer-nav">
+          <span>Поддержка</span>
+          <ul>
+            <li><a href="">Где купить</a></li>
+            <li><a href="">Таблица характеристик</a></li>
+            <li><a href="">Инструкция по эксплуатации</a></li>
+            <li><a href="">Рекомендации по монтажу</a></li>
+            <li><a href="">Вопросы и ответы</a></li>
+            <li><a href="">Информация о гарантии</a></li>
+          </ul>
+        </div>
+        <div class="footer-nav">
+          <span>О компании</span>
+          <ul>
+            <li><a href="">О компании </a></li>
+            <li><a href="">Контакты</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer__copy">© 2010–2020 ООО «Хелиоса Рус»</div>
+  </div>
+</footer>
+<div class="overlay"></div>
+
+    <script src="js/vendor/splide.min.js"></script>
+    <script src="js/main.min.js"></script>
+    <script>
+      let galleryCompare = new Splide('.js-compare-gallery', {
+        perPage: 4,
+        perMove: 1,
+        gap: 50,
+        pagination: false,
+        breakpoints: {
+          992: {
+            perPage: 3,
+            gap: 50,
+          },
+          640: {
+            perPage: 2,
+            gap: 30,
+          },
+          480: {
+            gap: 15,
+          },
+        },
+      });
+
+      galleryCompare.mount();
+    </script>
+  </body>
+</html>

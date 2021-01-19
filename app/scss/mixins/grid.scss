@@ -1,0 +1,46 @@
+$gap-horizontal: 10px;
+$gap-vertical: $gap-horizontal;
+
+$grid-columns: 12;
+
+@mixin grid {
+  @supports (grid-area: auto) {
+    display: grid;
+    grid-column-gap: $gap-horizontal;
+    grid-row-gap: $gap-vertical;
+  }
+}
+
+@mixin gridAuto($min-width) {
+  @supports (grid-area: auto) {
+    grid-template-columns: repeat(auto-fit, minmax($min-width, 1fr));
+  }
+}
+
+@mixin gridLayout($cols...) {
+  grid-template-columns: repeat($grid-columns, 1fr);
+
+  $i: 1;
+  @each $col in $cols {
+    > :nth-of-type(#{$i}) {
+      grid-column-end: span nth($col, 1);
+      @if length($col) > 1 {
+        grid-row-end: span nth($col, 2);
+      }
+    }
+    $i: $i + 1;
+  }
+}
+
+.gallery-grid {
+  @include grid;
+  @include gridAuto(260px);
+}
+
+.grid {
+  @include gridLayout((7, 2), 2), //i
+    (5, 1), 1), //i
+    (5, 1), 1), //i
+    (12, 1) , 1) //i
+  );
+}

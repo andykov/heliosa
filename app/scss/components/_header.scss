@@ -1,0 +1,98 @@
+.header {
+  &-top {
+    background-color: $gray-light;
+    font-size: 14px;
+    padding: 11px 0;
+
+    &__inner {
+      display: flex;
+      justify-content: space-between;
+
+      span {
+      }
+    }
+  }
+  &__main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 10px 0 20px;
+
+    @include lg {
+      padding: 24px 0 22px;
+    }
+  }
+  &__logo {
+    margin-right: 15px;
+
+    @include lg {
+      max-width: 160px;
+    }
+    @include xl {
+      max-width: 100%;
+    }
+  }
+  &__nav {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    flex: none;
+
+    @include lg {
+      flex: 1;
+      margin-left: 0;
+    }
+
+    &-user {
+      display: flex;
+      align-items: center;
+      margin-right: 15px;
+      margin-left: auto;
+      @include md {
+        margin-right: 25px;
+      }
+      @include lg {
+      }
+      a {
+        position: relative;
+        padding: 5px;
+        margin: 2.5px;
+        @include md {
+          margin: 5px;
+        }
+
+        .header-counter {
+          position: absolute;
+          top: 3px;
+          left: 55%;
+          display: block;
+          font-size: 7px;
+          font-weight: $font-medium;
+          background-color: $black;
+          color: #fff;
+          min-width: 13px;
+          height: 13px;
+          border-radius: 13px;
+          border: 1px solid #fff;
+          line-height: 11px;
+          text-align: center;
+          padding: 0 3px;
+        }
+      }
+    }
+  }
+
+  &__search {
+    width: 100%;
+    @include md-max {
+      margin-top: 10px;
+    }
+    @include lg {
+      max-width: 120px;
+    }
+    @include xl {
+      max-width: 160px;
+    }
+  }
+}

@@ -1,0 +1,129 @@
+$line-height: 1.375em !default;
+
+.field-radio {
+  $block-name: &;
+
+  display: flex;
+  margin-bottom: ($line-height / 2);
+
+  &__title {
+    display: block;
+    font-weight: 700;
+    line-height: $line-height;
+    margin-bottom: 0.4em;
+  }
+
+  &__input-wrap {
+    & + & {
+      margin-top: 15px;
+    }
+  }
+
+  &__name {
+    flex: 1;
+    position: relative;
+    display: inline-block;
+    padding-left: 39px;
+    margin-right: 0.6em;
+    font-weight: 400;
+    line-height: 1.2;
+
+    &:hover & {
+      &-text {
+        &::before {
+          border-color: $gray-dark;
+        }
+      }
+    }
+    &:hover {
+      input:checked ~ :before {
+        border-color: $gray;
+      }
+    }
+  }
+
+  &__name-text {
+    &:before {
+      content: '';
+      position: absolute;
+      top: -3px;
+      left: 0;
+      width: 25px;
+      height: 25px;
+      border-radius: 50%;
+      border: 1px solid $gray;
+      background-color: $white;
+    }
+
+    // @at-root input:checked ~ &:before {
+    // }
+
+    @at-root input:checked ~ &:after {
+      content: '';
+      position: absolute;
+      top: 4px;
+      left: 7px;
+      width: 11px;
+      height: 11px;
+      border-radius: 50%;
+      background: $black;
+    }
+  }
+
+  &__input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+    visibility: hidden;
+  }
+
+  &__help-text-wrap {
+    padding-left: 1.5em;
+  }
+
+  &__help-text {
+    @include field-help-text;
+  }
+
+  &__info {
+    flex: 1;
+    font-size: 1em;
+    color: $gray;
+    padding-left: 39px;
+  }
+
+  &--md-inline {
+    @media (min-width: $screen-md) {
+      display: flex;
+      flex-wrap: wrap;
+
+      #{$block-name}__input-wrap {
+        margin-right: 20px;
+      }
+
+      #{$block-name}__input-wrap + #{$block-name}__input-wrap {
+        margin-top: 0;
+      }
+    }
+  }
+
+  &--mb30 {
+    margin-bottom: 30px;
+  }
+}
+
+$color-danger: hsl(2, 64%, 58%) !default;
+
+.field-radio {
+  $block-name: &;
+
+  &__input-wrap--error {
+    #{$block-name}__name-text,
+    #{$block-name}__help-text {
+      color: $color-danger;
+    }
+  }
+}
