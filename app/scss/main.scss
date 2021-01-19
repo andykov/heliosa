@@ -28,7 +28,7 @@
 @import './components/table';
 @import './components/main-stores';
 @import './components/online-stores';
-// @import './components/tiles';
+@import './components/tiles';
 @import './components/form-contacts';
 
 // @import "breadcrumb";
@@ -554,10 +554,10 @@ body {
 
       a {
         &:not(.active) {
-          color: #686868;
+          color: #8e8e8e;
         }
         &:hover {
-          color: $black;
+          color: #2d2d2d;
         }
       }
     }
@@ -682,6 +682,19 @@ body {
   }
 
   &--products {
+  }
+}
+
+.list-dots {
+  padding-left: 25px;
+  margin: 0;
+  li {
+    &:not(:last-child) {
+      margin-bottom: 15px;
+    }
+    &::marker {
+      font-size: 25px;
+    }
   }
 }
 
@@ -1547,8 +1560,29 @@ body {
 
   &--grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 80px 60px;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 40px 0;
+
+    @include lg {
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 60px 80px;
+    }
+
+    @include xl {
+      grid-gap: 70px 60px;
+    }
+
+    li {
+      @include md {
+        padding-left: 50px;
+      }
+      @include lg {
+        padding-left: 60px;
+      }
+      @include xl {
+        padding-left: 80px;
+      }
+    }
   }
 }
 
@@ -1676,6 +1710,13 @@ body {
   }
 
   &__head {
+    margin-bottom: 50px;
+
+    h2,
+    h3 {
+      margin-bottom: 15px;
+    }
+
     [data-tabs] {
       display: flex;
       align-items: flex-end;
@@ -1703,6 +1744,11 @@ body {
         margin-bottom: 50px;
       }
     }
+  }
+
+  &__subtitle {
+    color: $gray-dark;
+    font-size: 18px;
   }
 }
 
@@ -1892,9 +1938,11 @@ body {
         margin-bottom: 50px;
       }
       &--lg {
+        color: $gray;
         font-size: 56px;
-        font-weight: $font-normal;
+        font-weight: $font-light;
         line-height: (72.8/56);
+        margin-bottom: 50px;
       }
     }
   }

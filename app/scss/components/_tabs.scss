@@ -98,6 +98,10 @@
       outline: none;
     }
 
+    &:hover {
+      color: $black;
+    }
+
     &[aria-selected='true'] {
       color: $black;
       @include md {
