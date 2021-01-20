@@ -119,6 +119,11 @@ figure {
   color: #fff;
 }
 
+svg {
+  fill: currentColor;
+  transition: fill 0.175s;
+}
+
 img,
 picture {
   max-width: 100%;

@@ -1,4 +1,4 @@
-import { getSiblings } from '../utils/getSiblings';
+import { getSiblings } from '../utils/helpers';
 // let siblings = getSiblings(document.querySelector('.current'));
 // let siblingText = siblings.map((e) => e.innerHTML);
 // console.log(siblings);

@@ -1,0 +1,213 @@
+.product-hero {
+  position: relative;
+
+  &__inner {
+    background-color: $black;
+    position: relative;
+  }
+
+  &__bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    &::before {
+      content: '';
+      display: block;
+      position: absolute;
+      left: 0;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(
+          180deg,
+          rgba(0, 0, 0, 0) 73.06%,
+          #010101 103.06%
+        ),
+        linear-gradient(
+          277.49deg,
+          rgba(6, 6, 6, 0.54) -4.69%,
+          rgba(0, 0, 0, 0.68) 33.23%,
+          rgba(3, 3, 3, 0) 65.78%
+        );
+    }
+
+    img {
+      width: 100%;
+      object-fit: cover;
+
+      object-position: center;
+    }
+  }
+  &__content {
+    position: relative;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    height: 460px;
+    @include md {
+      height: 410px;
+    }
+    @include lg {
+      height: 490px;
+    }
+    @include xl {
+      height: 720px;
+    }
+    .container {
+      height: 100%;
+    }
+  }
+
+  &__form {
+    display: flex;
+    align-items: flex-end;
+    height: 100%;
+    padding-bottom: 20px;
+
+    @include md {
+      align-items: center;
+      padding-bottom: 0;
+    }
+    .field-checkbox {
+      input:checked ~ .field-checkbox__name-text {
+        &::after {
+          border-color: #b6b6b6;
+        }
+      }
+    }
+
+    .field-colors {
+      &__check {
+        padding: 4px;
+        &::before {
+          width: 20px;
+          height: 20px;
+        }
+      }
+    }
+    @include md {
+      &::before {
+        content: '';
+        display: block;
+        flex: 1;
+      }
+    }
+
+    .btn {
+      @include md-max {
+        padding: 13px 20px;
+        min-width: 160px;
+      }
+    }
+  }
+
+  &__narrow {
+    flex: 1;
+    max-width: 520px;
+
+    @include sm-max {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      padding-top: 15px;
+
+      .field-checkbox {
+        margin-bottom: auto;
+      }
+    }
+  }
+
+  &__title {
+    color: #fff;
+    font-weight: 600;
+    line-height: 1.2;
+    margin-bottom: 8px;
+    font-size: 24px;
+    @include md {
+      font-size: 28px;
+    }
+    @include lg {
+      font-size: 36px;
+      margin-bottom: 10px;
+    }
+    @include xl {
+      font-size: 42px;
+      margin-bottom: 15px;
+    }
+  }
+
+  &__text {
+    padding: 15px 0;
+    color: #aeaeae;
+    font-size: 14px;
+
+    @include md {
+      font-size: 16px;
+      padding: 20px 0;
+    }
+    @include lg {
+      padding: 25px 0;
+    }
+    @include xl {
+      padding: 30px 0;
+    }
+  }
+
+  &__advant {
+    @include lg {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 30px;
+    }
+    @include xl {
+      bottom: 45px;
+    }
+    .advant {
+      @include lg {
+        color: #fff;
+
+        // svg {
+        //   stroke: #fff;
+        // }
+      }
+    }
+  }
+
+  &__price {
+    span {
+      font-size: 20px;
+      margin-right: 30px;
+      line-height: 1;
+      @include lg {
+        font-size: 23px;
+      }
+    }
+  }
+
+  &__colors {
+    display: flex;
+    align-items: center;
+    padding-bottom: 20px;
+
+    @include lg {
+      padding-bottom: 35px;
+    }
+
+    > span {
+      font-size: 12px;
+      text-transform: uppercase;
+      color: #aeaeae;
+      letter-spacing: 0.1em;
+      margin-right: 15px;
+    }
+
+    .field-colors__check {
+      background-color: rgba($color: #e3e3e3, $alpha: 0.1);
+      border-color: transparent;
+    }
+  }
+}
