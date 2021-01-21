@@ -537,19 +537,55 @@ body {
     border-top: 1px solid #dddddd;
     border-bottom: 1px solid #dddddd;
 
+    &__wrap {
+      display: flex;
+      align-items: center;
+    }
+
+    &__name {
+      font-weight: $font-bold;
+      flex-shrink: 0;
+      padding-right: 20px;
+      position: relative;
+      opacity: 0.99;
+      @include md {
+        padding-right: 65px;
+      }
+      @include xl {
+        font-size: 18px;
+        padding-right: 130px;
+      }
+    }
+
     &__list {
       white-space: nowrap;
       overflow-x: auto;
       -webkit-overflow-scrolling: touch;
       display: flex;
       flex-wrap: nowrap;
-      padding: 19.5px 0;
+      padding: 11px 0;
       margin: 0;
       list-style: none;
 
+      @include lg {
+        padding: 17px 0;
+      }
+      @include xl {
+        padding: 19.5px 0;
+      }
       li {
+        font-size: 14px;
+        @include xl {
+          font-size: 16px;
+        }
         &:not(:last-child) {
-          margin-right: 31px;
+          margin-right: 20px;
+          @include md {
+            margin-right: 25px;
+          }
+          @include xl {
+            margin-right: 30px;
+          }
         }
       }
 
@@ -980,10 +1016,22 @@ body {
   }
 }
 
+.company-ru,
+.company-web {
+  font-size: 12px;
+
+  @include xl {
+    font-size: 14px;
+  }
+}
+
 .company-ru {
   display: inline-flex;
   align-items: center;
   line-height: 1;
+  padding-right: 28px;
+  position: relative;
+  margin-right: 40px;
 
   &::after {
     content: '';
@@ -991,6 +1039,8 @@ body {
     width: 18px;
     height: 18px;
     margin-left: 10px;
+    position: absolute;
+    right: 0;
   }
 }
 
