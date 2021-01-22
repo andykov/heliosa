@@ -5,11 +5,11 @@
 // console.log(bsNative);
 // // OR initialize component with no option
 // // the option is optional
-// // var myDropdownInit = new Dropdown('#myDropdown');
+// var myDropdownInit = new Dropdown('#myDropdown');
 // // // reference the initialization
 // // reference the initialization
-// // var myDropdownInit = document.getElementById('myDropdown').Dropdown;
+// var myDropdownInit = document.getElementById('myDropdown').Dropdown;
 
 // // // use the public Methods
-// // myDropdownInit.toggle();
+// myDropdownInit.toggle();
 // console.log(222);

@@ -14,6 +14,19 @@
   <body>
     @@include('modules/_header-site.html')
     <main class="page">
+      <div class="catalog-nav medium">
+        <div class="container">
+          <div class="catalog-nav__wrap">
+            <div class="catalog-nav__name">Heliosa 44</div>
+            <ul class="catalog-nav__list">
+              <li><a href="" class="active">Heliosa 44 1,5kW/IPX5/WHT</a></li>
+              <li><a href="">Heliosa 44 2kW/IPX5/WHT</a></li>
+              <li><a href="">Heliosa 44 2kW/IPX5/WHT/MOB</a></li>
+              <li><a href="">Heliosa 44 2kW/IPX5/BLK/MOB</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
       <section class="product-hero">
         <div class="product-hero__inner">
           <div
@@ -50,28 +63,10 @@
                     </label>
                   </div>
                   <h1 class="product-hero__title">Heliosa 44 2kW/IPX5/WHT</h1>
-                  <span class="vendor-code">Арт. 208177657456</span>
                   <div class="product-hero__text">
                     Регулируемая модель для установки под зонтами со
                     специальными крепежами, на другие наружные структуры, на
                     стены снаружи помещений и в условиях открытых пространств.
-                  </div>
-                  <div class="product-hero__colors">
-                    <span>цвет</span>
-                    <div class="field-colors">
-                      <label class="field-colors__item">
-                        <input type="radio" name="color" checked />
-                        <span
-                          class="field-colors__check field-colors__check--white"
-                        ></span>
-                      </label>
-                      <label class="field-colors__item">
-                        <input type="radio" name="color" />
-                        <span
-                          class="field-colors__check field-colors__check--black"
-                        ></span>
-                      </label>
-                    </div>
                   </div>
                   <div class="product-hero__price">
                     <span>15 000 руб.</span>
@@ -409,16 +404,49 @@
               <div class="splide__track">
                 <div class="splide__list">
                   <div class="splide__slide">
-                    @@include('modules/catalog/_card-product.html')
+                    @@include('modules/catalog/_card-product_compare.html')
                   </div>
                   <div class="splide__slide">
-                    @@include('modules/catalog/_card-product.html')
+                    <div class="card">
+                      <div class="card__compare">
+                        <div class="field-checkbox">
+                          <label class="field-checkbox__name">
+                            <input
+                              class="field-checkbox__input"
+                              type="checkbox"
+                              value=""
+                              name="compare"
+                            />
+                            <span class="field-checkbox__name-text"
+                              >Сравнить</span
+                            >
+                          </label>
+                        </div>
+                      </div>
+                      <div class="card__img">
+                        <a href="#"
+                          ><img src="img/content/product-1.png" alt=""
+                        /></a>
+                      </div>
+                      <div class="card__content">
+                        <div class="card__name">
+                          <a href="#">Heliosa 44 2kW/IPX5/WHT</a>
+                        </div>
+                        <div class="card__price">
+                          <span class="old-price">24 500 ₽</span>14 500 ₽
+                        </div>
+                        <span class="card__discount">-15%</span>
+                      </div>
+                      <div class="card__buttons">
+                        <a href="" class="btn btn--sm">Купить</a>
+                      </div>
+                    </div>
                   </div>
                   <div class="splide__slide">
-                    @@include('modules/catalog/_card-product.html')
+                    @@include('modules/catalog/_card-product_compare.html')
                   </div>
                   <div class="splide__slide">
-                    @@include('modules/catalog/_card-product.html')
+                    @@include('modules/catalog/_card-product_compare.html')
                   </div>
                 </div>
               </div>

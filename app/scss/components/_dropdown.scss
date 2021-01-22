@@ -2,6 +2,27 @@
   position: relative;
   display: inline-block;
 
+  &.selected {
+    &:not(.show) {
+      [data-toggle='dropdown'] {
+        background-color: $black;
+        color: #fff;
+      }
+      [data-clear] {
+        &::before,
+        &::after {
+          background-color: #fff;
+        }
+      }
+    }
+
+    [data-toggle='dropdown'] {
+      &::after {
+        content: none;
+      }
+    }
+  }
+
   [data-toggle='dropdown'] {
     min-width: 160px;
     // width: 150px;
@@ -10,6 +31,7 @@
     line-height: 1;
     outline: none;
     text-align: left;
+    position: relative;
   }
 
   [data-icon='true'] {
@@ -31,16 +53,43 @@
 
   [data-clear] {
     display: inline-block;
-    padding: 5px;
+    padding: 10px;
+    font-size: 0;
     line-height: 1;
     position: absolute;
-    background-color: red;
-    // z-index: 1;
+    background-color: transparent;
     visibility: hidden;
+    right: 17px;
+    top: 50%;
+    transform: translateY(-50%);
+
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      background-color: $black;
+      width: 1px;
+      height: 100%;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    &::before {
+      transform: translateX(-50%) rotate(-45deg);
+    }
+    &::after {
+      transform: translateX(-50%) rotate(45deg);
+    }
 
     &.show {
       visibility: visible;
     }
+  }
+
+  &__selected {
+    white-space: nowrap;
+    overflow: hidden;
+    display: block;
   }
 
   &__body {
@@ -54,11 +103,13 @@
     background-color: #fff;
     color: $text-color;
     border: 1px solid $gray-light;
-    box-shadow: 0 10px 10px -5px rgba(0, 0, 0, 0.2);
+    // box-shadow: 0 10px 10px -5px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 16px 12px -6px rgba(0, 0, 0, 0.05);
     opacity: 0;
     visibility: hidden;
     overflow: hidden;
     transition: opacity $transition-time;
+    outline: none;
 
     &--up {
       top: auto;
@@ -85,11 +136,16 @@
   }
 
   &.show {
-    [data-dropdown='arrow'] {
-      &:after {
-        border-color: $black;
-        transform: translateY(-30%) rotate(225deg);
+    [data-toggle='dropdown'] {
+      &::after {
+        transform: translateY(-35%) rotate(-135deg);
       }
     }
+    // [data-dropdown='arrow'] {
+    //   &:after {
+    //     border-color: $black;
+    //     transform: translateY(-30%) rotate(225deg);
+    //   }
+    // }
   }
 }

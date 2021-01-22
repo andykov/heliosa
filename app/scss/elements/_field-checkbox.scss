@@ -95,6 +95,12 @@ $color-danger: hsl(2, 64%, 58%);
     &--one-line {
       white-space: nowrap;
     }
+
+    &:hover {
+      &::before {
+        border-color: $gray-dark;
+      }
+    }
   }
 
   &__input {

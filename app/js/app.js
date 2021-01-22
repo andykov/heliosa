@@ -28,15 +28,19 @@ import './modules/galleryRecommend';
 import './modules/galleryTabs';
 import './modules/productQuantity';
 
-const dropdowns = document.querySelectorAll('[data-toggle="dropdown"]');
-if (dropdowns.length) {
-  dropdowns.forEach((elem) => {
-    let DropdownInit = new Dropdown(elem);
-    DropdownInit.dispose();
-    // DropdownInit.getSelected();
+const dropdownsInit = document.querySelectorAll('[data-toggle="dropdown"]');
+if (dropdownsInit.length) {
+  let filters;
+  dropdownsInit.forEach((elem) => {
+    filters = new Dropdown(elem);
+  });
+
+  let btnClear = document.querySelector('.js-filters-clear');
+  btnClear.addEventListener('click', function (e) {
+    filters.clear();
   });
 }
-
+// .js-filter-clear
 // function mobileDropdownTabsInit(mq) {
 
 //   const dropdowns = document.querySelectorAll('[data-toggle="dropdown"]');

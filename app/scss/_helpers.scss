@@ -87,3 +87,18 @@
     padding-bottom: 160px;
   }
 }
+.hide-desktop {
+  @include xl {
+    display: none !important;
+  }
+}
+.hide-tablet {
+  @include lg {
+    display: none !important;
+  }
+}
+.hide-mobile {
+  @include md-max {
+    display: none !important;
+  }
+}

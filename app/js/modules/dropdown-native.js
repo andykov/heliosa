@@ -62,6 +62,7 @@
       labelDefault = null,
       clear = element.querySelector('[data-clear]'),
       menuItems = [],
+      selected = [],
       persist;
 
     parent = element.parentNode;
@@ -70,21 +71,25 @@
     if (label) {
       labelDefault = label.textContent;
     }
-
+    console.log('selectedselected ', selected);
     checkboxes.forEach((item, i) => {
-      var selected = [];
+      // var selected = [];
 
       if (item.checked) {
-        let parent = item.parentNode;
-        let span = queryElement('span', parent);
+        let checkParent = item.parentNode;
+        let span = queryElement('span', checkParent);
+
         selected.push(span.textContent);
         setLabelSelected(selected);
         clear.classList.add('show');
+        if (selected.length) {
+          parent.classList.add('selected');
+        }
       }
 
       item.addEventListener('change', function () {
         selected = [];
-
+        console.log(element);
         checkboxes.forEach((input, i) => {
           if (input.checked) {
             let parent = input.parentNode;
@@ -97,6 +102,7 @@
         if (selected.length) {
           setLabelSelected(selected);
           clear.classList.add('show');
+          parent.classList.add('selected');
         } else {
           label.textContent = labelDefault;
         }
@@ -118,11 +124,16 @@
       clear.addEventListener('click', function (e) {
         e.stopPropagation();
         e.target.classList.remove('show');
-        console.log(checkboxes);
+        // console.log(checkboxes);
         checkboxes.forEach((input) => {
           input.checked = false;
         });
         label.textContent = labelDefault;
+        selected = [];
+
+        if (!selected.length) {
+          parent.classList.remove('selected');
+        }
         // self.toggle();
       });
     }
@@ -238,6 +249,7 @@
       preventEmptyAnchor.call(e, eventTarget);
     }
     function clickHandler(e) {
+      console.log(1);
       relatedTarget = element;
       self.show();
       preventEmptyAnchor.call(e, e.target);
@@ -304,7 +316,21 @@
         dispatchCustomEvent.call(parent, shownCustomEvent);
       }, 1);
     };
+    self.clear = function (elem) {
+      let filters = document.querySelectorAll('.filters__item .dropdown');
+
+      filters.forEach(function (item) {
+        let clearItem = item.querySelector('[data-clear]');
+        let isActive = clearItem.classList.contains('show');
+        if (isActive) {
+          clearItem.click();
+        }
+      });
+    };
     self.hide = function () {
+      if (selected.length) {
+        parent.classList.add('selected');
+      }
       hideCustomEvent = bootstrapCustomEvent('hide', 'dropdown', {
         relatedTarget: relatedTarget,
       });
