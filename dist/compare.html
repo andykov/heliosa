@@ -85,36 +85,41 @@
 </header>
 
     <main class="page">
-      <div class="page-head">
+      <div class="page-head pb-0">
         <div class="container">
           <div class="container-narrow">
-          <h1 class="page-head__title">Сравнение товаров</h1>
+            <h1 class="page-head__title">Сравнение товаров</h1>
+          </div>
         </div>
       </div>
       <div class="container">
         <div class="compare">
-          <div class="compare__buttons">
-            <a href="" class="btn">Все характеристики</a>
-            <a href="" class="btn btn--white btn--outline">Ключевые характеристики</a>
-            <div class="field-checkbox">
-              <label class="field-checkbox__name">
-                <input
-                  class="field-checkbox__input"
-                  type="checkbox"
-                  value=""
-                  name="compare"
-                  checked
-                />
-                <span class="field-checkbox__name-text">Только отличия</span>
-              </label>
+          <div class="compare__head">
+            <div class="compare__buttons">
+              <a href="" class="btn">Все характеристики</a>
+              <a href="" class="btn btn--white btn--outline"
+                >Ключевые характеристики</a
+              >
+              <div class="field-checkbox">
+                <label class="field-checkbox__name">
+                  <input
+                    class="field-checkbox__input"
+                    type="checkbox"
+                    value=""
+                    name="compare"
+                    checked
+                  />
+                  <span class="field-checkbox__name-text">Только отличия</span>
+                </label>
+              </div>
             </div>
-          </div>
-          <div class="compare__products">
-            <div class="js-compare-gallery splide">
-              <div class="splide__track">
-                <div class="splide__list">
-                  <div class="splide__slide"><div class="card">
-  <div class="card__compare">
+            <div class="compare__products">
+              <div class="js-compare-gallery splide">
+                <div class="splide__track">
+                  <div class="splide__list">
+                    <div class="splide__slide">
+                      <div class="card">
+  <div class="card__remove">
     <button class="btn-remove">Удалить</button>
   </div>
   <div class="card__img">
@@ -126,10 +131,15 @@
     </div>
     <div class="card__price">14 500 ₽</div>
   </div>
+  <div class="card__buttons">
+    <a href="" class="btn btn--sm btn--gray">Купить</a>
+  </div>
 </div>
-</div>
-                  <div class="splide__slide"><div class="card">
-  <div class="card__compare">
+
+                    </div>
+                    <div class="splide__slide">
+                      <div class="card">
+  <div class="card__remove">
     <button class="btn-remove">Удалить</button>
   </div>
   <div class="card__img">
@@ -141,10 +151,15 @@
     </div>
     <div class="card__price">14 500 ₽</div>
   </div>
+  <div class="card__buttons">
+    <a href="" class="btn btn--sm btn--gray">Купить</a>
+  </div>
 </div>
-</div>
-                  <div class="splide__slide"><div class="card">
-  <div class="card__compare">
+
+                    </div>
+                    <div class="splide__slide">
+                      <div class="card">
+  <div class="card__remove">
     <button class="btn-remove">Удалить</button>
   </div>
   <div class="card__img">
@@ -156,10 +171,15 @@
     </div>
     <div class="card__price">14 500 ₽</div>
   </div>
+  <div class="card__buttons">
+    <a href="" class="btn btn--sm btn--gray">Купить</a>
+  </div>
 </div>
-</div>
-                  <div class="splide__slide"><div class="card">
-  <div class="card__compare">
+
+                    </div>
+                    <div class="splide__slide">
+                      <div class="card">
+  <div class="card__remove">
     <button class="btn-remove">Удалить</button>
   </div>
   <div class="card__img">
@@ -171,10 +191,15 @@
     </div>
     <div class="card__price">14 500 ₽</div>
   </div>
+  <div class="card__buttons">
+    <a href="" class="btn btn--sm btn--gray">Купить</a>
+  </div>
 </div>
-</div>
-                  <div class="splide__slide"><div class="card">
-  <div class="card__compare">
+
+                    </div>
+                    <div class="splide__slide">
+                      <div class="card">
+  <div class="card__remove">
     <button class="btn-remove">Удалить</button>
   </div>
   <div class="card__img">
@@ -186,256 +211,243 @@
     </div>
     <div class="card__price">14 500 ₽</div>
   </div>
+  <div class="card__buttons">
+    <a href="" class="btn btn--sm btn--gray">Купить</a>
+  </div>
 </div>
-</div>
+
+                    </div>
+                  </div>
+                </div>
+                <div class="splide__arrows">
+                  <button
+                    class="splide__arrow splide__arrow--prev splide__arrow--gray"
+                  ></button>
+                  <button
+                    class="splide__arrow splide__arrow--next splide__arrow--gray"
+                  ></button>
                 </div>
               </div>
             </div>
           </div>
-          
-        </div>
-        <div class="accordion accordion--color-interval">
-          <div class="accordion__section">
-            <div class="accordion__head accordion__head-title">
-              Heliosa 11
-            </div>
-            <div class="accordion__body">
-              <ul class="spec-list spec-list--cols-5">
-                <li>
-                  <span class="spec-list__label">Артикул</span>
-                  <div class="spec-list__cells">
-                    <span><a href="">11FM20</a></span>
-                    <span><a href="">11B20</a></span>
-                    <span><a href="">11BX5</a></span>
-                    <span><a href="">11FMX5</a></span>
-                  </div>
-                </li>
-                <li>
-                  <span class="spec-list__label">Мощность, Вт</span>
-                  <div class="spec-list__cells">
-                    <span><a href="">2000</a></span>
-                    <span><a href="">2000</a></span>
-                    <span><a href="">1500</a></span>
-                    <span><a href="">1500</a></span>
-                  </div>
-                </li>
-                <li>
-                  <span class="spec-list__label">Индекс защиты</span>
-                  <div class="spec-list__cells">
-                    <span><a href="">IP20</a></span>
-                    <span><a href="">IP20</a></span>
-                    <span><a href="">IPX5</a></span>
-                    <span><a href="">IPX5</a></span>
-                  </div>
-                </li>
-                <li>
-                  <span class="spec-list__label">Цвет</span>
-                  <div class="spec-list__cells">
-                    <span><a href="">Черный</a></span>
-                    <span><a href="">Белый</a></span>
-                    <span><a href="">Черный</a></span>
-                    <span><a href="">Белый</a></span>
-                  </div>
-                </li>
-                <li>
-                  <span class="spec-list__label">Подставка</span>
-                  <div class="spec-list__cells">
-                    <span><a href="">Есть</a></span>
-                    <span><a href="">Есть</a></span>
-                    <span><a href="">Нет</a></span>
-                    <span><a href="">Нет</a></span>
-                  </div>
-                </li>
-                <li>
-                  <span class="spec-list__label">Пульт ДУ</span>
-                  <div class="spec-list__cells">
-                    <span><a href="">Нет</a></span>
-                    <span><a href="">Нет</a></span>
-                    <span><a href="">Нет</a></span>
-                    <span><a href="">Нет</a></span>
-                  </div>
-                </li>
-                <li>
-                  <span class="spec-list__label">Площадь, м2</span>
-                  <div class="spec-list__cells">
-                    <span><a href="">12 – 15</a></span>
-                    <span><a href="">12 – 15</a></span>
-                    <span><a href="">12 – 15</a></span>
-                    <span><a href="">12 – 15</a></span>
-                  </div>
-                </li>
-                <li>
-                  <span class="spec-list__label">вилка</span>
-                  <div class="spec-list__cells">
-                    <span><a href="">Есть</a></span>
-                    <span><a href="">Есть</a></span>
-                    <span><a href="">Нет</a></span>
-                    <span><a href="">Нет</a></span>
-                  </div>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div class="accordion__section">
-            <div class="accordion__head accordion__head-title">
-              Heliosa 55
-            </div>
-            <div class="accordion__body">
-              <ul class="spec-list spec-list--cols-5">
-                <li>
-                  <span class="spec-list__label">Артикул</span>
-                  <div class="spec-list__cells">
-                    <span><a href="">11FM20</a></span>
-                    <span><a href="">11B20</a></span>
-                    <span><a href="">11BX5</a></span>
-                    <span><a href="">11FMX5</a></span>
-                  </div>
-                </li>
-                <li>
-                  <span class="spec-list__label">Мощность, Вт</span>
-                  <div class="spec-list__cells">
-                    <span><a href="">2000</a></span>
-                    <span><a href="">2000</a></span>
-                    <span><a href="">1500</a></span>
-                    <span><a href="">1500</a></span>
-                  </div>
-                </li>
-                <li>
-                  <span class="spec-list__label">Индекс защиты</span>
-                  <div class="spec-list__cells">
-                    <span><a href="">IP20</a></span>
-                    <span><a href="">IP20</a></span>
-                    <span><a href="">IPX5</a></span>
-                    <span><a href="">IPX5</a></span>
-                  </div>
-                </li>
-                <li>
-                  <span class="spec-list__label">Цвет</span>
-                  <div class="spec-list__cells">
-                    <span><a href="">Черный</a></span>
-                    <span><a href="">Белый</a></span>
-                    <span><a href="">Черный</a></span>
-                    <span><a href="">Белый</a></span>
-                  </div>
-                </li>
-                <li>
-                  <span class="spec-list__label">Подставка</span>
-                  <div class="spec-list__cells">
-                    <span><a href="">Есть</a></span>
-                    <span><a href="">Есть</a></span>
-                    <span><a href="">Нет</a></span>
-                    <span><a href="">Нет</a></span>
-                  </div>
-                </li>
-                <li>
-                  <span class="spec-list__label">Пульт ДУ</span>
-                  <div class="spec-list__cells">
-                    <span><a href="">Нет</a></span>
-                    <span><a href="">Нет</a></span>
-                    <span><a href="">Нет</a></span>
-                    <span><a href="">Нет</a></span>
-                  </div>
-                </li>
-                <li>
-                  <span class="spec-list__label">Площадь, м2</span>
-                  <div class="spec-list__cells">
-                    <span><a href="">12 – 15</a></span>
-                    <span><a href="">12 – 15</a></span>
-                    <span><a href="">12 – 15</a></span>
-                    <span><a href="">12 – 15</a></span>
-                  </div>
-                </li>
-                <li>
-                  <span class="spec-list__label">вилка</span>
-                  <div class="spec-list__cells">
-                    <span><a href="">Есть</a></span>
-                    <span><a href="">Есть</a></span>
-                    <span><a href="">Нет</a></span>
-                    <span><a href="">Нет</a></span>
-                  </div>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div class="accordion__section">
-            <div class="accordion__head accordion__head-title">
-              Heliosa 44
-            </div>
-            <div class="accordion__body">
-              <ul class="spec-list spec-list--cols-5">
-                <li>
-                  <span class="spec-list__label">Артикул</span>
-                  <div class="spec-list__cells">
-                    <span><a href="">11FM20</a></span>
-                    <span><a href="">11B20</a></span>
-                    <span><a href="">11BX5</a></span>
-                    <span><a href="">11FMX5</a></span>
-                  </div>
-                </li>
-                <li>
-                  <span class="spec-list__label">Мощность, Вт</span>
-                  <div class="spec-list__cells">
-                    <span><a href="">2000</a></span>
-                    <span><a href="">2000</a></span>
-                    <span><a href="">1500</a></span>
-                    <span><a href="">1500</a></span>
-                  </div>
-                </li>
-                <li>
-                  <span class="spec-list__label">Индекс защиты</span>
-                  <div class="spec-list__cells">
-                    <span><a href="">IP20</a></span>
-                    <span><a href="">IP20</a></span>
-                    <span><a href="">IPX5</a></span>
-                    <span><a href="">IPX5</a></span>
-                  </div>
-                </li>
-                <li>
-                  <span class="spec-list__label">Цвет</span>
-                  <div class="spec-list__cells">
-                    <span><a href="">Черный</a></span>
-                    <span><a href="">Белый</a></span>
-                    <span><a href="">Черный</a></span>
-                    <span><a href="">Белый</a></span>
-                  </div>
-                </li>
-                <li>
-                  <span class="spec-list__label">Подставка</span>
-                  <div class="spec-list__cells">
-                    <span><a href="">Есть</a></span>
-                    <span><a href="">Есть</a></span>
-                    <span><a href="">Нет</a></span>
-                    <span><a href="">Нет</a></span>
-                  </div>
-                </li>
-                <li>
-                  <span class="spec-list__label">Пульт ДУ</span>
-                  <div class="spec-list__cells">
-                    <span><a href="">Нет</a></span>
-                    <span><a href="">Нет</a></span>
-                    <span><a href="">Нет</a></span>
-                    <span><a href="">Нет</a></span>
-                  </div>
-                </li>
-                <li>
-                  <span class="spec-list__label">Площадь, м2</span>
-                  <div class="spec-list__cells">
-                    <span><a href="">12 – 15</a></span>
-                    <span><a href="">12 – 15</a></span>
-                    <span><a href="">12 – 15</a></span>
-                    <span><a href="">12 – 15</a></span>
-                  </div>
-                </li>
-                <li>
-                  <span class="spec-list__label">вилка</span>
-                  <div class="spec-list__cells">
-                    <span><a href="">Есть</a></span>
-                    <span><a href="">Есть</a></span>
-                    <span><a href="">Нет</a></span>
-                    <span><a href="">Нет</a></span>
-                  </div>
-                </li>
-              </ul>
+          <div class="compare__info">
+            <div class="accordion accordion--color-interval">
+              <div class="accordion__section">
+                <div class="accordion__head accordion__head-title">
+                  Основные характеристики
+                </div>
+                <div class="accordion__body">
+                  <ul class="spec-list spec-list--cols-5">
+                    <li>
+                      <span class="spec-list__label">Мощность</span>
+                      <div class="spec-list__cells">
+                        <span>2000 Вт</span>
+                        <span>2000 Вт</span>
+                        <span>2000 Вт</span>
+                        <span>2000 Вт</span>
+                      </div>
+                    </li>
+                    <li>
+                      <span class="spec-list__label">Класс влагозащиты</span>
+                      <div class="spec-list__cells">
+                        <span>IPX5</span>
+                        <span>IPX5</span>
+                        <span>IPX5</span>
+                        <span>IPX5</span>
+                      </div>
+                    </li>
+                    <li>
+                      <span class="spec-list__label">Цвет</span>
+                      <div class="spec-list__cells">
+                        <span>белый (Carrara, RAL 9016)</span>
+                        <span>белый (Carrara, RAL 9016)</span>
+                        <span>белый (Carrara, RAL 9016)</span>
+                        <span>белый (Carrara, RAL 9016)</span>
+                      </div>
+                    </li>
+                    <li>
+                      <span class="spec-list__label">Обогреваемая площадь</span>
+                      <div class="spec-list__cells">
+                        <span>20–25 м2</span>
+                        <span>20–25 м2</span>
+                        <span>20–25 м2</span>
+                        <span>20–25 м2</span>
+                      </div>
+                    </li>
+                    <li>
+                      <span class="spec-list__label">Высота установки</span>
+                      <div class="spec-list__cells">
+                        <span>2,30–2,50 м</span>
+                        <span>2,30–2,50 м</span>
+                        <span>2,30–2,50 м</span>
+                        <span>2,30–2,50 м</span>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="accordion__section">
+                <div class="accordion__head accordion__head-title">
+                  Техническая информация
+                </div>
+                <div class="accordion__body">
+                  <ul class="spec-list spec-list--cols-5">
+                    <li>
+                      <span class="spec-list__label">Артикул</span>
+                      <div class="spec-list__cells">
+                        <span><a href="">11FM20</a></span>
+                        <span><a href="">11B20</a></span>
+                        <span><a href="">11BX5</a></span>
+                        <span><a href="">11FMX5</a></span>
+                      </div>
+                    </li>
+                    <li>
+                      <span class="spec-list__label">Мощность, Вт</span>
+                      <div class="spec-list__cells">
+                        <span><a href="">2000</a></span>
+                        <span><a href="">2000</a></span>
+                        <span><a href="">1500</a></span>
+                        <span><a href="">1500</a></span>
+                      </div>
+                    </li>
+                    <li>
+                      <span class="spec-list__label">Индекс защиты</span>
+                      <div class="spec-list__cells">
+                        <span><a href="">IP20</a></span>
+                        <span><a href="">IP20</a></span>
+                        <span><a href="">IPX5</a></span>
+                        <span><a href="">IPX5</a></span>
+                      </div>
+                    </li>
+                    <li>
+                      <span class="spec-list__label">Цвет</span>
+                      <div class="spec-list__cells">
+                        <span><a href="">Черный</a></span>
+                        <span><a href="">Белый</a></span>
+                        <span><a href="">Черный</a></span>
+                        <span><a href="">Белый</a></span>
+                      </div>
+                    </li>
+                    <li>
+                      <span class="spec-list__label">Подставка</span>
+                      <div class="spec-list__cells">
+                        <span><a href="">Есть</a></span>
+                        <span><a href="">Есть</a></span>
+                        <span><a href="">Нет</a></span>
+                        <span><a href="">Нет</a></span>
+                      </div>
+                    </li>
+                    <li>
+                      <span class="spec-list__label">Пульт ДУ</span>
+                      <div class="spec-list__cells">
+                        <span><a href="">Нет</a></span>
+                        <span><a href="">Нет</a></span>
+                        <span><a href="">Нет</a></span>
+                        <span><a href="">Нет</a></span>
+                      </div>
+                    </li>
+                    <li>
+                      <span class="spec-list__label">Площадь, м2</span>
+                      <div class="spec-list__cells">
+                        <span><a href="">12 – 15</a></span>
+                        <span><a href="">12 – 15</a></span>
+                        <span><a href="">12 – 15</a></span>
+                        <span><a href="">12 – 15</a></span>
+                      </div>
+                    </li>
+                    <li>
+                      <span class="spec-list__label">вилка</span>
+                      <div class="spec-list__cells">
+                        <span><a href="">Есть</a></span>
+                        <span><a href="">Есть</a></span>
+                        <span><a href="">Нет</a></span>
+                        <span><a href="">Нет</a></span>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="accordion__section">
+                <div class="accordion__head accordion__head-title">
+                  Корпус и дизайн
+                </div>
+                <div class="accordion__body">
+                  <ul class="spec-list spec-list--cols-5">
+                    <li>
+                      <span class="spec-list__label">Артикул</span>
+                      <div class="spec-list__cells">
+                        <span><a href="">11FM20</a></span>
+                        <span><a href="">11B20</a></span>
+                        <span><a href="">11BX5</a></span>
+                        <span><a href="">11FMX5</a></span>
+                      </div>
+                    </li>
+                    <li>
+                      <span class="spec-list__label">Мощность, Вт</span>
+                      <div class="spec-list__cells">
+                        <span><a href="">2000</a></span>
+                        <span><a href="">2000</a></span>
+                        <span><a href="">1500</a></span>
+                        <span><a href="">1500</a></span>
+                      </div>
+                    </li>
+                    <li>
+                      <span class="spec-list__label">Индекс защиты</span>
+                      <div class="spec-list__cells">
+                        <span><a href="">IP20</a></span>
+                        <span><a href="">IP20</a></span>
+                        <span><a href="">IPX5</a></span>
+                        <span><a href="">IPX5</a></span>
+                      </div>
+                    </li>
+                    <li>
+                      <span class="spec-list__label">Цвет</span>
+                      <div class="spec-list__cells">
+                        <span><a href="">Черный</a></span>
+                        <span><a href="">Белый</a></span>
+                        <span><a href="">Черный</a></span>
+                        <span><a href="">Белый</a></span>
+                      </div>
+                    </li>
+                    <li>
+                      <span class="spec-list__label">Подставка</span>
+                      <div class="spec-list__cells">
+                        <span><a href="">Есть</a></span>
+                        <span><a href="">Есть</a></span>
+                        <span><a href="">Нет</a></span>
+                        <span><a href="">Нет</a></span>
+                      </div>
+                    </li>
+                    <li>
+                      <span class="spec-list__label">Пульт ДУ</span>
+                      <div class="spec-list__cells">
+                        <span><a href="">Нет</a></span>
+                        <span><a href="">Нет</a></span>
+                        <span><a href="">Нет</a></span>
+                        <span><a href="">Нет</a></span>
+                      </div>
+                    </li>
+                    <li>
+                      <span class="spec-list__label">Площадь, м2</span>
+                      <div class="spec-list__cells">
+                        <span><a href="">12 – 15</a></span>
+                        <span><a href="">12 – 15</a></span>
+                        <span><a href="">12 – 15</a></span>
+                        <span><a href="">12 – 15</a></span>
+                      </div>
+                    </li>
+                    <li>
+                      <span class="spec-list__label">вилка</span>
+                      <div class="spec-list__cells">
+                        <span><a href="">Есть</a></span>
+                        <span><a href="">Есть</a></span>
+                        <span><a href="">Нет</a></span>
+                        <span><a href="">Нет</a></span>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -519,15 +531,20 @@
         gap: 50,
         pagination: false,
         breakpoints: {
-          992: {
+          1240: {
             perPage: 3,
-            gap: 50,
+            gap: 70,
           },
-          640: {
+          // 991: {
+          //   perPage: 3,
+          //   gap: 50,
+          // },
+          991: {
             perPage: 2,
-            gap: 30,
+            gap: 25,
           },
           480: {
+            perPage: 2,
             gap: 15,
           },
         },

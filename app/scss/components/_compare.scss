@@ -1,0 +1,84 @@
+.compare {
+  &__head {
+    padding-top: 25px;
+    padding-bottom: 50px;
+
+    @include md {
+      display: grid;
+      grid-template-columns: 1fr minmax(365px, 830px);
+      grid-gap: 0 35px;
+      padding-bottom: 60px;
+    }
+    @include lg {
+      padding-bottom: 70px;
+      padding-top: 35px;
+    }
+    @include xl {
+      padding-top: 40px;
+      padding-bottom: 100px;
+    }
+  }
+
+  &__products {
+    .card {
+      &__name {
+        font-size: 14px;
+      }
+      &__price {
+        font-size: 16px;
+      }
+    }
+    .splide {
+      &__arrow {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-100%);
+
+        &--prev {
+          left: 0;
+        }
+        &--next {
+          right: 0;
+        }
+      }
+    }
+  }
+  &__buttons {
+    @include md {
+      max-width: 200px;
+    }
+    @include lg {
+      max-width: 240px;
+    }
+    @include lg {
+      max-width: 300px;
+    }
+    .btn {
+      width: 100%;
+      font-size: 10px;
+      padding: 20px 35px;
+      margin-bottom: 15px;
+      @include lg {
+        font-size: 12px;
+      }
+    }
+    .field-checkbox {
+      @include lg {
+        padding-top: 15px;
+      }
+    }
+  }
+
+  &__info {
+    padding-bottom: 100px;
+    @include md {
+      padding-bottom: 120px;
+    }
+    @include lg {
+      padding-bottom: 140px;
+    }
+    @include xl {
+      padding-bottom: 160px;
+    }
+  }
+}

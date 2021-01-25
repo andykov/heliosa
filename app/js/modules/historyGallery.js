@@ -15,18 +15,39 @@ if (sliderHistoryElem) {
     },
     breakpoints: {
       1240: {
-        perPage: 3,
-        gap: 88,
+        perPage: 2,
+        gap: 80,
+        padding: {
+          // left: (window.screen.width - 960) / 2 + 'px',
+          right: '240px',
+        },
       },
       991: {
         perPage: 2,
-        gap: 80,
+        gap: 40,
+        padding: {
+          // left: (window.screen.width - 960) / 2 + 'px',
+          right: 0,
+        },
       },
       639: {
         perPage: 1,
-        gap: 40,
       },
     },
+    // breakpoints: {
+    //   1240: {
+    //     perPage: 2,
+    //     gap: 80,
+    //   },
+    //   991: {
+    //     perPage: 2,
+    //     gap: 40,
+    //   },
+    //   639: {
+    //     perPage: 1,
+    //     gap: 0,
+    //   },
+    // },
   });
   sliderHistory.mount();
   sliderHistory.on('mounted', setCurrentIndexSLide(sliderHistory));

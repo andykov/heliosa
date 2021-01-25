@@ -12,11 +12,19 @@
     &--line & {
       &-inner {
         &:after {
-          content: '';
-          width: 100%;
-          height: 1px;
-          background-color: $gray;
-          margin-left: 60px;
+          @include md {
+            content: '';
+            width: 100%;
+            height: 1px;
+            background-color: $gray;
+            margin-left: 40px;
+          }
+          @include lg {
+            margin-left: 50px;
+          }
+          @include xl {
+            margin-left: 60px;
+          }
         }
       }
     }
@@ -47,7 +55,7 @@
     flex-shrink: 0;
     cursor: pointer;
     opacity: 1;
-    transition: border-color $transition-time;
+    transition: border-color $transition-time, background-color $transition-time;
     background-color: transparent;
     background-repeat: no-repeat;
     background-size: 15px auto;
@@ -80,6 +88,13 @@
         border-color: $black;
       }
     }
+    &--gray {
+      border: 0;
+      background-color: #c4c4c4;
+      &:hover {
+        background-color: $black;
+      }
+    }
 
     &--prev {
       left: 10px;
@@ -97,6 +112,7 @@
       &.splide__arrow--black {
         background-image: url('../img/icons/arrow-black-left.svg');
       }
+      &.splide__arrow--gray,
       &.splide__arrow--white {
         background-image: url('../img/icons/arrow-white-left.svg');
       }
@@ -113,9 +129,11 @@
       @media screen and (min-width: 1440px) {
         right: -90px;
       }
+
       &.splide__arrow--black {
         background-image: url('../img/icons/arrow-black-right.svg');
       }
+      &.splide__arrow--gray,
       &.splide__arrow--white {
         background-image: url('../img/icons/arrow-white-right.svg');
       }

@@ -21,6 +21,7 @@
 @import './components/catalog-gallery';
 @import './components/photo-gallery';
 @import './components/main-stores';
+@import './components/compare';
 @import './components/online-stores';
 @import './components/product-hero';
 @import './components/tiles';
@@ -530,17 +531,6 @@ body {
 // container-narrow
 .container-narrow {
   max-width: 850px;
-}
-
-.compare {
-  display: grid;
-  grid-template-columns: 300px 1fr;
-
-  &__products {
-    max-width: 830px;
-  }
-  &__buttons {
-  }
 }
 
 @keyframes bubble-fade-in {

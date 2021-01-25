@@ -1,8 +1,25 @@
 .history {
+  padding: 0 10px;
+  @include md {
+    padding: 0 20px;
+  }
+  @include lg {
+    padding-right: 0;
+  }
+  @include xl {
+    padding: 0;
+  }
   .splide__track {
     margin-bottom: 80px;
   }
-
+  .splide__arrows {
+    margin-left: -10px;
+    margin-right: -10px;
+    @include md {
+      margin-left: -20px;
+      margin-right: -20px;
+    }
+  }
   &__item {
     span {
       display: block;
