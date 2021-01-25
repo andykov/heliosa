@@ -18,7 +18,7 @@
     padding-top: 10px;
     padding-bottom: 10px;
 
-    @include xl {
+    @include lg {
       padding-top: 20px;
       padding-bottom: 20px;
     }
@@ -32,7 +32,7 @@
       top: 9px;
       left: 15px;
 
-      @include xl {
+      @include lg {
         top: 19px;
       }
     }
@@ -40,7 +40,11 @@
   input:checked ~ .field-checkbox__name-text:before {
   }
   input:checked ~ .field-checkbox__name-text:after {
-    top: 25px;
+    top: 15px;
     left: 21px;
+
+    @include lg {
+      top: 25px;
+    }
   }
 }

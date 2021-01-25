@@ -1,0 +1,25 @@
+.photo-gallery {
+  @include lg-max {
+    padding-left: 20px;
+  }
+  @include xs-max {
+    padding-left: 10px;
+  }
+  .splide {
+    &__slide {
+      display: flex;
+      align-items: center;
+      opacity: 0.3;
+      &.is-active {
+        transition: opacity $transition-time;
+        opacity: 1;
+      }
+    }
+    &__arrows {
+      padding-top: 40px;
+      @include md {
+        padding-top: 60px;
+      }
+    }
+  }
+}

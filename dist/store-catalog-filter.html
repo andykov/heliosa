@@ -34,7 +34,7 @@
       <div class="header__nav">
         <nav class="nav">
           <button class="mobile-nav-close">
-            <svg class="icon icon--blue" width="19" height="19">
+            <svg class="icon" width="19" height="19">
               <use xlink:href="img/icons.svg#icon-close"></use>
             </svg>
           </button>
@@ -109,6 +109,14 @@
         <div class="catalog catalog--products">
           <div class="catalog__filters">
             <form class="filters">
+              <div class="js-filter-mobile filters__mobile">
+                <span>Фильтр</span>
+                <span class="icon">
+                  <svg width="16" height="12">
+                    <use xlink:href="img/icons.svg#icon-filter"></use>
+                  </svg>
+                </span>
+              </div>
               <div class="filters__group">
                 <div class="filters__item">
                   <div class="dropdown">
@@ -314,7 +322,7 @@
                   <div class="filters__buttons">
                     <button
                       type="submit"
-                      class="js-filters-clear filters__clear"
+                      class="js-filters-clear filters__clear btn btn--white btn--outline"
                     >
                       <span class="hide-mobile">Очистить фильтр</span>
                       <span class="hide-tablet">Сбросить</span>
@@ -328,18 +336,9 @@
                   </div>
                 </div>
               </div>
-              <!-- <div class="filters__buttons">
-                <button type="submit" class="js-filters-clear filters__clear">
-                  <span class="hide-mobile">Очистить фильтр</span>
-                  <span class="hide-tablet">Сбросить</span>
-                </button>
-                <button type="submit" class="filters__submit hide-tablet btn">
-                  Применить
-                </button>
-              </div> -->
             </form>
             <div class="sorting">
-              Сортировать по цене:
+              <span class="sorting__label">Сортировать по цене:</span>
               <a href="" class="active">сначала дешевые</a>
               <a href="">сначала дороже</a>
             </div>

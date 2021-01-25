@@ -1,0 +1,97 @@
+.accordion {
+  &--color-interval & {
+    &__section {
+      &:nth-child(odd) {
+        .accordion__head {
+          background-color: $gray-light;
+        }
+      }
+    }
+  }
+
+  &__section {
+    &.opened {
+      .accordion__head {
+        &::after {
+          transform: translateY(-50%) scale(0);
+        }
+      }
+      .accordion__body {
+        display: block;
+
+        ul {
+          list-style: none;
+          padding: 0;
+          margin: 0;
+        }
+      }
+    }
+  }
+
+  &__head {
+    padding: 10px 57px 10px 20px;
+    display: flex;
+    align-items: center;
+    min-height: 80px;
+    cursor: pointer;
+    position: relative;
+
+    @include md {
+      padding-left: 30px;
+    }
+    @include lg {
+      min-height: 90px;
+    }
+
+    &::before,
+    &::after {
+      content: '';
+      background-color: $black;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%) scale(1);
+      transition: transform $transition-time ease-in-out;
+    }
+    &::before {
+      width: 17px;
+      height: 2px;
+      right: 30px;
+    }
+    &::after {
+      width: 2px;
+      height: 17px;
+      right: 37.5px;
+    }
+
+    &-title {
+      font-size: 16px;
+      font-weight: $font-bold;
+      line-height: 1.2;
+      @include md {
+        font-size: 18px;
+      }
+      @include lg {
+        font-size: 20px;
+      }
+    }
+  }
+
+  &__body {
+    display: none;
+    transition: opacity 1.25s;
+    transition-delay: opacity 0.2s;
+    border-bottom: 1px solid #eaeaea;
+    animation: bubble-fade-in 0.55s ease alternate;
+  }
+
+  &__box {
+    opacity: 0.6;
+    padding: 20px 20px 30px;
+    @include md {
+      padding: 25px 25px 35px;
+    }
+    @include lg {
+      padding: 30px 30px 40px;
+    }
+  }
+}

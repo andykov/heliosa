@@ -110,14 +110,26 @@
     });
 
     function setLabelSelected(selected) {
-      console.log('selected=', selected);
       let maxAmount = 2;
       let labels = selected.slice(0, maxAmount);
+      // let labels = selected.slice(0, maxAmount);
       let count = selected.length - maxAmount;
 
       label.textContent = labels;
       if (count > 0) {
         label.textContent = `${labels} +${count}`;
+      }
+      // console.log('selected=', selected);
+      // console.log(element.clientWidth);
+      // console.log(label.offsetWidth);
+      // console.log(element.offsetWidth, element.clientWidth, label.clientWidth);
+      // let maxWidth =
+      //   label.offsetWidth + (element.clientWidth - label.clientWidth);
+      // console.log(maxWidth);
+      if (label.clientWidth + 90 >= element.offsetWidth) {
+        console.log('>', selected.length);
+      } else {
+        console.log('<', selected.length);
       }
     }
     if (clear) {

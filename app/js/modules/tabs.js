@@ -44,9 +44,10 @@ function setLabelActiveTab(data) {
   }
 
   let parent = data.tab.closest('.tabs-nav');
-  // console.log(parent);
-  let mobileBtn = parent.querySelector('[data-tabs-mobile]') || null;
-  if (mobileBtn) {
-    mobileBtn.textContent = data.tab.textContent;
+  if (parent) {
+    let mobileBtn = parent.querySelector('[data-tabs-mobile]') || null;
+    if (mobileBtn) {
+      mobileBtn.textContent = data.tab.textContent;
+    }
   }
 }

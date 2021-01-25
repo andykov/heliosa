@@ -1,0 +1,159 @@
+.banner-collections {
+  color: #fff;
+
+  &__item {
+    display: grid;
+    grid-template-columns: 1fr;
+    height: 420px;
+    @include md {
+      grid-template-columns: 1fr 1fr;
+      height: 310px;
+    }
+    @include lg {
+      height: 400px;
+
+      padding: 0 80px;
+    }
+    @include xl {
+      height: 550px;
+      grid-template-columns: 1fr auto;
+    }
+    @media screen and (min-width: 1400px) {
+      padding: 0;
+    }
+  }
+  &__overhead {
+    display: inline-block;
+    // vertical-align: top;
+    font-size: 9px;
+    line-height: 1;
+    letter-spacing: 0.09265em;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    @include xl {
+      font-size: 14px;
+    }
+  }
+  &__text {
+    align-self: flex-end;
+    padding-top: 20px;
+    @include sm-max {
+      grid-row: 1;
+    }
+    @include md {
+      padding-top: 40px;
+    }
+    @include lg {
+      padding-top: 80px;
+    }
+  }
+  &__title {
+    font-size: 28px;
+    font-weight: $font-semibold;
+    line-height: 1;
+    // margin-bottom: 40px;
+
+    @include md {
+      font-size: 38px;
+      margin-bottom: 20px;
+    }
+    @include lg {
+      font-size: 48px;
+      margin-bottom: 30px;
+    }
+    @include xl {
+      font-size: 56px;
+      margin-bottom: 40px;
+    }
+  }
+  &__img {
+    grid-row: 2;
+    @include sm-max {
+      text-align: center;
+      max-height: 170px;
+      img {
+        max-height: 170px;
+      }
+    }
+    @include md {
+      grid-row: 1/3;
+      grid-column: 2/3;
+    }
+    // float: right;
+    // @include col(lg, 6, 12);
+  }
+  &__btn {
+    align-self: flex-start;
+    padding-bottom: 80px;
+    @include sm-max {
+      grid-row: 3;
+      padding-bottom: 95px;
+
+      .btn {
+        width: 100%;
+      }
+    }
+    @include md-max {
+      .btn {
+        padding-top: 18px;
+        padding-bottom: 18px;
+      }
+    }
+    @include xl {
+      padding-bottom: 80px;
+    }
+  }
+
+  .splide {
+    &__arrows {
+      position: absolute;
+      top: calc(100% - 50px);
+      transform: translateY(-50%);
+      width: 100%;
+      z-index: 1;
+      pointer-events: none;
+
+      @include lg {
+        top: 50%;
+      }
+
+      .container {
+        position: relative;
+        height: 0;
+      }
+    }
+    &__arrow {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+
+      &--prev {
+        left: 10px;
+        @include md {
+          left: 20px;
+        }
+        @media screen and (min-width: 1400px) {
+          left: -90px;
+        }
+      }
+      &--next {
+        right: 10px;
+        @include md {
+          right: 20px;
+        }
+        @media screen and (min-width: 1400px) {
+          right: -90px;
+        }
+      }
+    }
+    &__pagination {
+      position: absolute;
+      bottom: 0;
+      padding: 0 0 37.5px;
+
+      @include lg {
+        padding: 50px 0;
+      }
+    }
+  }
+}

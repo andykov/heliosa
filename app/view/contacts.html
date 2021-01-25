@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="">
+  <head>
+    <meta charset="utf-8" />
+    <title>OptimizedHTML 5</title>
+    <meta name="description" content="Startup HTML template OptimizedHTML 5" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" href="img/favicon.png" />
+    <meta property="og:image" content="img/dest/preview.jpg" />
+    <link rel="stylesheet" href="css/app.min.css" />
+  </head>
+  <body>
+    @@include('modules/_header-site.html')
+    <main class="page">
+      <div class="page-contacts">
+        <div class="page-head pb-0">
+          <div class="container">
+            <div class="container-narrow">
+              <h1 class="page-head__title">Контакты</h1>
+              <div class="page-head__subtitle">
+                Чтобы начать сотрудничество или получить больше информации вы
+                можете связаться любыми способами
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="container">
+          <div class="contacts-cities">
+            <div class="contacts-cities__tabs" data-tabs>
+              <button>Москва</button>
+              <button>Санкт–Петербург</button>
+            </div>
+
+            <div class="contacts-cities__panes" data-panes>
+              <div class="contacts-cities__pane">
+                <ul class="contacts-cities__list">
+                  <li>
+                    <span>Адрес</span>
+                    1-й Грайвороновский проезд, 6, 109518
+                  </li>
+                  <li>
+                    <span>Телефон</span>
+                    <a href="tel:+74991771390">+7 (499) 177-13-90</a>
+                  </li>
+                  <li>
+                    <span>E–mail</span>
+                    <a href="mailto:sale@heliosa-rus.ru">sale@heliosa-rus.ru</a>
+                  </li>
+                  <li>
+                    <a href="">
+                      <svg class="icon" width="10" height="17">
+                        <use xlink:href="img/icons.svg#icon-pin2"></use>
+                      </svg>
+                      Построить маршрут
+                    </a>
+                  </li>
+                </ul>
+                <div class="contacts-cities__map">
+                  <img src="img/content/address-moscow-map.png" alt="" />
+                </div>
+              </div>
+              <div class="contacts-cities__pane">
+                <ul class="contacts-cities__list">
+                  <li>
+                    <span>Адрес</span>
+                    1-й Грайвороновский проезд
+                  </li>
+                  <li>
+                    <span>Телефон</span>
+                    <a href="tel:+74991771390">+7 (499) 177-13-90</a>
+                  </li>
+                  <li>
+                    <span>E–mail</span>
+                    <a href="mailto:sale@heliosa-rus.ru">sale@heliosa-rus.ru</a>
+                  </li>
+                  <li>
+                    <a href="">
+                      <svg class="icon" width="10" height="17">
+                        <use xlink:href="img/icons.svg#icon-pin2"></use>
+                      </svg>
+                      Построить маршрут
+                    </a>
+                  </li>
+                </ul>
+                <div class="contacts-cities__map">
+                  <img src="https://picsum.photos/800/620" alt="" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    @@include('modules/_footer.html')
+    <script src="js/vendor/tabbis.min.js"></script>
+    <script src="js/main.min.js"></script>
+  </body>
+</html>

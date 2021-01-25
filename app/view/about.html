@@ -92,15 +92,17 @@
       </section>
       <section class="page-section page-section--gray">
         <div class="container">
-          <div class="page-section__head">
-            <h2>Сертификация</h2>
-            <div class="page-section__text">
-              Star Progetti позаботилась о безопасности монтажников,
-              дистрибьюторов и пользователей. Сертификаты качества гарантируют,
-              что продукция прошла проверку качества и все испытания,
-              необходимые для подтверждения безопасности и надежности.
-              Сертифицирующие организации проводят мониторинг во время
-              производства и при выпуске продукции на рынок.
+          <div class="container-narrow">
+            <div class="page-section__head">
+              <h2>Сертификация</h2>
+              <div class="page-section__text">
+                Star Progetti позаботилась о безопасности монтажников,
+                дистрибьюторов и пользователей. Сертификаты качества
+                гарантируют, что продукция прошла проверку качества и все
+                испытания, необходимые для подтверждения безопасности и
+                надежности. Сертифицирующие организации проводят мониторинг во
+                время производства и при выпуске продукции на рынок.
+              </div>
             </div>
           </div>
           <div class="certification">
@@ -171,7 +173,7 @@
           <div class="tiles tiles--revers">
             <div class="tile">
               <div class="tile__text">
-                <div class="h3">Инновации</div>
+                <div class="tile__title">Инновации</div>
                 <p>
                   Star Progetti - экологически устойчивая фирма с нулевым
                   воздействием. Для производства оборудования для отопления Star
@@ -185,7 +187,7 @@
             </div>
             <div class="tile">
               <div class="tile__text">
-                <div class="h3">Экологичность</div>
+                <div class="tile__title">Экологичность</div>
                 <p>
                   Star Progetti, экологически безопасная компания с нулевым
                   воздействием на окружающую среду
@@ -197,7 +199,7 @@
             </div>
             <div class="tile">
               <div class="tile__text">
-                <div class="h3">Патенты</div>
+                <div class="tile__title">Патенты</div>
                 <p>
                   Star Progetti зарегистрировала 10 патентов, которые защищают
                   интеллектуальную собственность своих инноваций – плод
@@ -224,31 +226,35 @@
               <li class="splide__slide">
                 <div class="history__item">
                   <span>1994</span>
-                  <p>
+                  <div class="history__text">
                     Основание компании и разработка первого газового
                     обогревателя Fungo
-                  </p>
+                  </div>
                 </div>
               </li>
               <li class="splide__slide">
                 <div class="history__item">
                   <span>1996</span>
-                  <p>Рост и расширение на европейском рынке</p>
+                  <div class="history__text">
+                    Рост и расширение на европейском рынке
+                  </div>
                 </div>
               </li>
               <li class="splide__slide">
                 <div class="history__item">
                   <span>1997</span>
-                  <p>
+                  <div class="history__text">
                     Производство первого электрического инфракрасного
                     обогревателя
-                  </p>
+                  </div>
                 </div>
               </li>
               <li class="splide__slide">
                 <div class="history__item">
                   <span>1997</span>
-                  <p>Открытие новой фабрики в Трибьяно (Милан)</p>
+                  <div class="history__text">
+                    Открытие новой фабрики в Трибьяно (Милан)
+                  </div>
                 </div>
               </li>
             </ul>
@@ -259,7 +265,6 @@
                 <button
                   class="splide__arrow splide__arrow--prev splide__arrow--black"
                 ></button>
-                <span class="splide__count"></span>
                 <button
                   class="splide__arrow splide__arrow--next splide__arrow--black"
                 ></button>
@@ -307,38 +312,16 @@
               <img src="img/content/logo-clients/hardrock.png" alt="" />
             </div>
           </div>
-
-          .centered
+          <div class="centered">
+            <a href="#" class="btn btn--white btn--outline btn--fw-mobile"
+              >Все клиенты</a
+            >
+          </div>
         </div>
       </section>
     </main>
     @@include('modules/_footer.html')
     <script src="js/vendor/splide.min.js"></script>
     <script src="js/main.min.js"></script>
-    <script>
-      // 1200 - это ширина общего контейнера
-      let sliderHistory = new Splide('.js-history', {
-        perPage: 3,
-        perMove: 1,
-        gap: 80,
-        pagination: false,
-        padding: {
-          left: (window.screen.width - 1200) / 2 + 'px',
-          right: (window.screen.width - 1200) / 2 + 'px',
-        },
-      });
-
-      // sliderHistory.on('autoplay:playing', function (rate) {
-      //   console.log(rate); // 0-1
-      // });
-
-      sliderHistory.on('mounted moved', function () {
-        let splideCount = sliderHistory.root.querySelector('.splide__count');
-        splideCount.textContent = `${sliderHistory.index + 1}/${
-          sliderHistory.length
-        }`;
-      });
-      sliderHistory.mount();
-    </script>
   </body>
 </html>

@@ -1,0 +1,128 @@
+.client-order {
+  padding-top: 50px;
+
+  @include lg {
+    padding-top: 70px;
+  }
+
+  &__head {
+    display: none;
+    @include lg {
+      display: flex;
+    }
+    span {
+      display: block;
+      flex: 1;
+      color: $gray;
+      font-weight: $font-bold;
+      line-height: 1;
+      padding-bottom: 15px;
+
+      &:first-child {
+        @include lg {
+          flex-basis: 185px;
+          max-width: 185px;
+        }
+        @include xl {
+          flex-basis: 228px;
+          max-width: 228px;
+        }
+      }
+
+      &:last-child {
+        @include lg {
+          flex-basis: 320px;
+          max-width: 320px;
+        }
+        @include xl {
+          flex-basis: 375px;
+          max-width: 375px;
+        }
+      }
+    }
+  }
+
+  &__item {
+    padding: 16px 0;
+    border-top: 1px solid rgba($gray, 0.5);
+    &:last-child {
+      border-bottom: 1px solid rgba($gray, 0.5);
+    }
+    @include lg {
+      padding: 0;
+      display: flex;
+    }
+  }
+
+  &__cell {
+    &::before {
+      content: attr(data-label);
+      display: inline-block;
+      width: 160px;
+      color: $gray;
+    }
+    @include md-max {
+      display: flex;
+      flex-wrap: wrap;
+      padding: 4px 0;
+    }
+    @include md {
+      &::before {
+        width: 175px;
+      }
+    }
+
+    @include lg {
+      flex: 1;
+      padding: 25px 0;
+      line-height: 1;
+      &::before {
+        content: none;
+      }
+    }
+
+    &:first-child {
+      @include lg {
+        flex-basis: 185px;
+        max-width: 185px;
+      }
+      @include xl {
+        flex-basis: 228px;
+        max-width: 228px;
+      }
+    }
+
+    &:last-child {
+      @include lg {
+        display: flex;
+        justify-content: space-between;
+        flex-basis: 320px;
+        max-width: 320px;
+      }
+      @include xl {
+        flex-basis: 375px;
+        max-width: 375px;
+      }
+
+      span {
+        display: inline-block;
+        vertical-align: top;
+      }
+
+      a {
+        text-decoration: underline;
+
+        &:hover {
+          text-decoration: none;
+        }
+      }
+    }
+  }
+
+  &__link {
+    @include md-max {
+      width: 100%;
+      padding-top: 23px;
+    }
+  }
+}

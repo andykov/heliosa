@@ -24,14 +24,16 @@
   }
 
   [data-toggle='dropdown'] {
-    min-width: 160px;
-    // width: 150px;
-    padding: 17px 15px;
+    padding: 22px 15px;
     border: 0px;
     line-height: 1;
     outline: none;
     text-align: left;
     position: relative;
+
+    @include lg {
+      padding: 17px 30px;
+    }
   }
 
   [data-icon='true'] {
@@ -53,15 +55,20 @@
 
   [data-clear] {
     display: inline-block;
-    padding: 10px;
+    padding: 6px;
     font-size: 0;
     line-height: 1;
     position: absolute;
     background-color: transparent;
     visibility: hidden;
-    right: 17px;
+    right: 12px;
     top: 50%;
     transform: translateY(-50%);
+
+    @include lg {
+      right: 17px;
+      padding: 10px;
+    }
 
     &::before,
     &::after {
@@ -88,8 +95,8 @@
 
   &__selected {
     white-space: nowrap;
-    overflow: hidden;
-    display: block;
+    // overflow: hidden;
+    display: inline-block;
   }
 
   &__body {
@@ -97,7 +104,7 @@
     z-index: -1;
     top: 100%;
     left: 0;
-    max-width: 90vw;
+    // max-width: 90vw;
     width: 1px;
     margin: 0;
     background-color: #fff;

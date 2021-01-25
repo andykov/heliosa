@@ -1,0 +1,86 @@
+.profile {
+  padding-bottom: 70px;
+
+  @include md {
+    padding-bottom: 90px;
+  }
+  @include lg {
+    padding-bottom: 110px;
+  }
+  @include xl {
+    padding-bottom: 130px;
+  }
+
+  &__menu {
+    background-color: $gray-light;
+    font-size: 18px;
+    padding: 0 25px;
+    margin-bottom: 60px;
+
+    @include md {
+      padding: 0 20px;
+    }
+
+    @include lg {
+      padding: 0 30px;
+    }
+
+    button {
+      background: transparent;
+      padding: 20px 0;
+      border: 0;
+      border-bottom: 2px solid transparent;
+      line-height: 1;
+      font-size: 16px;
+
+      @include lg {
+        font-size: 18px;
+      }
+
+      &:not(:first-child) {
+        margin-left: 50px;
+      }
+
+      &:focus {
+        outline: none;
+      }
+
+      &[aria-selected='true'] {
+        font-weight: $font-bold;
+        border-color: inherit;
+      }
+    }
+  }
+  &__content {
+  }
+
+  &__data {
+    @include xl {
+      max-width: 760px;
+    }
+  }
+
+  &__orders {
+    &-menu {
+      display: flex;
+      .btn {
+        margin-right: -1px;
+        &:focus {
+          outline: none;
+        }
+        &[aria-selected='true'] {
+          background-color: #1c1c1c;
+          color: #fff;
+        }
+        @include sm-max {
+          white-space: normal;
+          min-width: auto;
+          padding: 12px;
+          width: 50%;
+        }
+      }
+    }
+    &-content {
+    }
+  }
+}

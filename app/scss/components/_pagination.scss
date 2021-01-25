@@ -1,0 +1,49 @@
+.pagination {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  li {
+    padding: 0 5px;
+    a {
+      font-size: 18px;
+      line-height: 1;
+      padding: 5px;
+      color: $black;
+
+      &.active {
+        color: $gray;
+        text-decoration: none;
+      }
+    }
+
+    &:first-child,
+    &:last-child {
+      a {
+        font-size: 0;
+        display: inline-block;
+        width: 15px;
+        height: 12px;
+        background-repeat: no-repeat;
+        background-size: contain;
+      }
+    }
+    &:first-child {
+      padding-right: 35px;
+
+      a {
+        background-image: url('../img/icons/arrow-left.svg');
+      }
+    }
+    &:last-child {
+      padding-left: 35px;
+
+      a {
+        background-image: url('../img/icons/arrow-right.svg');
+      }
+    }
+  }
+}

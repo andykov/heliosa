@@ -1,0 +1,19 @@
+.clients-logo {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 30px 40px;
+  align-items: center;
+  margin-bottom: 50px;
+
+  @include md {
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 50px 70px;
+  }
+  @include lg {
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 70px 50px;
+  }
+  @include xl {
+    grid-gap: 60px 110px;
+  }
+}

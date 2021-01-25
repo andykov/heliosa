@@ -1,0 +1,90 @@
+.form-editable {
+  &__group {
+    border-bottom: 1px solid rgba($gray, 0.5);
+    margin-bottom: 30px;
+
+    &.editing {
+      .form-editable-trigger,
+      .form-editable__label {
+        display: none;
+      }
+      .form-editable__field {
+        margin-bottom: 10px;
+      }
+      .form-editable__field--password {
+        &::before {
+          content: none;
+        }
+        .field-text {
+          display: block;
+        }
+      }
+    }
+  }
+  &__head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+  }
+  &__title {
+    font-weight: $font-bold;
+  }
+  &__field {
+    position: relative;
+    margin-bottom: 25px;
+
+    &--password {
+      line-height: 7px;
+
+      .field-text {
+        display: none;
+      }
+
+      &::before {
+        content: '\2022\2022\2022\2022\2022\2022\2022\2022';
+        line-height: 7px;
+        display: inline-block;
+        vertical-align: middle;
+        font-size: 20px;
+        letter-spacing: 3.3px;
+      }
+    }
+  }
+  &__label {
+    position: absolute;
+    line-height: 1;
+    opacity: 0.5;
+  }
+  [data-form-edit] {
+    &:not(.editing) {
+      .form-editable-save {
+        display: none;
+      }
+    }
+  }
+  input[readonly] {
+    background-color: transparent;
+    border-color: transparent;
+    padding: 5px 0;
+    min-height: auto;
+  }
+  &-trigger {
+    text-decoration: underline;
+    &:hover {
+      text-decoration: none;
+    }
+  }
+  &-save {
+    border: 0;
+    background: transparent;
+    padding: 0;
+    text-decoration: underline;
+    &:hover {
+      text-decoration: none;
+    }
+    &:focus {
+      outline: none;
+    }
+  }
+}

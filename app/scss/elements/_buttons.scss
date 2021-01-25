@@ -202,3 +202,45 @@
     }
   }
 }
+
+.btn-remove {
+  position: relative;
+  padding: 5px 0 5px 24px;
+  color: $gray;
+  font-size: 12px;
+  font-weight: $font-normal;
+  line-height: 1;
+  border: 0;
+  background-color: transparent;
+
+  &::before,
+  &::after {
+    content: '';
+    background-color: $gray;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%) rotate(45deg);
+    transition: transform $transition-time ease-in-out;
+  }
+  &::before {
+    width: 15px;
+    height: 1px;
+    left: 5px;
+  }
+  &::after {
+    width: 1px;
+    height: 15px;
+    left: 12px;
+  }
+  &:focus {
+    outline: none;
+  }
+  &:hover {
+    color: $black;
+
+    &::before,
+    &::after {
+      background-color: $black;
+    }
+  }
+}

@@ -1,0 +1,21 @@
+.history {
+  .splide__track {
+    margin-bottom: 80px;
+  }
+
+  &__item {
+    span {
+      display: block;
+      font-size: 48px;
+      line-height: 1;
+      font-weight: $font-light;
+      padding-bottom: 20px;
+      border-bottom: 1px solid $gray;
+    }
+  }
+
+  &__text {
+    padding-top: 20px;
+    line-height: 1.6;
+  }
+}

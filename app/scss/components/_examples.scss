@@ -1,0 +1,67 @@
+.examples {
+  margin-bottom: 40px;
+  @include lg {
+    margin-bottom: 50px;
+  }
+  @include xl {
+    margin-bottom: 60px;
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  &__group {
+    display: grid;
+    grid-template-columns: repeat(1, minmax(300px, max-content));
+    grid-gap: 20px;
+
+    @include md {
+      grid-template-columns: repeat(2, minmax(300px, max-content));
+      grid-template-rows: repeat(2, minmax(135px, max-content));
+    }
+  }
+
+  &__lg,
+  &__sm {
+    position: relative;
+
+    figcaption {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background-color: rgba(#000, 0.6);
+      padding: 15px;
+      color: #fff;
+      line-height: 1;
+
+      @include md {
+        display: none;
+      }
+    }
+  }
+
+  &__lg {
+    @include md {
+      grid-row: 1/3;
+    }
+    @include lg {
+      max-width: 460px;
+    }
+    @include xl {
+      max-width: 100%;
+    }
+  }
+
+  &__sm {
+    @include lg {
+      max-height: 220px;
+    }
+    @include xl {
+      max-height: 100%;
+    }
+  }
+}

@@ -24,6 +24,7 @@ import './modules/mobileNav';
 import './modules/tabs';
 import './modules/bannerCollection';
 import './modules/photoGallery';
+import './modules/historyGallery';
 import './modules/galleryRecommend';
 import './modules/galleryTabs';
 import './modules/productQuantity';
@@ -40,6 +41,14 @@ if (dropdownsInit.length) {
     filters.clear();
   });
 }
+
+const filterMobile = document.querySelector('.js-filter-mobile');
+if (filterMobile) {
+  filterMobile.addEventListener('click', function () {
+    filterMobile.parentNode.classList.toggle('show');
+  });
+}
+
 // .js-filter-clear
 // function mobileDropdownTabsInit(mq) {
 

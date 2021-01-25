@@ -18,6 +18,7 @@ $tile-img-offset-xl: 60px;
       }
       @include lg {
         font-size: 28px;
+        padding-bottom: 6px;
       }
     }
     &__text {
@@ -25,15 +26,6 @@ $tile-img-offset-xl: 60px;
       color: #4b4b4b;
       @include lg {
         font-size: 18px;
-      }
-    }
-    &:not(:last-child) {
-      margin-bottom: 60px;
-      @include md {
-        margin-bottom: 90px;
-      }
-      @include lg {
-        margin-bottom: 120px;
       }
     }
   }
@@ -108,9 +100,9 @@ $tile-img-offset-xl: 60px;
         @include lg {
           grid-template-columns: calc((510 / 960) * 100%) 1fr;
         }
-        // @include xl {
-        //   grid-template-columns: 1fr 1fr;
-        // }
+        @include xl {
+          grid-template-columns: calc((580 / 1200) * 100%) 1fr;
+        }
         .tile__img {
           > img,
           > picture {
@@ -152,9 +144,9 @@ $tile-img-offset-xl: 60px;
         @include lg {
           grid-template-columns: 1fr calc((510 / 960) * 100%);
         }
-        // @include xl {
-        //   grid-template-columns: 1fr 1fr;
-        // }
+        @include xl {
+          grid-template-columns: 1fr calc((580 / 1200) * 100%);
+        }
         .tile__img {
           > img,
           > picture {
@@ -189,20 +181,117 @@ $tile-img-offset-xl: 60px;
           }
         }
       }
+      &:not(:last-child) {
+        margin-bottom: 60px;
+        @include md {
+          margin-bottom: 90px;
+        }
+        @include lg {
+          margin-bottom: 120px;
+        }
+      }
+    }
+  }
+
+  &:not(.tiles--square) {
+    .tile {
+      grid-gap: 40px 0;
+      @include lg {
+        grid-gap: 0 70px;
+      }
+      @include xl {
+        grid-gap: 0 120px;
+      }
+
+      &__text {
+        max-width: 600px;
+        @include xl {
+        }
+        @include lg {
+          // max-width: 370px;
+        }
+        @include xl {
+          grid-template-columns: 1fr calc((640 / 1200) * 100%);
+        }
+      }
+
+      &__img {
+      }
+
+      &:nth-child(odd) {
+        @include lg {
+          grid-template-columns: 1fr calc((520 / 960) * 100%);
+        }
+        @include xl {
+          grid-template-columns: 1fr calc((640 / 1200) * 100%);
+        }
+        .tile__img {
+        }
+        .tile__text {
+          @include lg {
+            justify-self: flex-start;
+          }
+        }
+      }
+      &:nth-child(even) {
+        @include lg {
+          grid-template-columns: calc((520 / 960) * 100%) 1fr;
+        }
+        @include xl {
+          grid-template-columns: calc((640 / 1200) * 100%) 1fr;
+        }
+        .tile__img {
+        }
+        .tile__text {
+          @include lg {
+            justify-self: flex-end;
+          }
+        }
+      }
+      &:not(:last-child) {
+        margin-bottom: 60px;
+
+        @include lg {
+          margin-bottom: 100px;
+        }
+        @include xl {
+          margin-bottom: 120px;
+        }
+      }
     }
   }
 
   @include md {
     &--revers {
-      .tile {
-        &:nth-child(odd) {
-        }
-        &:nth-child(even) {
-          .tile__img {
-            order: 1;
+      &.tiles--square {
+        .tile {
+          &:nth-child(odd) {
           }
-          .tile__text {
-            order: 0;
+          &:nth-child(even) {
+            .tile__img {
+              order: 1;
+            }
+            .tile__text {
+              order: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+  @include lg {
+    &--revers {
+      &:not(.tiles--square) {
+        .tile {
+          &:nth-child(odd) {
+          }
+          &:nth-child(even) {
+            .tile__img {
+              order: 0;
+            }
+            .tile__text {
+              order: 1;
+            }
           }
         }
       }

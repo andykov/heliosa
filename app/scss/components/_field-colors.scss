@@ -1,0 +1,57 @@
+.field-colors {
+  display: flex;
+  &__item {
+    margin: 0 10px 0 0;
+    display: flex;
+    align-items: center;
+    input {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 0;
+      height: 0;
+      overflow: hidden;
+      visibility: hidden;
+
+      &:checked {
+        & ~ .field-colors__check {
+          border-color: #828282;
+        }
+      }
+    }
+  }
+
+  &__name {
+    margin-left: 10px;
+    color: $black;
+  }
+
+  &__check {
+    display: block;
+    padding: 7px;
+    border-radius: 100%;
+    background-color: #e3e3e3;
+
+    &::before {
+      content: '';
+      display: block;
+      width: 28px;
+      height: 28px;
+      border-radius: inherit;
+    }
+
+    &--white {
+      border: 1px solid #ebebeb;
+
+      &::before {
+        background-color: #fff;
+      }
+    }
+    &--black {
+      border: 1px solid #c6c6c6;
+      &::before {
+        background-color: #000;
+      }
+    }
+  }
+}
