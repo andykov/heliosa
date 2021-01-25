@@ -1,7 +1,5 @@
 import { setCurrentIndexSLide } from '../utils/helpers';
-// 1200 - container width
 
-// 1200 - это ширина общего контейнера
 const sliderHistoryElem = document.querySelector('.js-history');
 if (sliderHistoryElem) {
   let sliderHistory = new Splide(sliderHistoryElem, {

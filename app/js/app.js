@@ -25,6 +25,7 @@ import './modules/tabs';
 import './modules/bannerCollection';
 import './modules/photoGallery';
 import './modules/historyGallery';
+import './modules/compareGallery';
 import './modules/galleryRecommend';
 import './modules/galleryTabs';
 import './modules/productQuantity';
