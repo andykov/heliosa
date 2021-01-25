@@ -243,6 +243,7 @@
 }
 
 .cart-order {
+  padding-top: 25px;
   padding-bottom: 90px;
 
   @include md {
@@ -250,6 +251,7 @@
   }
   @include lg {
     padding-bottom: 140px;
+    padding-top: 35px;
   }
   @include xl {
     padding-bottom: 110px;
