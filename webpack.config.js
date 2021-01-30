@@ -17,7 +17,7 @@ module.exports = {
 
   entry: {
     main: './app/js/app.js',
-    pageA: './app/js/pages/pageA.js',
+    // pageA: './app/js/pages/pageA.js',
   },
 
   output: {

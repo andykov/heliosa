@@ -1,23 +1,4 @@
-// import $ from 'jquery'; window.jQuery = $; window.$ = $ // import module example (npm i -D jquery)
-// require('./other_script.js') // Require Other Script(s) from app/js folder Example
-import ready from './utils/documentReady';
 import { isOutSideClick, overlayVisibility } from './utils/helpers';
-// import './modules/modules';
-
-// function setCurrentIndexSLide(slider, newIndex = 0) {
-//   let content = `${newIndex + 1} / ${slider.length}`;
-//   let prevArrow = slider.Components.Elements.arrows.prev;
-//   let arrowsParent = prevArrow.parentNode;
-//   let span = arrowsParent.querySelector('span');
-//   if (span === null) {
-//     let span = document.createElement('span');
-//     span.textContent = content;
-//     arrowsParent.insertBefore(span, prevArrow.nextSibling);
-//   } else {
-//     span.textContent = content;
-//     arrowsParent.insertBefore(span, prevArrow.nextSibling);
-//   }
-// }
 
 import Dropdown from './modules/dropdown-native';
 import './modules/mobileNav';
@@ -49,55 +30,6 @@ if (filterMobile) {
     filterMobile.parentNode.classList.toggle('show');
   });
 }
-
-// .js-filter-clear
-// function mobileDropdownTabsInit(mq) {
-
-//   const dropdowns = document.querySelectorAll('[data-toggle="dropdown"]');
-//   if (dropdowns.length) {
-//     dropdowns.forEach((elem) => {
-
-//       let DropdownInit = new Dropdown(elem);
-//       if (!mq) {
-//         DropdownInit.dispose();
-//       }
-//       getLabelActiveTab(elem);
-//       // elem.parentNode.addEventListener(
-//       //   'show.bs.dropdown',
-//       //   function (event) {
-
-//       //   },
-//       //   false
-//       // );
-//       elem.parentNode.addEventListener('hide.bs.dropdown', function (event) {
-
-//         getLabelActiveTab(elem);
-//         // elem.textContent = tabActive.textContent;
-//       });
-//       // DropdownInit.getSelected();
-//     });
-//   }
-// }
-
-// function getLabelActiveTab(elem) {
-//   if (!elem) {
-//     return false;
-//   }
-//   const parent = elem.parentNode;
-//   const tabActive = parent.querySelector('.nav-tab.active');
-//   if (tabActive) {
-//     elem.textContent = tabActive.textContent;
-//   }
-// }
-
-// let imagesWatch = document.querySelectorAll('img.is-loaded');
-// imagesWatch.forEach(function (img) {
-//   img.addEventListener('load', function (e) {
-
-//     this.classList.add('load');
-//   });
-// });
-// banner-collections slider init
 
 let specBtn = document.querySelectorAll('.product-spec__btn');
 if (specBtn) {
@@ -149,4 +81,22 @@ document.addEventListener('click', function (e) {
     nav.classList.remove('opened');
     overlayVisibility(false);
   }
+});
+MicroModal.init({
+  onShow: function (modal) {
+    if (modal.id == 'modal-auth') {
+      MicroModal.close('modal-login');
+    }
+    if (modal.id == 'modal-login') {
+      MicroModal.close('modal-auth');
+    }
+  },
+  // onClose: onCloseModal,
+  openTrigger: 'data-micromodal-trigger',
+  closeTrigger: 'data-micromodal-close',
+  disableScroll: true,
+  disableFocus: false,
+  awaitOpenAnimation: false,
+  awaitCloseAnimation: false,
+  debugMode: true,
 });

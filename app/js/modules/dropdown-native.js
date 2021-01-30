@@ -112,31 +112,25 @@
     function setLabelSelected(selected) {
       let maxAmount = 2;
       let labels = selected.slice(0, maxAmount);
-      // let labels = selected.slice(0, maxAmount);
+
       let count = selected.length - maxAmount;
 
       label.textContent = labels;
       if (count > 0) {
         label.textContent = `${labels} +${count}`;
       }
-      // console.log('selected=', selected);
-      // console.log(element.clientWidth);
-      // console.log(label.offsetWidth);
-      // console.log(element.offsetWidth, element.clientWidth, label.clientWidth);
-      // let maxWidth =
-      //   label.offsetWidth + (element.clientWidth - label.clientWidth);
-      // console.log(maxWidth);
+
       if (label.clientWidth + 90 >= element.offsetWidth) {
         console.log('>', selected.length);
       } else {
         console.log('<', selected.length);
       }
     }
+
     if (clear) {
       clear.addEventListener('click', function (e) {
         e.stopPropagation();
         e.target.classList.remove('show');
-        // console.log(checkboxes);
         checkboxes.forEach((input) => {
           input.checked = false;
         });
@@ -146,76 +140,9 @@
         if (!selected.length) {
           parent.classList.remove('selected');
         }
-        // self.toggle();
       });
     }
-    // console.log(document.querySelectorAll('.dropdown input[type="checkbox"]'));
 
-    // function getSelected(el) {
-    //   element = queryElement(element);
-    //   parent = element.parentNode;
-    //   let checkboxes = queryElementAll('input[type="checkbox"]', parent);
-
-    //   console.log(checkboxes);
-    //   // let checkboxes = element.querySelectorAll('input[type="checkbox"]');
-    //   // // console.log(checkboxes);
-    //   checkboxes.forEach((input, i) => {
-    //     // console.log(input);
-    //     input.addEventListener('change', function (e) {
-    //       var selected = [];
-    //       var parent = e.target.parentNode;
-    //       let span = queryElement('span', parent);
-
-    //       // console.log(span.textContent);
-
-    //       if (e.target.checked) {
-    //         // console.log(input.checked);
-    //         // console.log(input.value);
-    //         // console.log('/////');
-    //         // console.log(e.target.checked);
-    //         // console.log(e.target.value);
-
-    //         // console.log(input[i].value);
-    //         selected.push(span.textContent);
-    //         console.log(selected);
-    //         console.log(selected.indexOf(span.textContent));
-    //       } else {
-    //         selected = selected.splice(selected.indexOf(span.textContent), 0);
-    //         console.log(selected);
-    //       }
-    //     });
-    //   });
-    //   // $("input[name='checkbox']").change(function() {
-    //   //   var checked = $(this).val();
-    //   //     if ($(this).is(':checked')) {
-    //   //       tmp.push(checked);
-    //   //     }else{
-    //   //     tmp.splice($.inArray(checked, tmp),1);
-    //   //     }
-    //   //   });
-    //   //Create an Array.
-    //   // selected = new Array();
-
-    //   // //Reference the Table.
-    //   // var tblFruits = document.getElementById("tblFruits");
-
-    //   // //Reference all the CheckBoxes in Table.
-    //   // var chks = tblFruits.getElementsByTagName("INPUT");
-
-    //   // // Loop and push the checked CheckBox value in Array.
-    //   // for (var i = 0; i < chks.length; i++) {
-    //   //     if (chks[i].checked) {
-    //   //         selected.push(chks[i].value);
-    //   //     }
-    //   // }
-
-    //   // //Display the selected CheckBox values.
-    //   // if (selected.length > 0) {
-    //   //     alert("Selected values: " + selected.join(","));
-    //   // }
-    //   // return checkboxes;
-    // }
-    // getSelected();
     function preventEmptyAnchor(anchor) {
       ((anchor.href && anchor.href.slice(-1) === '#') ||
         (anchor.parentNode &&

@@ -12,6 +12,7 @@
   }
 
   &__menu {
+    display: flex;
     background-color: $gray-light;
     font-size: 18px;
     padding: 0 25px;
@@ -25,13 +26,14 @@
       padding: 0 30px;
     }
 
-    button {
+    a {
       background: transparent;
       padding: 20px 0;
       border: 0;
       border-bottom: 2px solid transparent;
       line-height: 1;
       font-size: 16px;
+      text-decoration: none;
 
       @include lg {
         font-size: 18px;
@@ -45,7 +47,7 @@
         outline: none;
       }
 
-      &[aria-selected='true'] {
+      &.active {
         font-weight: $font-bold;
         border-color: inherit;
       }

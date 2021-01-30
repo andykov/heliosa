@@ -45,14 +45,9 @@
 
     form {
       display: flex;
-      // align-items: flex-end;
       justify-content: flex-end;
       flex-direction: column;
 
-      @include xl {
-        // flex-direction: row;
-        // align-items: flex-end;
-      }
       @include xxl {
         flex-direction: row;
         align-items: flex-end;

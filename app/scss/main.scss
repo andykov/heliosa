@@ -3,6 +3,7 @@
 @import 'fonts-generate';
 
 @import './grid';
+@import './components/modals';
 @import './components/splide-custom';
 @import './components/dropdown';
 @import './components/banner-collections';
@@ -13,6 +14,7 @@
 @import './components/footer';
 @import './components/card';
 @import './components/cart';
+@import './components/order-history';
 @import './components/tabs';
 @import './components/table';
 @import './components/advant';
@@ -21,7 +23,6 @@
 @import './components/catalog-gallery';
 @import './components/photo-gallery';
 @import './components/main-stores';
-@import './components/compare';
 @import './components/online-stores';
 @import './components/product-hero';
 @import './components/tiles';
@@ -34,6 +35,7 @@
 @import './components/profile';
 @import './components/recommends';
 @import './components/spec-list';
+@import './components/compare';
 @import './components/certification';
 @import './components/field-colors';
 @import './components/instructions';
@@ -569,6 +571,97 @@ body {
       background-color: rgba($color: $gray-light, $alpha: 0.1);
       border-color: rgba($color: $gray, $alpha: 0.1);
     }
+  }
+}
+
+.login-social {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 10px;
+  border-bottom: 1px solid rgba(182, 182, 182, 0.7);
+  margin-bottom: 5px;
+  @include md {
+    padding-bottom: 30px;
+    margin-bottom: 15px;
+  }
+
+  span {
+    flex: 1;
+    color: #8f8f8f;
+    margin-right: 15px;
+    line-height: 1.3;
+  }
+
+  &__list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: inline-flex;
+
+    li {
+      padding: 0 4px;
+      img {
+        width: 34px;
+        height: 34px;
+        @include md {
+          width: 40px;
+          height: 40px;
+        }
+      }
+      @include md {
+        padding: 0 10px;
+      }
+    }
+  }
+}
+
+.login-form,
+.auth-form {
+  hr {
+    margin: 30px 0 15px;
+    border-color: rgba(182, 182, 182, 0.3);
+    border-width: 1px 0 0 0;
+  }
+  .form-group {
+    padding-bottom: 30px;
+  }
+
+  .field-text {
+    position: relative;
+    a {
+      color: #333333;
+      display: inline-block;
+      margin-top: 18px;
+      @include md {
+        position: absolute;
+        right: 20px;
+        top: 50%;
+        transform: translateY(-50%);
+        margin-top: 7.5px;
+      }
+    }
+
+    &__input {
+      &[type='password'] {
+        padding-right: 160px;
+      }
+      &::placeholder {
+        color: #8f8f8f;
+      }
+    }
+  }
+
+  .field-checkbox {
+    margin-top: 18px;
+    &__name-text {
+      text-transform: none;
+      letter-spacing: normal;
+    }
+  }
+
+  .btn {
+    margin-bottom: 15px;
   }
 }
 

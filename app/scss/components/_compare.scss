@@ -2,7 +2,14 @@
   &__head {
     padding-top: 25px;
     padding-bottom: 50px;
+    @include sm-max {
+      display: flex;
+      flex-direction: column-reverse;
 
+      .field-checkbox {
+        margin-bottom: 0;
+      }
+    }
     @include md {
       display: grid;
       grid-template-columns: 1fr minmax(365px, 830px);
@@ -12,10 +19,12 @@
     @include lg {
       padding-bottom: 70px;
       padding-top: 35px;
+      grid-gap: 0 45px;
     }
     @include xl {
       padding-top: 40px;
       padding-bottom: 100px;
+      grid-gap: 0 65px;
     }
   }
 
@@ -30,6 +39,8 @@
     }
     .splide {
       &__arrow {
+        width: 40px;
+        height: 40px;
         position: absolute;
         top: 50%;
         transform: translateY(-100%);
@@ -44,13 +55,15 @@
     }
   }
   &__buttons {
+    padding-top: 50px;
     @include md {
+      padding-top: 0;
       max-width: 200px;
     }
     @include lg {
       max-width: 240px;
     }
-    @include lg {
+    @include xl {
       max-width: 300px;
     }
     .btn {
@@ -79,6 +92,48 @@
     }
     @include xl {
       padding-bottom: 160px;
+    }
+  }
+
+  .spec-list {
+    &__cells {
+      span {
+        display: none;
+      }
+    }
+    &--cols-5 {
+      li {
+        grid-template-columns: 1fr;
+        @include md {
+          grid-template-columns: 220px 1fr;
+        }
+        @include lg {
+          grid-template-columns: 260px 1fr;
+        }
+        @include xl {
+          grid-template-columns: 340px 1fr;
+        }
+      }
+      .spec-list__label {
+        @include md {
+          grid-column: 1;
+        }
+      }
+      .spec-list__cells {
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 15px;
+        @include md {
+          grid-gap: 25px;
+        }
+        @include lg {
+          grid-template-columns: repeat(3, 1fr);
+          grid-gap: 70px;
+        }
+        @include xl {
+          grid-template-columns: repeat(4, 1fr);
+          grid-gap: 0px;
+        }
+      }
     }
   }
 }

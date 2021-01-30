@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="">
+  <head>
+    <meta charset="utf-8" />
+    <title>OptimizedHTML 5</title>
+    <meta name="description" content="Startup HTML template OptimizedHTML 5" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" href="img/favicon.png" />
+    <meta property="og:image" content="img/dest/preview.jpg" />
+    <link rel="stylesheet" href="css/vendor/splide-core.min.css" />
+    <link rel="stylesheet" href="css/app.min.css" />
+  </head>
+  <body>
+    @@include('modules/_header-store.html')
+    <main class="page">
+      <div class="page-head">
+        <div class="container">
+          <div class="container-narrow">
+            <h1 class="page-head__title">Мои заказы</h1>
+            <div class="page-head__subtitle">
+              Хотите сменить аккаунт? <a href="">Выйти из личного кабинета</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="profile">
+          <div class="profile__menu">
+            <a href="profile-data.html">Мои данные</a>
+            <a href="profile-orders.html" class="active">Мои заказы</a>
+          </div>
+          <div class="profile__content">
+            <div class="order-history">
+              <div class="order-history__number">
+                <span>Заказ № 1098 0023 4566 </span>
+                <a href="">Скачать электронный чек</a>
+              </div>
+
+              <div class="order-history-table">
+                <div class="order-history-table__head">
+                  <span>ID товара</span>
+                  <span>Наименование</span>
+                  <span>Цена</span>
+                  <span>Цена со скидкой</span>
+                  <span>Размер скидки</span>
+                  <span>Количество</span>
+                </div>
+                <div class="order-history-table__item">
+                  <div class="order-history-table__cell" data-label="ID товара">
+                    222712
+                  </div>
+                  <div
+                    class="order-history-table__cell"
+                    data-label="Наименование"
+                  >
+                    <div class="order-history-table__cell-product">
+                      <div class="order-history-table__preview">
+                        <img src="img/content/product-order.png" alt="" />
+                      </div>
+                      <ul>
+                        <li>Heliosa 44 2kW/IPX5/WHT</li>
+                        <li>Белый</li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="order-history-table__cell" data-label="Цена">
+                    24 500 ₽
+                  </div>
+                  <div
+                    class="order-history-table__cell"
+                    data-label="Цена со скидкой"
+                  >
+                    14 500 ₽
+                  </div>
+                  <div
+                    class="order-history-table__cell"
+                    data-label="Размер скидки"
+                  >
+                    15%
+                  </div>
+                  <div
+                    class="order-history-table__cell"
+                    data-label="Количество"
+                  >
+                    1
+                  </div>
+                </div>
+              </div>
+
+              <div class="order-history__total">
+                <ul>
+                  <li>
+                    <span>Итог к оплате</span>
+                    <span>58 300 ₽</span>
+                  </li>
+                  <li>
+                    <span>Доставка</span>
+                    <span>300 ₽</span>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="order-history-data">
+                <div class="order-history-data__title">
+                  Способ оплаты и доставки
+                </div>
+                <ul class="order-history-data__info">
+                  <li>
+                    <span>Способ оплаты</span>
+                    Наличными/картой в пункте самовывоза
+                  </li>
+                  <li>
+                    <span>Способ доставки</span>
+                    м. Площадь Восстания, пр-т. Невский, д. 109
+                  </li>
+                  <li>
+                    <span>График работы</span>
+                    пн – пт: c 9:00 до 20:00 <br />
+                    сб – вс: c 10:00 до 20:00
+                  </li>
+                </ul>
+                <div class="order-history-data__title">Данные получателя</div>
+                <ul class="order-history-data__info">
+                  <li>
+                    <span>Имя</span>
+                    Алексей Иванов
+                  </li>
+                  <li>
+                    <span>Телефон</span>
+                    +7 (900) 987-00-12
+                  </li>
+                </ul>
+                <div class="order-history-data__title">
+                  История сообщений по заказу
+                </div>
+                <div class="order-history-appeal">
+                  <div class="order-history-appeal__head">
+                    <span>Номер заказа</span>
+                    <span>Дата</span>
+                    <span>Статус заказа</span>
+                  </div>
+                  <div class="order-history-appeal__row">
+                    <div
+                      class="order-history-appeal__cell"
+                      data-label="Номер заказа"
+                    >
+                      № 1098 0023 4566
+                    </div>
+                    <div class="order-history-appeal__cell" data-label="Дата">
+                      16 октября 13:43:39
+                    </div>
+                    <div
+                      class="order-history-appeal__cell"
+                      data-label="Статус заказа"
+                    >
+                      Заказ оформлен
+                    </div>
+                  </div>
+                  <div class="order-history-appeal__row">
+                    <div
+                      class="order-history-appeal__cell"
+                      data-label="Номер заказа"
+                    >
+                      № 1098 0023 4566
+                    </div>
+                    <div class="order-history-appeal__cell" data-label="Дата">
+                      16 октября 14:49:11
+                    </div>
+                    <div
+                      class="order-history-appeal__cell"
+                      data-label="Статус заказа"
+                    >
+                      Заказ передан на комплектацию
+                    </div>
+                  </div>
+                  <div class="order-history-appeal__row">
+                    <div
+                      class="order-history-appeal__cell"
+                      data-label="Номер заказа"
+                    >
+                      № 1098 0023 4566
+                    </div>
+                    <div class="order-history-appeal__cell" data-label="Дата">
+                      17 октября 12:44:23
+                    </div>
+                    <div
+                      class="order-history-appeal__cell"
+                      data-label="Статус заказа"
+                    >
+                      Отправлен в службу доставки Вашего города
+                    </div>
+                  </div>
+                  <div class="order-history-appeal__row">
+                    <div
+                      class="order-history-appeal__cell"
+                      data-label="Номер заказа"
+                    >
+                      № 1098 0023 4566
+                    </div>
+                    <div class="order-history-appeal__cell" data-label="Дата">
+                      18 октября 12:43:03
+                    </div>
+                    <div
+                      class="order-history-appeal__cell"
+                      data-label="Статус заказа"
+                    >
+                      Прибыл в пункт самовывоза. Срок хранения в пункте
+                      самовывоза до 23.10.2020
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <a href="" class="btn btn--fw-mobile">Добавить в корзину</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    @@include('modules/_footer.html')
+    <script src="js/main.min.js"></script>
+  </body>
+</html>

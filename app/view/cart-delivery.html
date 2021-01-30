@@ -241,30 +241,6 @@
       </div>
     </main>
     @@include('modules/_footer.html')
-    <script src="js/vendor/splide.min.js"></script>
     <script src="js/main.min.js"></script>
-    <script>
-      let galleryCompare = new Splide('.js-compare-gallery', {
-        perPage: 4,
-        perMove: 1,
-        gap: 50,
-        pagination: false,
-        breakpoints: {
-          992: {
-            perPage: 3,
-            gap: 50,
-          },
-          640: {
-            perPage: 2,
-            gap: 30,
-          },
-          480: {
-            gap: 15,
-          },
-        },
-      });
-
-      galleryCompare.mount();
-    </script>
   </body>
 </html>

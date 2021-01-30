@@ -1,7 +1,5 @@
 import { getSiblings } from '../utils/helpers';
-// let siblings = getSiblings(document.querySelector('.current'));
-// let siblingText = siblings.map((e) => e.innerHTML);
-// console.log(siblings);
+
 // tabs init
 if (document.querySelector('[data-tabs]')) {
   tabbis();
