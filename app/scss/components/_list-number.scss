@@ -48,6 +48,10 @@
   }
 
   &--v {
+    padding-top: 30px;
+    @include lg {
+      padding-top: 20px;
+    }
     li {
       margin-bottom: 40px;
     }
@@ -62,6 +66,7 @@
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     grid-gap: 40px 0;
+    max-width: 1140px;
 
     @include lg {
       grid-template-columns: repeat(2, 1fr);

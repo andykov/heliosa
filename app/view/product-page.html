@@ -35,7 +35,7 @@
             data-delay="1000"
             data-sal-duration="2000"
           >
-            <picture>
+            <picture class="product-hero__bg--desktop">
               <source
                 srcset="img/content/product-hero-img.webp"
                 type="image/webp"
@@ -46,11 +46,33 @@
               />
               <img src="img/content/product-hero-img.jpg" alt="" />
             </picture>
+            <picture class="product-hero__bg--mobile">
+              <source
+                srcset="img/content/product-hero-img-mobile.webp"
+                type="image/webp"
+              />
+              <source
+                srcset="img/content/product-hero-img-mobile.jpg"
+                type="image/jpeg"
+              />
+              <img src="img/content/product-hero-img-mobile.jpg" alt="" />
+            </picture>
           </div>
           <div class="product-hero__content">
             <div class="container">
               <form action="" class="product-hero__form">
                 <div class="product-hero__narrow">
+                  <div class="field-checkbox">
+                    <label class="field-checkbox__name">
+                      <input
+                        class="field-checkbox__input"
+                        type="checkbox"
+                        value=""
+                        name="compare"
+                      />
+                      <span class="field-checkbox__name-text">Сравнить</span>
+                    </label>
+                  </div>
                   <h1 class="product-hero__title">Heliosa 44 2kW/IPX5/WHT</h1>
                   <span class="vendor-code">Арт. 208177657456</span>
                   <div class="product-hero__text">
@@ -317,7 +339,7 @@
           <div class="product-spec">
             <div class="product-spec__info">
               <h2 class="product-spec__title">Характеристики</h2>
-              <ul class="product-spec__list spec-list--cols-1">
+              <ul class="product-spec__list">
                 <li>
                   <span>Мощность</span>
                   <span>2000 Вт</span>
@@ -436,6 +458,7 @@
           </div>
         </div>
       </section>
+      @@include('modules/_form-contacts.html')
     </main>
     @@include('modules/_footer.html')
     <script src="js/vendor/sal.js"></script>

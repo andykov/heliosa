@@ -1,13 +1,14 @@
 .btn {
   display: inline-flex;
+  align-items: center;
   position: relative;
   white-space: nowrap;
   text-decoration: none;
   line-height: 1;
   border: 1px solid transparent;
-  min-width: 200px;
   background-color: $btn-color-black;
-  padding: 23px 30px;
+  min-width: 200px;
+  padding: 18px 30px;
   border-radius: 0px;
   font-size: $btn-font-size;
   font-weight: $font-medium;
@@ -15,6 +16,14 @@
   text-transform: uppercase;
   letter-spacing: 0.1em;
   transition: all $transition-time;
+
+  @include xl {
+    padding-top: 23px;
+    padding-bottom: 23px;
+  }
+  @include xl {
+    min-width: 220px;
+  }
 
   &:not(&--link) {
     justify-content: center;
@@ -25,6 +34,7 @@
   &:hover,
   &:active {
     background-color: $btn-color-hover;
+    border-color: rgba(28, 28, 28, 0.3);
     color: $black;
     text-decoration: none;
   }
@@ -104,7 +114,7 @@
 
   &:visited {
     background-color: $btn-color-white;
-    color: $gray;
+    // color: $gray;
   }
 
   &:hover,
@@ -120,7 +130,7 @@
 
     &:visited {
       background-color: $btn-color-white;
-      color: $gray;
+      // color: $gray;
     }
 
     &:hover,
@@ -138,7 +148,7 @@
 
   &:visited {
     background-color: $btn-color-white;
-    color: $gray;
+    // color: $gray;
   }
 
   &:hover,
@@ -162,17 +172,9 @@
   }
 
   &:visited {
-    color: $gray;
+    // color: $gray;
   }
 }
-
-// .btn--md {
-//   font-size: var($--btn-md);
-// }
-
-// .btn--lg {
-//   font-size: var($--btn-lg);
-// }
 
 .btn--fw {
   display: flex;

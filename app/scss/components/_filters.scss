@@ -135,6 +135,14 @@
         @include md-max {
           background-color: transparent;
         }
+        @include md {
+          padding-left: 30px;
+          padding-right: 75px;
+        }
+        @include lg {
+          padding-left: 17px;
+          padding-right: 60px;
+        }
         @include xl {
           max-width: 220px;
         }

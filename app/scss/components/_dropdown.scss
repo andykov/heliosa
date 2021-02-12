@@ -50,6 +50,12 @@
       border-right: 1px solid currentColor;
       transform: translateY(-70%) rotate(45deg);
       transition: transform $transition-time, border-color $transition-time;
+      @include md {
+        right: 27px;
+      }
+      @include lg {
+        right: 15px;
+      }
     }
   }
 
@@ -64,6 +70,10 @@
     right: 12px;
     top: 50%;
     transform: translateY(-50%);
+
+    @include md {
+      right: 27px;
+    }
 
     @include lg {
       right: 17px;

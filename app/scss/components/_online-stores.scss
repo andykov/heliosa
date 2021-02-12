@@ -1,5 +1,27 @@
 .online-stores {
+  &:not(:last-child) {
+    margin-bottom: 50px;
+
+    @include lg {
+      margin-bottom: 70px;
+    }
+  }
   &__title {
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    line-height: 1;
+    @include md {
+      font-size: 24px;
+    }
+    @include lg {
+      font-size: 26px;
+      margin-bottom: 30px;
+    }
+    @include xl {
+      font-size: 28px;
+      margin-bottom: 36px;
+    }
   }
 
   ul {
@@ -22,14 +44,27 @@
     border-top: 1px solid #dedede;
     border-bottom: 1px solid #dedede;
     margin-top: -1px;
+    padding: 10px 0;
+
+    @include md {
+      min-height: 56px;
+    }
 
     span {
       color: #747474;
+      @include sm-max {
+        flex: 1;
+        line-height: 1.2;
+      }
     }
 
     a {
       text-decoration: underline;
       text-align: right;
+
+      @include sm-max {
+        font-size: 14px;
+      }
 
       &:hover {
         text-decoration: none;

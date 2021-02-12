@@ -62,6 +62,11 @@ if (galleryItems.length) {
           let g = new Splide(gallery, productGalleryOptions);
           g.mount();
           g.on('mounted', onMountedHideArrowsSlider(g));
+          g.on('mounted', setCurrentIndexSLide(g));
+
+          g.on('move', function (newIndex) {
+            setCurrentIndexSLide(g, newIndex);
+          });
         }
       }
 

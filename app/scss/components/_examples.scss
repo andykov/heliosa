@@ -16,18 +16,37 @@
   &__group {
     display: grid;
     grid-template-columns: repeat(1, minmax(300px, max-content));
-    grid-gap: 20px;
+    grid-gap: 10px;
 
     @include md {
-      grid-template-columns: repeat(2, minmax(300px, max-content));
+      grid-template-columns: minmax(285px, max-content) minmax(
+          300px,
+          max-content
+        );
       grid-template-rows: repeat(2, minmax(135px, max-content));
+      grid-gap: 15px;
+    }
+    @include lg {
+      grid-template-columns: minmax(460px, max-content) minmax(
+          480px,
+          max-content
+        );
+      grid-gap: 20px;
+    }
+    @include xl {
+      grid-template-columns: minmax(580px, max-content) minmax(
+          600px,
+          max-content
+        );
     }
   }
 
   &__lg,
   &__sm {
     position: relative;
-
+    figure {
+      height: 100%;
+    }
     figcaption {
       position: absolute;
       bottom: 0;

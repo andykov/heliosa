@@ -1,6 +1,5 @@
 .catalog {
   &-nav {
-    border-top: 1px solid #dddddd;
     border-bottom: 1px solid #dddddd;
 
     &__wrap {
@@ -96,13 +95,14 @@
     }
     @include lg {
       grid-template-columns: repeat(3, 1fr);
-      grid-gap: 70px 30px;
+      grid-gap: 60px 30px;
     }
   }
 
   &--category {
     .catalog__list {
       grid-gap: 10px;
+      padding-top: 0;
 
       @include md {
         grid-template-columns: repeat(1, 1fr);
@@ -139,12 +139,16 @@
             position: static;
           }
         }
+        @include sm-max {
+          padding: 30px 0 40px;
+        }
       }
       &__title {
-        margin-bottom: 20px;
+        margin-bottom: 10px;
         font-size: 26px;
         @include md {
           font-size: 22px;
+          margin-bottom: 20px;
         }
         @include lg {
           font-size: 26px;
@@ -182,6 +186,9 @@
 
   &--series {
     .catalog__list {
+      @include lg {
+        grid-gap: 70px 30px;
+      }
     }
     .card {
       &__img {
@@ -215,6 +222,7 @@
     }
     .btn {
       width: 100%;
+      min-width: 260px;
       @include lg {
         width: auto;
       }

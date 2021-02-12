@@ -17,15 +17,18 @@
     flex-wrap: wrap;
     padding: 10px 0 15px;
     @include lg {
-      padding: 24px 0 22px;
+      padding: 15.5px 0 15.5px;
     }
-    @include lg {
-      padding: 24px 0 22px;
+    @include xl {
+      padding: 16.5px 0 16.5px;
     }
   }
   &__logo {
     margin-right: 15px;
-
+    max-width: 120px;
+    @include md {
+      max-width: 134px;
+    }
     @include lg {
       max-width: 160px;
     }

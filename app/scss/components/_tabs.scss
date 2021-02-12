@@ -90,8 +90,14 @@
     background-color: transparent;
 
     @include md {
-      margin-right: 80px;
       padding: 8px 0;
+      margin-right: 40px;
+    }
+    @include lg {
+      margin-right: 60px;
+    }
+    @include xl {
+      margin-right: 80px;
     }
 
     &:focus {

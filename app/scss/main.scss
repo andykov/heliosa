@@ -21,6 +21,7 @@
 @import './components/catalog-banner';
 @import './components/catalog';
 @import './components/catalog-gallery';
+@import './components/pagination';
 @import './components/photo-gallery';
 @import './components/main-stores';
 @import './components/online-stores';
@@ -77,6 +78,11 @@ body.sal-disabled [data-sal|='slide'] {
   }
 }
 
+html,
+body {
+  height: 100%;
+}
+
 body {
   &.scroll-off {
     overflow: hidden !important;
@@ -89,6 +95,7 @@ body {
 
 .group-links {
   a {
+    display: inline-block;
     text-decoration: underline;
     &:hover {
       text-decoration: none;
@@ -257,7 +264,7 @@ body {
     align-items: center;
     margin: 0 auto;
 
-    @include md {
+    @include lg {
       margin: 0;
     }
 
@@ -336,9 +343,9 @@ body {
   display: inline-flex;
   align-items: center;
   line-height: 1;
-  padding-right: 28px;
+  padding-right: 25px;
   position: relative;
-  margin-right: 40px;
+  margin-right: 50px;
 
   &::after {
     content: '';
@@ -375,7 +382,7 @@ body {
 .search-form {
   &__input {
     width: 100%;
-    height: 36px;
+    height: 30px;
     background-color: $gray-light;
     background-image: url('../img/icons/icon-search.svg');
     background-repeat: no-repeat;
@@ -386,6 +393,10 @@ body {
     font-size: 12px;
     color: $black;
     line-height: 1;
+
+    @include md {
+      height: 36px;
+    }
 
     &::placeholder {
       color: #878787;
@@ -424,7 +435,7 @@ body {
   &__head {
     margin-bottom: 40px;
 
-    @include md {
+    @include lg {
       margin-bottom: 50px;
     }
 
@@ -475,7 +486,19 @@ body {
   padding: 0;
   margin: 0;
 }
+.page-wrapper {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
 
+  .header,
+  .footer {
+    flex-shrink: 0;
+  }
+  .page {
+    flex-grow: 1;
+  }
+}
 .page {
   &-head {
     padding-top: 60px;
@@ -507,10 +530,15 @@ body {
       }
 
       &--md {
-        font-size: 20px;
+        font-size: 18px;
         font-weight: $font-normal;
-        line-height: (32/20);
+        line-height: 1.6;
         margin-bottom: 50px;
+
+        @include lg {
+          font-size: 20px;
+          line-height: (32/20);
+        }
       }
       &--lg {
         color: $gray;
@@ -539,6 +567,13 @@ body {
 // container-narrow
 .container-narrow {
   max-width: 850px;
+}
+
+.article {
+  padding-top: 40px;
+  @include lg {
+    padding-top: 30px;
+  }
 }
 
 @keyframes bubble-fade-in {
@@ -723,6 +758,7 @@ body {
       font-size: 20px;
       color: $gray;
       line-height: 1;
+      padding: 0;
 
       @include lg {
         font-size: 22px;
@@ -767,6 +803,13 @@ body {
       padding-bottom: 120px;
     }
 
+    @media screen and (min-width: 640px) and (max-width: 991px) {
+      display: grid;
+      grid-template-columns: 290px 1fr;
+      grid-gap: 0px 70px;
+      padding-bottom: 25px;
+    }
+
     li {
       line-height: 1;
       &:not(:last-child) {
@@ -784,16 +827,15 @@ body {
         color: $gray;
         margin-bottom: 10px;
       }
-
-      a {
-        text-decoration: underline;
-        .icon {
-          margin-right: 8px;
-        }
-        &:hover {
-          text-decoration: none;
-        }
-      }
+    }
+  }
+  &__route {
+    text-decoration: underline;
+    .icon {
+      margin-right: 8px;
+    }
+    &:hover {
+      text-decoration: none;
     }
   }
   &__map {
@@ -802,13 +844,16 @@ body {
     justify-content: flex-end;
     margin-left: -10px;
     margin-right: -10px;
+    height: 240px;
 
     @include md {
       // padding-top: 80px;
+      height: 350px;
       margin-left: -20px;
       margin-right: -20px;
     }
     @include lg {
+      height: auto;
       top: 100px;
       width: 50%;
       margin-left: 0;

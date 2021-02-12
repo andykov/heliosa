@@ -22,14 +22,12 @@
   color: $gray-light;
 }
 .link-arrow {
-  display: inline-flex;
-  align-items: center;
-
   &:after {
     content: '';
     width: 8px;
     height: 8px;
     display: inline-block;
+    vertical-align: middle;
     margin-left: 5px;
     border: 1px solid #111111;
     border-color: $black;
@@ -100,5 +98,16 @@
 .hide-mobile {
   @include md-max {
     display: none !important;
+  }
+}
+.link-upcase {
+  text-transform: uppercase;
+  text-decoration: underline;
+  letter-spacing: 0.1em;
+  font-size: 12px;
+  font-weight: $font-medium;
+  line-height: 1;
+  &:hover {
+    text-decoration: none;
   }
 }

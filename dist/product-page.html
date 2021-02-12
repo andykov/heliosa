@@ -88,7 +88,7 @@
             data-delay="1000"
             data-sal-duration="2000"
           >
-            <picture>
+            <picture class="product-hero__bg--desktop">
               <source
                 srcset="img/content/product-hero-img.webp"
                 type="image/webp"
@@ -99,11 +99,33 @@
               />
               <img src="img/content/product-hero-img.jpg" alt="" />
             </picture>
+            <picture class="product-hero__bg--mobile">
+              <source
+                srcset="img/content/product-hero-img-mobile.webp"
+                type="image/webp"
+              />
+              <source
+                srcset="img/content/product-hero-img-mobile.jpg"
+                type="image/jpeg"
+              />
+              <img src="img/content/product-hero-img-mobile.jpg" alt="" />
+            </picture>
           </div>
           <div class="product-hero__content">
             <div class="container">
               <form action="" class="product-hero__form">
                 <div class="product-hero__narrow">
+                  <div class="field-checkbox">
+                    <label class="field-checkbox__name">
+                      <input
+                        class="field-checkbox__input"
+                        type="checkbox"
+                        value=""
+                        name="compare"
+                      />
+                      <span class="field-checkbox__name-text">Сравнить</span>
+                    </label>
+                  </div>
                   <h1 class="product-hero__title">Heliosa 44 2kW/IPX5/WHT</h1>
                   <span class="vendor-code">Арт. 208177657456</span>
                   <div class="product-hero__text">
@@ -370,7 +392,7 @@
           <div class="product-spec">
             <div class="product-spec__info">
               <h2 class="product-spec__title">Характеристики</h2>
-              <ul class="product-spec__list spec-list--cols-1">
+              <ul class="product-spec__list">
                 <li>
                   <span>Мощность</span>
                   <span>2000 Вт</span>
@@ -533,6 +555,45 @@
           </div>
         </div>
       </section>
+      <section class="form-contacts">
+  <div class="container">
+    <div class="form-contacts__inner">
+      <div class="form-contacts__text">
+        <div class="form-contacts__title h2">Остались вопросы?</div>
+        <div class="form-contacts__subtitle">
+          Оставьте ваши контакты и мы ответим на все вопросы
+        </div>
+      </div>
+      <div class="form-contacts__form">
+        <form action="">
+          <label class="field-text field-text--error">
+            <span class="field-text__input-wrap">
+              <span class="field-text__help-text"
+                >Поле обязательно для заполнения</span
+              >
+              <input
+                class="field-text__input field-text__input--lg"
+                type="text"
+                placeholder="Имя*"
+              />
+            </span>
+          </label>
+          <label class="field-text">
+            <span class="field-text__input-wrap">
+              <input
+                class="field-text__input field-text__input--lg"
+                type="text"
+                placeholder="Телефон*"
+              />
+            </span>
+          </label>
+          <button type="submit" class="btn">Отправить</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
     </main>
     <footer class="footer">
   <div class="container">

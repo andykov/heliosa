@@ -36,6 +36,7 @@ $line-height: 1.375em !default;
       }
     }
     &:hover {
+      cursor: pointer;
       input:checked ~ :before {
         border-color: $gray;
       }

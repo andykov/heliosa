@@ -1,5 +1,11 @@
 .order-history-table {
-  margin-bottom: 40px;
+  margin-bottom: 30px;
+  @include md-max {
+    border-top: 1px solid rgba($color: $gray, $alpha: 0.5);
+  }
+  @include lg {
+    margin-bottom: 40px;
+  }
   &__head {
     display: none;
     font-size: 16px;
@@ -14,6 +20,13 @@
 
   &__item {
     border-bottom: 1px solid rgba($color: $gray, $alpha: 0.5);
+    padding: 20px 0 30px;
+    @include md {
+      padding: 10px 0;
+    }
+    @include lg {
+      padding: 0;
+    }
   }
 
   &__cell {
@@ -25,7 +38,8 @@
 
     @include md-max {
       display: flex;
-
+      align-items: flex-start;
+      line-height: 1;
       &::before {
         content: attr(data-label);
         display: inline-block;
@@ -34,6 +48,7 @@
         flex: 1;
         color: #b6b6b6;
         line-height: 1;
+        font-weight: $font-bold;
       }
     }
 
@@ -72,6 +87,7 @@
   }
 
   &__preview {
+    margin-right: 10px;
     img {
       max-width: 90px;
       max-height: 60px;
@@ -172,8 +188,12 @@
   }
   &__total {
     margin-bottom: 40px;
-    padding-bottom: 70px;
+    padding-bottom: 30px;
     border-bottom: 1px solid rgba($color: $gray, $alpha: 0.5);
+
+    @include lg {
+      padding-bottom: 70px;
+    }
 
     ul {
       list-style: none;
@@ -204,18 +224,31 @@
   &__title {
     font-size: 18px;
     font-weight: $font-bold;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
+    @include lg {
+      margin-bottom: 30px;
+    }
   }
   &__info {
     display: flex;
+    flex-wrap: wrap;
     list-style: none;
-    padding: 0 0 70px;
-    margin: 0 0 40px;
+    padding: 0 0 30px;
+    margin: 0 0 30px;
     border-bottom: 1px solid rgba($color: $gray, $alpha: 0.5);
-
+    @include lg {
+      padding: 0 0 70px;
+      margin: 0 0 40px;
+    }
     li {
-      flex: 1;
-      max-width: calc(1200px / 3);
+      width: 100%;
+      &:not(:last-child) {
+        margin-bottom: 30px;
+      }
+      @include lg {
+        flex: 1;
+        max-width: calc(1200px / 3);
+      }
       span {
         display: block;
         color: rgba($color: $black, $alpha: 0.5);

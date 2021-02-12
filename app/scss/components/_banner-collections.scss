@@ -126,19 +126,15 @@
       transform: translateY(-50%);
 
       &--prev {
-        left: 10px;
-        @include md {
-          left: 20px;
-        }
+        left: 0;
+
         @media screen and (min-width: 1400px) {
           left: -90px;
         }
       }
       &--next {
-        right: 10px;
-        @include md {
-          right: 20px;
-        }
+        right: 0;
+
         @media screen and (min-width: 1400px) {
           right: -90px;
         }
@@ -148,6 +144,9 @@
       position: absolute;
       bottom: 0;
       padding: 0 0 37.5px;
+      width: auto;
+      left: 50%;
+      transform: translateX(-50%);
 
       @include lg {
         padding: 50px 0;
