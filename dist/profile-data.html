@@ -11,7 +11,8 @@
     <link rel="stylesheet" href="css/app.min.css" />
   </head>
   <body>
-    <header class="header">
+    <div class="page-wrapper">
+      <header class="header">
   <div class="header-top">
     <div class="container">
       <div class="header-top__inner">
@@ -84,152 +85,152 @@
   </div>
 </header>
 
-    <main class="page">
-      <div class="page-head">
+      <main class="page">
+        <div class="page-head">
+          <div class="container">
+            <div class="container-narrow">
+              <h1 class="page-head__title">Мой кабинет</h1>
+              <div class="page-head__subtitle">
+                Хотите сменить аккаунт? <a href="">Выйти из личного кабинета</a>
+              </div>
+            </div>
+          </div>
+        </div>
         <div class="container">
-          <div class="container-narrow">
-            <h1 class="page-head__title">Мой кабинет</h1>
-            <div class="page-head__subtitle">
-              Хотите сменить аккаунт? <a href="">Выйти из личного кабинета</a>
+          <div class="profile">
+            <div class="profile__menu">
+              <a href="profile-data.html" class="active">Мои данные</a>
+              <a href="profile-orders.html">Мои заказы</a>
             </div>
-          </div>
-        </div>
-      </div>
-      <div class="container">
-        <div class="profile">
-          <div class="profile__menu">
-            <a href="profile-data.html" class="active">Мои данные</a>
-            <a href="profile-orders.html">Мои заказы</a>
-          </div>
 
-          <div class="profile__content">
-            <div class="profile__data">
-              <form action="" class="form-editable">
-                <div class="form-editable__group" data-form-edit>
-                  <div class="form-editable__head">
-                    <div class="form-editable__title">Личные данные</div>
-                    <a href="" class="form-editable-trigger">Редактировать</a>
-                    <button type="submit" class="form-editable-save">
-                      Сохранить
-                    </button>
+            <div class="profile__content">
+              <div class="profile__data">
+                <form action="" class="form-editable">
+                  <div class="form-editable__group" data-form-edit>
+                    <div class="form-editable__head">
+                      <div class="form-editable__title">Личные данные</div>
+                      <a href="" class="form-editable-trigger">Редактировать</a>
+                      <button type="submit" class="form-editable-save">
+                        Сохранить
+                      </button>
+                    </div>
+                    <div class="form-editable__field">
+                      <div class="form-editable__label">Имя</div>
+                      <label class="field-text">
+                        <span class="field-text__input-wrap">
+                          <span class="field-text__help-text"
+                            >Поле обязательно для заполнения</span
+                          >
+                          <input
+                            class="field-text__input"
+                            type="text"
+                            placeholder="Имя*"
+                            value="Алексей"
+                            required
+                            readonly
+                          />
+                        </span>
+                      </label>
+                    </div>
+                    <div class="form-editable__field">
+                      <div class="form-editable__label">Фамилия</div>
+                      <label class="field-text">
+                        <span class="field-text__input-wrap">
+                          <span class="field-text__help-text"
+                            >Поле обязательно для заполнения</span
+                          >
+                          <input
+                            class="field-text__input"
+                            type="text"
+                            placeholder="Фамилия*"
+                            value="Иванов"
+                            required
+                            readonly
+                          />
+                        </span>
+                      </label>
+                    </div>
                   </div>
-                  <div class="form-editable__field">
-                    <div class="form-editable__label">Имя</div>
-                    <label class="field-text">
-                      <span class="field-text__input-wrap">
-                        <span class="field-text__help-text"
-                          >Поле обязательно для заполнения</span
-                        >
-                        <input
-                          class="field-text__input"
-                          type="text"
-                          placeholder="Имя*"
-                          value="Алексей"
-                          required
-                          readonly
-                        />
-                      </span>
-                    </label>
+                  <div class="form-editable__group" data-form-edit>
+                    <div class="form-editable__head">
+                      <div class="form-editable__title">Контакты</div>
+                      <a href="" class="form-editable-trigger">Редактировать</a>
+                      <button type="submit" class="form-editable-save">
+                        Сохранить
+                      </button>
+                    </div>
+                    <div class="form-editable__field">
+                      <div class="form-editable__label">Телефон</div>
+                      <label class="field-text">
+                        <span class="field-text__input-wrap">
+                          <span class="field-text__help-text"
+                            >Поле обязательно для заполнения</span
+                          >
+                          <input
+                            class="field-text__input"
+                            type="text"
+                            placeholder="Телефон*"
+                            value="+7 (900) 987-00-12"
+                            required
+                            readonly
+                          />
+                        </span>
+                      </label>
+                    </div>
+                    <div class="form-editable__field">
+                      <div class="form-editable__label">E–mail</div>
+                      <label class="field-text">
+                        <span class="field-text__input-wrap">
+                          <span class="field-text__help-text"
+                            >Поле обязательно для заполнения</span
+                          >
+                          <input
+                            class="field-text__input"
+                            type="email"
+                            placeholder="E–mail*"
+                            value="ivanov.alexey@mail.ru"
+                            required
+                            readonly
+                          />
+                        </span>
+                      </label>
+                    </div>
                   </div>
-                  <div class="form-editable__field">
-                    <div class="form-editable__label">Фамилия</div>
-                    <label class="field-text">
-                      <span class="field-text__input-wrap">
-                        <span class="field-text__help-text"
-                          >Поле обязательно для заполнения</span
-                        >
-                        <input
-                          class="field-text__input"
-                          type="text"
-                          placeholder="Фамилия*"
-                          value="Иванов"
-                          required
-                          readonly
-                        />
-                      </span>
-                    </label>
+                  <div class="form-editable__group" data-form-edit>
+                    <div class="form-editable__head">
+                      <div class="form-editable__title">Пароль</div>
+                      <a href="" class="form-editable-trigger">Редактировать</a>
+                      <button type="submit" class="form-editable-save">
+                        Сохранить
+                      </button>
+                    </div>
+                    <div
+                      class="form-editable__field form-editable__field--password"
+                    >
+                      <label class="field-text">
+                        <span class="field-text__input-wrap">
+                          <span class="field-text__help-text"
+                            >Поле обязательно для заполнения</span
+                          >
+                          <input
+                            class="field-text__input"
+                            type="password"
+                            placeholder="Новый пароль*"
+                            value=""
+                            required
+                            readonly
+                          />
+                        </span>
+                      </label>
+                    </div>
                   </div>
-                </div>
-                <div class="form-editable__group" data-form-edit>
-                  <div class="form-editable__head">
-                    <div class="form-editable__title">Контакты</div>
-                    <a href="" class="form-editable-trigger">Редактировать</a>
-                    <button type="submit" class="form-editable-save">
-                      Сохранить
-                    </button>
-                  </div>
-                  <div class="form-editable__field">
-                    <div class="form-editable__label">Телефон</div>
-                    <label class="field-text">
-                      <span class="field-text__input-wrap">
-                        <span class="field-text__help-text"
-                          >Поле обязательно для заполнения</span
-                        >
-                        <input
-                          class="field-text__input"
-                          type="text"
-                          placeholder="Телефон*"
-                          value="+7 (900) 987-00-12"
-                          required
-                          readonly
-                        />
-                      </span>
-                    </label>
-                  </div>
-                  <div class="form-editable__field">
-                    <div class="form-editable__label">E–mail</div>
-                    <label class="field-text">
-                      <span class="field-text__input-wrap">
-                        <span class="field-text__help-text"
-                          >Поле обязательно для заполнения</span
-                        >
-                        <input
-                          class="field-text__input"
-                          type="email"
-                          placeholder="E–mail*"
-                          value="ivanov.alexey@mail.ru"
-                          required
-                          readonly
-                        />
-                      </span>
-                    </label>
-                  </div>
-                </div>
-                <div class="form-editable__group" data-form-edit>
-                  <div class="form-editable__head">
-                    <div class="form-editable__title">Пароль</div>
-                    <a href="" class="form-editable-trigger">Редактировать</a>
-                    <button type="submit" class="form-editable-save">
-                      Сохранить
-                    </button>
-                  </div>
-                  <div
-                    class="form-editable__field form-editable__field--password"
-                  >
-                    <label class="field-text">
-                      <span class="field-text__input-wrap">
-                        <span class="field-text__help-text"
-                          >Поле обязательно для заполнения</span
-                        >
-                        <input
-                          class="field-text__input"
-                          type="password"
-                          placeholder="Новый пароль*"
-                          value=""
-                          required
-                          readonly
-                        />
-                      </span>
-                    </label>
-                  </div>
-                </div>
-              </form>
+                </form>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </main>
-    <footer class="footer">
+      </main>
+      <footer class="footer">
   <div class="container">
     <div class="footer__inner">
       <div class="footer__contacts">
@@ -519,6 +520,7 @@
 <script src="js/vendor/tabbis.min.js"></script>
 <script src="js/vendor/splide.min.js"></script>
 
+    </div>
     <script src="js/main.min.js"></script>
     <script>
       let formEditTriggers = document.querySelectorAll(

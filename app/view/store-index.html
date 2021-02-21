@@ -11,198 +11,200 @@
     <link rel="stylesheet" href="css/app.min.css" />
   </head>
   <body>
-    @@include('modules/_header-store.html')
-    <main class="page">
-      @@include('modules/_banner.html')
+    <div class="page-wrapper">
+      @@include('modules/_header-store.html')
+      <main class="page">
+        @@include('modules/_banner.html')
 
-      <section class="page-section">
-        <div class="container">
-          <div class="page-section__head">
-            <div class="h1">Продукция</div>
-          </div>
-          @@include('modules/catalog/_catalog-category.html')
-        </div>
-      </section>
-
-      <section class="page-section page-section--gray">
-        <div class="container">
-          <div class="catalog-gallery catalog-gallery--compare">
-            <div class="catalog-gallery__tabs" data-catalog-tabs>
-              <button>Популярное</button>
-              <button>Новинки</button>
+        <section class="page-section">
+          <div class="container">
+            <div class="page-section__head">
+              <div class="h1">Продукция</div>
             </div>
+            @@include('modules/catalog/_catalog-category.html')
+          </div>
+        </section>
 
-            <div class="catalog-gallery__panes">
-              <div class="catalog-gallery__item" data-catalog-item>
-                <div class="splide">
-                  <div class="splide__track">
-                    <div class="splide__list">
-                      <div class="splide__slide">
-                        @@include('modules/catalog/_card-product_compare.html')
-                      </div>
-                      <div class="splide__slide">
-                        @@include('modules/catalog/_card-product-compare-old-price.html')
-                      </div>
-                      <div class="splide__slide">
-                        @@include('modules/catalog/_card-product_compare.html')
+        <section class="page-section page-section--gray">
+          <div class="container">
+            <div class="catalog-gallery catalog-gallery--compare">
+              <div class="catalog-gallery__tabs" data-catalog-tabs>
+                <button>Популярное</button>
+                <button>Новинки</button>
+              </div>
+
+              <div class="catalog-gallery__panes">
+                <div class="catalog-gallery__item" data-catalog-item>
+                  <div class="splide">
+                    <div class="splide__track">
+                      <div class="splide__list">
+                        <div class="splide__slide">
+                          @@include('modules/catalog/_card-product_compare.html')
+                        </div>
+                        <div class="splide__slide">
+                          @@include('modules/catalog/_card-product-compare-old-price.html')
+                        </div>
+                        <div class="splide__slide">
+                          @@include('modules/catalog/_card-product_compare.html')
+                        </div>
                       </div>
                     </div>
+                    <div class="splide__arrows">
+                      <button
+                        class="splide__arrow splide__arrow--prev splide__arrow--black"
+                      ></button>
+                      <button
+                        class="splide__arrow splide__arrow--next splide__arrow--black"
+                      ></button>
+                    </div>
                   </div>
-                  <div class="splide__arrows">
-                    <button
-                      class="splide__arrow splide__arrow--prev splide__arrow--black"
-                    ></button>
-                    <button
-                      class="splide__arrow splide__arrow--next splide__arrow--black"
-                    ></button>
+                </div>
+                <div
+                  class="catalog-gallery__item"
+                  style="display: none"
+                  data-catalog-item
+                >
+                  <div class="splide">
+                    <div class="splide__track">
+                      <div class="splide__list">
+                        <div class="splide__slide">
+                          @@include('modules/catalog/_card-product_compare.html')
+                        </div>
+                        <div class="splide__slide">
+                          @@include('modules/catalog/_card-product_compare.html')
+                        </div>
+                      </div>
+                    </div>
+                    <div class="splide__arrows">
+                      <button
+                        class="splide__arrow splide__arrow--prev splide__arrow--black"
+                      ></button>
+                      <button
+                        class="splide__arrow splide__arrow--next splide__arrow--black"
+                      ></button>
+                    </div>
                   </div>
                 </div>
               </div>
-              <div
-                class="catalog-gallery__item"
-                style="display: none"
-                data-catalog-item
+            </div>
+            <div class="centered">
+              <a href="" class="link-upcase">смотреть все обогреватели</a>
+            </div>
+          </div>
+        </section>
+
+        <section class="page-section">
+          <div class="container">
+            <div class="page-section__title h1">Использование</div>
+            <div class="examples">
+              <div class="tabs-nav">
+                <button class="tabs-nav__mobile" data-tabs-mobile></button>
+                <div class="tabs-nav__list" data-tabs>
+                  <button class="tabs-nav__btn">Все варианты</button>
+                  <button class="tabs-nav__btn">Терассы</button>
+                  <button class="tabs-nav__btn">Промышленные объекты</button>
+                </div>
+              </div>
+
+              <div class="tabs-panes" data-panes>
+                <div class="tabs-panes__item">
+                  <div class="examples__container">
+                    <div class="examples__group">
+                      <div class="examples__lg">
+                        <figure>
+                          <picture>
+                            <source
+                              srcset="img/content/example-lg.webp"
+                              type="image/webp"
+                            />
+                            <source
+                              srcset="img/content/example-lg.jpg"
+                              type="image/jpeg"
+                            />
+                            <img src="img/content/example-lg.jpg" alt="" />
+                          </picture>
+                          <figcaption>В общественных зонах</figcaption>
+                        </figure>
+                      </div>
+                      <div class="examples__sm">
+                        <figure>
+                          <picture>
+                            <source
+                              srcset="img/content/example-sm-1.webp"
+                              type="image/webp"
+                            />
+                            <source
+                              srcset="img/content/example-sm-1.jpg"
+                              type="image/jpeg"
+                            />
+                            <img src="img/content/example-sm-1.jpg" alt="" />
+                          </picture>
+                          <figcaption>В общественных зонах</figcaption>
+                        </figure>
+                      </div>
+                      <div class="examples__sm">
+                        <figure>
+                          <picture>
+                            <source
+                              srcset="img/content/example-sm-2.webp"
+                              type="image/webp"
+                            />
+                            <source
+                              srcset="img/content/example-sm-2.jpg"
+                              type="image/jpeg"
+                            />
+                            <img src="img/content/example-sm-2.jpg" alt="" />
+                          </picture>
+                          <figcaption>В общественных зонах</figcaption>
+                        </figure>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="tabs-panes__item">
+                  <div class="examples__container">
+                    <div class="examples__group">
+                      <div class="examples__lg">
+                        <img src="https://picsum.photos/580/580" alt="" />
+                      </div>
+                      <div class="examples__sm">
+                        <img src="https://picsum.photos/600/280" alt="" />
+                      </div>
+                      <div class="examples__sm">
+                        <img src="https://picsum.photos/600/280" alt="" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="tabs-panes__item">
+                  <div class="examples__container">
+                    <div class="examples__group">
+                      <div class="examples__lg">
+                        <img src="https://picsum.photos/580/580" alt="" />
+                      </div>
+                      <div class="examples__sm">
+                        <img src="https://picsum.photos/600/280" alt="" />
+                      </div>
+                      <div class="examples__sm">
+                        <img src="https://picsum.photos/600/280" alt="" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="centered">
+              <a href="" class="btn btn--white btn--outline btn--fw-mobile"
+                >Еще варианты</a
               >
-                <div class="splide">
-                  <div class="splide__track">
-                    <div class="splide__list">
-                      <div class="splide__slide">
-                        @@include('modules/catalog/_card-product_compare.html')
-                      </div>
-                      <div class="splide__slide">
-                        @@include('modules/catalog/_card-product_compare.html')
-                      </div>
-                    </div>
-                  </div>
-                  <div class="splide__arrows">
-                    <button
-                      class="splide__arrow splide__arrow--prev splide__arrow--black"
-                    ></button>
-                    <button
-                      class="splide__arrow splide__arrow--next splide__arrow--black"
-                    ></button>
-                  </div>
-                </div>
-              </div>
             </div>
           </div>
-          <div class="centered">
-            <a href="" class="link-upcase">смотреть все обогреватели</a>
-          </div>
-        </div>
-      </section>
-
-      <section class="page-section">
-        <div class="container">
-          <div class="page-section__title h1">Использование</div>
-          <div class="examples">
-            <div class="tabs-nav">
-              <button class="tabs-nav__mobile" data-tabs-mobile></button>
-              <div class="tabs-nav__list" data-tabs>
-                <button class="tabs-nav__btn">Все варианты</button>
-                <button class="tabs-nav__btn">Терассы</button>
-                <button class="tabs-nav__btn">Промышленные объекты</button>
-              </div>
-            </div>
-
-            <div class="tabs-panes" data-panes>
-              <div class="tabs-panes__item">
-                <div class="examples__container">
-                  <div class="examples__group">
-                    <div class="examples__lg">
-                      <figure>
-                        <picture>
-                          <source
-                            srcset="img/content/example-lg.webp"
-                            type="image/webp"
-                          />
-                          <source
-                            srcset="img/content/example-lg.jpg"
-                            type="image/jpeg"
-                          />
-                          <img src="img/content/example-lg.jpg" alt="" />
-                        </picture>
-                        <figcaption>В общественных зонах</figcaption>
-                      </figure>
-                    </div>
-                    <div class="examples__sm">
-                      <figure>
-                        <picture>
-                          <source
-                            srcset="img/content/example-sm-1.webp"
-                            type="image/webp"
-                          />
-                          <source
-                            srcset="img/content/example-sm-1.jpg"
-                            type="image/jpeg"
-                          />
-                          <img src="img/content/example-sm-1.jpg" alt="" />
-                        </picture>
-                        <figcaption>В общественных зонах</figcaption>
-                      </figure>
-                    </div>
-                    <div class="examples__sm">
-                      <figure>
-                        <picture>
-                          <source
-                            srcset="img/content/example-sm-2.webp"
-                            type="image/webp"
-                          />
-                          <source
-                            srcset="img/content/example-sm-2.jpg"
-                            type="image/jpeg"
-                          />
-                          <img src="img/content/example-sm-2.jpg" alt="" />
-                        </picture>
-                        <figcaption>В общественных зонах</figcaption>
-                      </figure>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="tabs-panes__item">
-                <div class="examples__container">
-                  <div class="examples__group">
-                    <div class="examples__lg">
-                      <img src="https://picsum.photos/580/580" alt="" />
-                    </div>
-                    <div class="examples__sm">
-                      <img src="https://picsum.photos/600/280" alt="" />
-                    </div>
-                    <div class="examples__sm">
-                      <img src="https://picsum.photos/600/280" alt="" />
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="tabs-panes__item">
-                <div class="examples__container">
-                  <div class="examples__group">
-                    <div class="examples__lg">
-                      <img src="https://picsum.photos/580/580" alt="" />
-                    </div>
-                    <div class="examples__sm">
-                      <img src="https://picsum.photos/600/280" alt="" />
-                    </div>
-                    <div class="examples__sm">
-                      <img src="https://picsum.photos/600/280" alt="" />
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="centered">
-            <a href="" class="btn btn--white btn--outline btn--fw-mobile"
-              >Еще варианты</a
-            >
-          </div>
-        </div>
-      </section>
-      @@include('modules/store/_about-box.html')
-      @@include('modules/_form-contacts.html')
-    </main>
-    @@include('modules/_footer.html')
+        </section>
+        @@include('modules/store/_about-box.html')
+        @@include('modules/_form-contacts.html')
+      </main>
+      @@include('modules/_footer.html')
+    </div>
     <script src="js/main.min.js"></script>
   </body>
 </html>

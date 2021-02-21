@@ -10,17 +10,19 @@
     <link rel="stylesheet" href="css/app.min.css" />
   </head>
   <body>
-    @@include('modules/_header-site.html')
-    <main class="page">
-      @@include('modules/catalog/_catalog-nav-category.html')
-      <section class="page-section pt-120 pb-160">
-        <div class="container">
-          <h1>Продукция</h1>
-          @@include('modules/catalog/_catalog-category.html')
-        </div>
-      </section>
-    </main>
-    @@include('modules/_footer.html')
+    <div class="page-wrapper">
+      @@include('modules/_header-site.html')
+      <main class="page">
+        @@include('modules/catalog/_catalog-nav-category.html')
+        <section class="page-section pt-120 pb-160">
+          <div class="container">
+            <h1>Продукция</h1>
+            @@include('modules/catalog/_catalog-category.html')
+          </div>
+        </section>
+      </main>
+      @@include('modules/_footer.html')
+    </div>
     <script src="js/main.min.js"></script>
   </body>
 </html>

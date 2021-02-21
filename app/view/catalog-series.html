@@ -10,29 +10,31 @@
     <link rel="stylesheet" href="css/app.min.css" />
   </head>
   <body>
-    @@include('modules/_header-site.html')
-    <main class="page">
-      @@include('modules/catalog/_catalog-nav-category.html')
-      <section class="page-section">
-        <div class="container">
-          <h1>Настенные обогреватели</h1>
-          <div class="catalog catalog--series">
-            <div class="catalog__list">
-              @@include('modules/catalog/_card-series.html')
-              @@include('modules/catalog/_card-series.html')
-              @@include('modules/catalog/_card-series.html')
-              @@include('modules/catalog/_card-series.html')
-              @@include('modules/catalog/_card-series.html')
-              @@include('modules/catalog/_card-series.html')
-              @@include('modules/catalog/_card-series.html')
-              @@include('modules/catalog/_card-series.html')
-              @@include('modules/catalog/_card-series.html')
+    <div class="page-wrapper">
+      @@include('modules/_header-site.html')
+      <main class="page">
+        @@include('modules/catalog/_catalog-nav-category.html')
+        <section class="page-section">
+          <div class="container">
+            <h1>Настенные обогреватели</h1>
+            <div class="catalog catalog--series">
+              <div class="catalog__list">
+                @@include('modules/catalog/_card-series.html')
+                @@include('modules/catalog/_card-series.html')
+                @@include('modules/catalog/_card-series.html')
+                @@include('modules/catalog/_card-series.html')
+                @@include('modules/catalog/_card-series.html')
+                @@include('modules/catalog/_card-series.html')
+                @@include('modules/catalog/_card-series.html')
+                @@include('modules/catalog/_card-series.html')
+                @@include('modules/catalog/_card-series.html')
+              </div>
             </div>
           </div>
-        </div>
-      </section>
-    </main>
-    @@include('modules/_footer.html')
+        </section>
+      </main>
+      @@include('modules/_footer.html')
+    </div>
     <script src="js/main.min.js"></script>
   </body>
 </html>

@@ -10,7 +10,8 @@
     <link rel="stylesheet" href="css/app.min.css" />
   </head>
   <body>
-    <header class="header">
+    <div class="page-wrapper">
+      <header class="header">
   <div class="header-top">
     <div class="container">
       <div class="header-top__inner">
@@ -64,8 +65,8 @@
   </div>
 </header>
 
-    <main class="page">
-      <div class="catalog-nav medium">
+      <main class="page">
+        <div class="catalog-nav medium">
   <div class="container">
     <div class="catalog-nav__wrap">
       <ul class="catalog-nav__list">
@@ -83,268 +84,284 @@
   </div>
 </div>
 
-      <div class="catalog-banner">
-        <div class="container">
-          <div class="catalog-banner__content">
-            <div class="catalog-banner__text">
-              <h1 class="catalog-banner__title">Heliosa Hi Design 44 серия</h1>
-              <p class="catalog-banner__desc">
-                HELIOSA HI DESIGN 44 серия уличных инфракрасных обогревателей
-                среднего размера с изящной перфорацией в боковых стенках для
-                охлаждения корпуса. Закругленные мягкие формы корпуса подходят
-                практически для любого интерьера. Все модели серии имеют класс
-                защиты IPX5.
-              </p>
-            </div>
-            <div class="catalog-banner__img">
-              <img
-                src="img/content/catalog-banner-img-1.png"
-                alt="Heliosa Hi Design 44 серия"
-              />
+        <div class="catalog-banner">
+          <div class="container">
+            <div class="catalog-banner__content">
+              <div class="catalog-banner__text">
+                <h1 class="catalog-banner__title">
+                  Heliosa Hi Design 44 серия
+                </h1>
+                <p class="catalog-banner__desc">
+                  HELIOSA HI DESIGN 44 серия уличных инфракрасных обогревателей
+                  среднего размера с изящной перфорацией в боковых стенках для
+                  охлаждения корпуса. Закругленные мягкие формы корпуса подходят
+                  практически для любого интерьера. Все модели серии имеют класс
+                  защиты IPX5.
+                </p>
+              </div>
+              <div class="catalog-banner__img">
+                <img
+                  src="img/content/catalog-banner-img-1.png"
+                  alt="Heliosa Hi Design 44 серия"
+                />
+              </div>
             </div>
           </div>
         </div>
-      </div>
-      <div class="container">
-        <div class="catalog catalog--products">
-          <div class="catalog__filters">
-            <form class="filters">
-              <div class="js-filter-mobile filters__mobile">
-                <span>Фильтр</span>
-                <span class="icon">
-                  <svg width="16" height="12">
-                    <use xlink:href="img/icons.svg#icon-filter"></use>
-                  </svg>
-                </span>
+        <div class="container">
+          <div class="catalog catalog--products">
+            <div class="catalog__filters">
+              <form class="filters">
+                <div class="js-filter-mobile filters__mobile">
+                  <span>Фильтр</span>
+                  <span class="icon">
+                    <svg width="16" height="12">
+                      <use xlink:href="img/icons.svg#icon-filter"></use>
+                    </svg>
+                  </span>
+                </div>
+                <div class="filters__group">
+                  <div class="filters__item">
+                    <div class="dropdown">
+                      <button
+                        type="button"
+                        data-toggle="dropdown"
+                        data-icon="true"
+                        data-persist="true"
+                      >
+                        <span class="dropdown__selected"
+                          >Класс влагозащиты</span
+                        >
+                        <span data-clear>X</span>
+                      </button>
+                      <div class="dropdown__body">
+                        <div class="field-drop-checkboxes">
+                          <div class="field-checkbox">
+                            <label class="field-checkbox__name">
+                              <input
+                                class="field-checkbox__input"
+                                type="checkbox"
+                                name="ipx"
+                                value="1"
+                              />
+                              <span class="field-checkbox__name-text"
+                                >IPX5</span
+                              >
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="filters__item">
+                    <div class="dropdown">
+                      <button
+                        type="button"
+                        data-toggle="dropdown"
+                        data-icon="true"
+                        data-persist="true"
+                      >
+                        <span class="dropdown__selected">Мощность, Вт</span>
+                        <span data-clear>X</span>
+                      </button>
+                      <div class="dropdown__body">
+                        <div class="field-drop-checkboxes">
+                          <div class="field-checkbox">
+                            <label class="field-checkbox__name">
+                              <input
+                                class="field-checkbox__input"
+                                type="checkbox"
+                                name="power"
+                                value="1"
+                              />
+                              <span class="field-checkbox__name-text"
+                                >1500</span
+                              >
+                            </label>
+                          </div>
+                          <div class="field-checkbox">
+                            <label class="field-checkbox__name">
+                              <input
+                                class="field-checkbox__input"
+                                type="checkbox"
+                                name="power"
+                                value="2"
+                                checked
+                              />
+                              <span class="field-checkbox__name-text"
+                                >2000</span
+                              >
+                            </label>
+                          </div>
+                          <div class="field-checkbox">
+                            <label class="field-checkbox__name">
+                              <input
+                                class="field-checkbox__input"
+                                type="checkbox"
+                                name="power"
+                                value="3"
+                              />
+                              <span class="field-checkbox__name-text"
+                                >2200</span
+                              >
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="filters__item">
+                    <div class="dropdown">
+                      <button
+                        type="button"
+                        data-toggle="dropdown"
+                        data-icon="true"
+                        data-persist="true"
+                      >
+                        <span class="dropdown__selected">Цвет</span>
+                        <span data-clear>X</span>
+                      </button>
+                      <div class="dropdown__body">
+                        <div class="field-drop-checkboxes">
+                          <div class="field-checkbox">
+                            <label class="field-checkbox__name">
+                              <input
+                                class="field-checkbox__input"
+                                type="checkbox"
+                                name="color"
+                                value="1"
+                              />
+                              <span class="field-checkbox__name-text"
+                                >Белый</span
+                              >
+                            </label>
+                          </div>
+                          <div class="field-checkbox">
+                            <label class="field-checkbox__name">
+                              <input
+                                class="field-checkbox__input"
+                                type="checkbox"
+                                name="color"
+                                value="2"
+                              />
+                              <span class="field-checkbox__name-text"
+                                >Черный</span
+                              >
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="filters__item">
+                    <div class="dropdown">
+                      <button
+                        type="button"
+                        data-toggle="dropdown"
+                        data-icon="true"
+                        data-persist="true"
+                      >
+                        <span class="dropdown__selected">Наличие вилки</span>
+                        <span data-clear>X</span>
+                      </button>
+                      <div class="dropdown__body">
+                        <div class="field-drop-checkboxes">
+                          <div class="field-checkbox">
+                            <label class="field-checkbox__name">
+                              <input
+                                class="field-checkbox__input"
+                                type="checkbox"
+                                name="elplug"
+                                value="1"
+                              />
+                              <span class="field-checkbox__name-text">Да </span>
+                            </label>
+                          </div>
+                          <div class="field-checkbox">
+                            <label class="field-checkbox__name">
+                              <input
+                                class="field-checkbox__input"
+                                type="checkbox"
+                                value="2"
+                                name="elplug"
+                              />
+                              <span class="field-checkbox__name-text">Нет</span>
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="filters__item">
+                    <div class="dropdown">
+                      <button
+                        type="button"
+                        data-toggle="dropdown"
+                        data-icon="true"
+                        data-persist="true"
+                      >
+                        <span class="dropdown__selected">Площадь обогрева</span>
+                        <span data-clear>X</span>
+                      </button>
+                      <div class="dropdown__body">
+                        <div class="field-drop-checkboxes">
+                          <div class="field-checkbox">
+                            <label class="field-checkbox__name">
+                              <input
+                                class="field-checkbox__input"
+                                type="checkbox"
+                                value="1"
+                                name="area"
+                              />
+                              <span class="field-checkbox__name-text"
+                                >500
+                              </span>
+                            </label>
+                          </div>
+                          <div class="field-checkbox">
+                            <label class="field-checkbox__name">
+                              <input
+                                class="field-checkbox__input"
+                                type="checkbox"
+                                value="2"
+                                name="area"
+                              />
+                              <span class="field-checkbox__name-text"
+                                >1000000</span
+                              >
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="filters__item">
+                    <div class="filters__buttons">
+                      <button
+                        type="submit"
+                        class="js-filters-clear filters__clear btn btn--white btn--outline"
+                      >
+                        <span class="hide-mobile">Очистить фильтр</span>
+                        <span class="hide-tablet">Сбросить</span>
+                      </button>
+                      <button
+                        type="submit"
+                        class="filters__submit hide-tablet btn"
+                      >
+                        Применить
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </form>
+              <div class="sorting">
+                <span class="sorting__label">Сортировать по цене:</span>
+                <a href="" class="active">сначала дешевые</a>
+                <a href="">сначала дороже</a>
               </div>
-              <div class="filters__group">
-                <div class="filters__item">
-                  <div class="dropdown">
-                    <button
-                      type="button"
-                      data-toggle="dropdown"
-                      data-icon="true"
-                      data-persist="true"
-                    >
-                      <span class="dropdown__selected">Класс влагозащиты</span>
-                      <span data-clear>X</span>
-                    </button>
-                    <div class="dropdown__body">
-                      <div class="field-drop-checkboxes">
-                        <div class="field-checkbox">
-                          <label class="field-checkbox__name">
-                            <input
-                              class="field-checkbox__input"
-                              type="checkbox"
-                              name="ipx"
-                              value="1"
-                            />
-                            <span class="field-checkbox__name-text">IPX5</span>
-                          </label>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="filters__item">
-                  <div class="dropdown">
-                    <button
-                      type="button"
-                      data-toggle="dropdown"
-                      data-icon="true"
-                      data-persist="true"
-                    >
-                      <span class="dropdown__selected">Мощность, Вт</span>
-                      <span data-clear>X</span>
-                    </button>
-                    <div class="dropdown__body">
-                      <div class="field-drop-checkboxes">
-                        <div class="field-checkbox">
-                          <label class="field-checkbox__name">
-                            <input
-                              class="field-checkbox__input"
-                              type="checkbox"
-                              name="power"
-                              value="1"
-                            />
-                            <span class="field-checkbox__name-text">1500</span>
-                          </label>
-                        </div>
-                        <div class="field-checkbox">
-                          <label class="field-checkbox__name">
-                            <input
-                              class="field-checkbox__input"
-                              type="checkbox"
-                              name="power"
-                              value="2"
-                              checked
-                            />
-                            <span class="field-checkbox__name-text">2000</span>
-                          </label>
-                        </div>
-                        <div class="field-checkbox">
-                          <label class="field-checkbox__name">
-                            <input
-                              class="field-checkbox__input"
-                              type="checkbox"
-                              name="power"
-                              value="3"
-                            />
-                            <span class="field-checkbox__name-text">2200</span>
-                          </label>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="filters__item">
-                  <div class="dropdown">
-                    <button
-                      type="button"
-                      data-toggle="dropdown"
-                      data-icon="true"
-                      data-persist="true"
-                    >
-                      <span class="dropdown__selected">Цвет</span>
-                      <span data-clear>X</span>
-                    </button>
-                    <div class="dropdown__body">
-                      <div class="field-drop-checkboxes">
-                        <div class="field-checkbox">
-                          <label class="field-checkbox__name">
-                            <input
-                              class="field-checkbox__input"
-                              type="checkbox"
-                              name="color"
-                              value="1"
-                            />
-                            <span class="field-checkbox__name-text">Белый</span>
-                          </label>
-                        </div>
-                        <div class="field-checkbox">
-                          <label class="field-checkbox__name">
-                            <input
-                              class="field-checkbox__input"
-                              type="checkbox"
-                              name="color"
-                              value="2"
-                            />
-                            <span class="field-checkbox__name-text"
-                              >Черный</span
-                            >
-                          </label>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="filters__item">
-                  <div class="dropdown">
-                    <button
-                      type="button"
-                      data-toggle="dropdown"
-                      data-icon="true"
-                      data-persist="true"
-                    >
-                      <span class="dropdown__selected">Наличие вилки</span>
-                      <span data-clear>X</span>
-                    </button>
-                    <div class="dropdown__body">
-                      <div class="field-drop-checkboxes">
-                        <div class="field-checkbox">
-                          <label class="field-checkbox__name">
-                            <input
-                              class="field-checkbox__input"
-                              type="checkbox"
-                              name="elplug"
-                              value="1"
-                            />
-                            <span class="field-checkbox__name-text">Да </span>
-                          </label>
-                        </div>
-                        <div class="field-checkbox">
-                          <label class="field-checkbox__name">
-                            <input
-                              class="field-checkbox__input"
-                              type="checkbox"
-                              value="2"
-                              name="elplug"
-                            />
-                            <span class="field-checkbox__name-text">Нет</span>
-                          </label>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="filters__item">
-                  <div class="dropdown">
-                    <button
-                      type="button"
-                      data-toggle="dropdown"
-                      data-icon="true"
-                      data-persist="true"
-                    >
-                      <span class="dropdown__selected">Площадь обогрева</span>
-                      <span data-clear>X</span>
-                    </button>
-                    <div class="dropdown__body">
-                      <div class="field-drop-checkboxes">
-                        <div class="field-checkbox">
-                          <label class="field-checkbox__name">
-                            <input
-                              class="field-checkbox__input"
-                              type="checkbox"
-                              value="1"
-                              name="area"
-                            />
-                            <span class="field-checkbox__name-text">500 </span>
-                          </label>
-                        </div>
-                        <div class="field-checkbox">
-                          <label class="field-checkbox__name">
-                            <input
-                              class="field-checkbox__input"
-                              type="checkbox"
-                              value="2"
-                              name="area"
-                            />
-                            <span class="field-checkbox__name-text"
-                              >1000000</span
-                            >
-                          </label>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="filters__item">
-                  <div class="filters__buttons">
-                    <button
-                      type="submit"
-                      class="js-filters-clear filters__clear btn btn--white btn--outline"
-                    >
-                      <span class="hide-mobile">Очистить фильтр</span>
-                      <span class="hide-tablet">Сбросить</span>
-                    </button>
-                    <button
-                      type="submit"
-                      class="filters__submit hide-tablet btn"
-                    >
-                      Применить
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </form>
-            <div class="sorting">
-              <span class="sorting__label">Сортировать по цене:</span>
-              <a href="" class="active">сначала дешевые</a>
-              <a href="">сначала дороже</a>
             </div>
-          </div>
-          <div class="catalog__list">
-            <div class="card">
+            <div class="catalog__list">
+              <div class="card">
   <div class="card__compare">
     <div class="field-checkbox">
       <label class="field-checkbox__name">
@@ -372,7 +389,7 @@
   </div>
 </div>
 
-            <div class="card">
+              <div class="card">
   <div class="card__compare">
     <div class="field-checkbox">
       <label class="field-checkbox__name">
@@ -403,7 +420,7 @@
   </div>
 </div>
 
-            <div class="card">
+              <div class="card">
   <div class="card__compare">
     <div class="field-checkbox">
       <label class="field-checkbox__name">
@@ -431,7 +448,7 @@
   </div>
 </div>
 
-            <div class="card">
+              <div class="card">
   <div class="card__compare">
     <div class="field-checkbox">
       <label class="field-checkbox__name">
@@ -462,7 +479,7 @@
   </div>
 </div>
 
-            <div class="card">
+              <div class="card">
   <div class="card__compare">
     <div class="field-checkbox">
       <label class="field-checkbox__name">
@@ -490,7 +507,7 @@
   </div>
 </div>
 
-            <div class="card">
+              <div class="card">
   <div class="card__compare">
     <div class="field-checkbox">
       <label class="field-checkbox__name">
@@ -521,7 +538,7 @@
   </div>
 </div>
 
-            <div class="card">
+              <div class="card">
   <div class="card__compare">
     <div class="field-checkbox">
       <label class="field-checkbox__name">
@@ -549,7 +566,7 @@
   </div>
 </div>
 
-            <div class="card">
+              <div class="card">
   <div class="card__compare">
     <div class="field-checkbox">
       <label class="field-checkbox__name">
@@ -577,7 +594,7 @@
   </div>
 </div>
 
-            <div class="card">
+              <div class="card">
   <div class="card__compare">
     <div class="field-checkbox">
       <label class="field-checkbox__name">
@@ -605,7 +622,7 @@
   </div>
 </div>
 
-            <div class="card">
+              <div class="card">
   <div class="card__compare">
     <div class="field-checkbox">
       <label class="field-checkbox__name">
@@ -633,7 +650,7 @@
   </div>
 </div>
 
-            <div class="card">
+              <div class="card">
   <div class="card__compare">
     <div class="field-checkbox">
       <label class="field-checkbox__name">
@@ -661,7 +678,7 @@
   </div>
 </div>
 
-            <div class="card">
+              <div class="card">
   <div class="card__compare">
     <div class="field-checkbox">
       <label class="field-checkbox__name">
@@ -689,24 +706,36 @@
   </div>
 </div>
 
-          </div>
-          <div class="catalog__bottom">
-            <a href="#" class="btn btn--gray">Загрузить еще</a>
-            <ul class="pagination">
-  <li><a href=""></a></li>
+            </div>
+            <div class="catalog__bottom">
+              <a href="#" class="btn btn--gray">Загрузить еще</a>
+              <ul class="pagination">
+  <li>
+    <a href="">
+      <svg width="15" height="12">
+        <use xlink:href="img/icons.svg#arrow-black-left"></use>
+      </svg>
+    </a>
+  </li>
   <li><a href="" class="active">1</a></li>
   <li><a href="">2</a></li>
   <li><a href="">3</a></li>
   <li><span>...</span></li>
   <li><a href="">6</a></li>
-  <li><a href=""></a></li>
+  <li>
+    <a href="">
+      <svg width="15" height="12">
+        <use xlink:href="img/icons.svg#arrow-black-right"></use>
+      </svg>
+    </a>
+  </li>
 </ul>
 
+            </div>
           </div>
         </div>
-      </div>
-    </main>
-    <footer class="footer">
+      </main>
+      <footer class="footer">
   <div class="container">
     <div class="footer__inner">
       <div class="footer__contacts">
@@ -996,6 +1025,7 @@
 <script src="js/vendor/tabbis.min.js"></script>
 <script src="js/vendor/splide.min.js"></script>
 
+    </div>
     <script src="js/main.min.js"></script>
   </body>
 </html>

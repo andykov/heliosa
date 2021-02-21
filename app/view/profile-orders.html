@@ -11,154 +11,180 @@
     <link rel="stylesheet" href="css/app.min.css" />
   </head>
   <body>
-    @@include('modules/_header-store.html')
-    <main class="page">
-      <div class="page-head">
+    <div class="page-wrapper">
+      @@include('modules/_header-store.html')
+      <main class="page">
+        <div class="page-head">
+          <div class="container">
+            <div class="container-narrow">
+              <h1 class="page-head__title">Мои заказы</h1>
+              <div class="page-head__subtitle">
+                Хотите сменить аккаунт? <a href="">Выйти из личного кабинета</a>
+              </div>
+            </div>
+          </div>
+        </div>
         <div class="container">
-          <div class="container-narrow">
-            <h1 class="page-head__title">Мои заказы</h1>
-            <div class="page-head__subtitle">
-              Хотите сменить аккаунт? <a href="">Выйти из личного кабинета</a>
+          <div class="profile">
+            <div class="profile__menu">
+              <a href="profile-data.html">Мои данные</a>
+              <a href="profile-orders.html" class="active">Мои заказы</a>
             </div>
-          </div>
-        </div>
-      </div>
-      <div class="container">
-        <div class="profile">
-          <div class="profile__menu">
-            <a href="profile-data.html">Мои данные</a>
-            <a href="profile-orders.html" class="active">Мои заказы</a>
-          </div>
 
-          <div class="profile__content">
-            <div class="profile__orders">
-              <div class="profile__orders-menu" data-tabs>
-                <button class="btn btn--white btn--outline btn--fw-mobile">
-                  Заказы в обработке
-                </button>
-                <button class="btn btn--white btn--outline btn--fw-mobile">
-                  Заказы в архиве
-                </button>
-              </div>
+            <div class="profile__content">
+              <div class="profile__orders">
+                <div class="profile__orders-menu" data-tabs>
+                  <button class="btn btn--white btn--outline btn--fw-mobile">
+                    Заказы в обработке
+                  </button>
+                  <button class="btn btn--white btn--outline btn--fw-mobile">
+                    Заказы в архиве
+                  </button>
+                </div>
 
-              <div class="profile__orders-content" data-panes>
-                <div>
-                  <div class="client-order">
-                    <div class="client-order__head">
-                      <span>Номер заказа</span>
-                      <span>Дата заказа</span>
-                      <span>К оплате</span>
-                      <span>Доставка</span>
-                      <span>Где заказ</span>
-                    </div>
-                    <div class="client-order__item">
-                      <div class="client-order__cell" data-label="Номер заказа">
-                        № 1098 0023 4566
+                <div class="profile__orders-content" data-panes>
+                  <div>
+                    <div class="client-order">
+                      <div class="client-order__head">
+                        <span>Номер заказа</span>
+                        <span>Дата заказа</span>
+                        <span>К оплате</span>
+                        <span>Доставка</span>
+                        <span>Где заказ</span>
                       </div>
-                      <div class="client-order__cell" data-label="Дата заказа">
-                        16.10.2020
-                      </div>
-                      <div class="client-order__cell" data-label="К оплате">
-                        58 300 ₽
-                      </div>
-                      <div class="client-order__cell" data-label="Доставка">
-                        23.10.2020
-                      </div>
-                      <div class="client-order__cell" data-label="Где заказ">
-                        <span
-                          >Готов к выдаче в <br />
-                          пункте самовывоза</span
+                      <div class="client-order__item">
+                        <div
+                          class="client-order__cell"
+                          data-label="Номер заказа"
                         >
-                        <div class="client-order__link">
-                          <a href="profile-history-order.html"
-                            >Подробнее о заказе</a
+                          № 1098 0023 4566
+                        </div>
+                        <div
+                          class="client-order__cell"
+                          data-label="Дата заказа"
+                        >
+                          16.10.2020
+                        </div>
+                        <div class="client-order__cell" data-label="К оплате">
+                          58 300 ₽
+                        </div>
+                        <div class="client-order__cell" data-label="Доставка">
+                          23.10.2020
+                        </div>
+                        <div class="client-order__cell" data-label="Где заказ">
+                          <span
+                            >Готов к выдаче в <br />
+                            пункте самовывоза</span
                           >
+                          <div class="client-order__link">
+                            <a href="profile-history-order.html"
+                              >Подробнее о заказе</a
+                            >
+                          </div>
                         </div>
                       </div>
                     </div>
                   </div>
-                </div>
-                <div>
-                  <div class="client-order">
-                    <div class="client-order__head">
-                      <span>Номер заказа</span>
-                      <span>Сумма заказа</span>
-                      <span>Сумма товаров</span>
-                      <span>Доставлен</span>
-                      <span>Статус</span>
-                    </div>
-                    <div class="client-order__item">
-                      <div class="client-order__cell" data-label="Номер заказа">
-                        № 1098 0023 4566
-                      </div>
-                      <div class="client-order__cell" data-label="Сумма заказа">
-                        58 300 ₽
-                      </div>
-                      <div
-                        class="client-order__cell"
-                        data-label="Сумма товаров"
-                      >
-                        58 000 ₽
-                      </div>
-                      <div class="client-order__cell" data-label="Доставлен">
-                        15.09.2020
-                      </div>
-                      <div class="client-order__cell" data-label="Статус">
+                  <div>
+                    <div class="client-order">
+                      <div class="client-order__head">
+                        <span>Номер заказа</span>
+                        <span>Сумма заказа</span>
+                        <span>Сумма товаров</span>
                         <span>Доставлен</span>
-                        <div class="client-order__link">
-                          <a href="profile-history-order.html"
-                            >Подробнее о заказе</a
-                          >
+                        <span>Статус</span>
+                      </div>
+                      <div class="client-order__item">
+                        <div
+                          class="client-order__cell"
+                          data-label="Номер заказа"
+                        >
+                          № 1098 0023 4566
+                        </div>
+                        <div
+                          class="client-order__cell"
+                          data-label="Сумма заказа"
+                        >
+                          58 300 ₽
+                        </div>
+                        <div
+                          class="client-order__cell"
+                          data-label="Сумма товаров"
+                        >
+                          58 000 ₽
+                        </div>
+                        <div class="client-order__cell" data-label="Доставлен">
+                          15.09.2020
+                        </div>
+                        <div class="client-order__cell" data-label="Статус">
+                          <span>Доставлен</span>
+                          <div class="client-order__link">
+                            <a href="profile-history-order.html"
+                              >Подробнее о заказе</a
+                            >
+                          </div>
                         </div>
                       </div>
-                    </div>
-                    <div class="client-order__item">
-                      <div class="client-order__cell" data-label="Номер заказа">
-                        № 1098 0023 4566
-                      </div>
-                      <div class="client-order__cell" data-label="Сумма заказа">
-                        58 300 ₽
-                      </div>
-                      <div
-                        class="client-order__cell"
-                        data-label="Сумма товаров"
-                      >
-                        58 000 ₽
-                      </div>
-                      <div class="client-order__cell" data-label="Доставлен">
-                        15.09.2020
-                      </div>
-                      <div class="client-order__cell" data-label="Статус">
-                        <span>Доставлен</span>
-                        <div class="client-order__link">
-                          <a href="profile-history-order.html"
-                            >Подробнее о заказе</a
-                          >
+                      <div class="client-order__item">
+                        <div
+                          class="client-order__cell"
+                          data-label="Номер заказа"
+                        >
+                          № 1098 0023 4566
+                        </div>
+                        <div
+                          class="client-order__cell"
+                          data-label="Сумма заказа"
+                        >
+                          58 300 ₽
+                        </div>
+                        <div
+                          class="client-order__cell"
+                          data-label="Сумма товаров"
+                        >
+                          58 000 ₽
+                        </div>
+                        <div class="client-order__cell" data-label="Доставлен">
+                          15.09.2020
+                        </div>
+                        <div class="client-order__cell" data-label="Статус">
+                          <span>Доставлен</span>
+                          <div class="client-order__link">
+                            <a href="profile-history-order.html"
+                              >Подробнее о заказе</a
+                            >
+                          </div>
                         </div>
                       </div>
-                    </div>
-                    <div class="client-order__item">
-                      <div class="client-order__cell" data-label="Номер заказа">
-                        № 1098 0023 4566
-                      </div>
-                      <div class="client-order__cell" data-label="Сумма заказа">
-                        58 300 ₽
-                      </div>
-                      <div
-                        class="client-order__cell"
-                        data-label="Сумма товаров"
-                      >
-                        58 000 ₽
-                      </div>
-                      <div class="client-order__cell" data-label="Доставлен">
-                        15.09.2020
-                      </div>
-                      <div class="client-order__cell" data-label="Статус">
-                        <span>Доставлен</span>
-                        <div class="client-order__link">
-                          <a href="profile-history-order.html"
-                            >Подробнее о заказе</a
-                          >
+                      <div class="client-order__item">
+                        <div
+                          class="client-order__cell"
+                          data-label="Номер заказа"
+                        >
+                          № 1098 0023 4566
+                        </div>
+                        <div
+                          class="client-order__cell"
+                          data-label="Сумма заказа"
+                        >
+                          58 300 ₽
+                        </div>
+                        <div
+                          class="client-order__cell"
+                          data-label="Сумма товаров"
+                        >
+                          58 000 ₽
+                        </div>
+                        <div class="client-order__cell" data-label="Доставлен">
+                          15.09.2020
+                        </div>
+                        <div class="client-order__cell" data-label="Статус">
+                          <span>Доставлен</span>
+                          <div class="client-order__link">
+                            <a href="profile-history-order.html"
+                              >Подробнее о заказе</a
+                            >
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -168,9 +194,9 @@
             </div>
           </div>
         </div>
-      </div>
-    </main>
-    @@include('modules/_footer.html')
+      </main>
+      @@include('modules/_footer.html')
+    </div>
     <script src="js/main.min.js"></script>
     <script>
       let formEditTriggers = document.querySelectorAll(

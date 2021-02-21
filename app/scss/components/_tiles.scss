@@ -204,11 +204,10 @@ $tile-img-offset-xl: 60px;
       }
 
       &__text {
-        max-width: 600px;
         @include xl {
         }
         @include lg {
-          // max-width: 370px;
+          max-width: 600px;
         }
         @include xl {
           grid-template-columns: 1fr calc((640 / 1200) * 100%);
@@ -216,6 +215,11 @@ $tile-img-offset-xl: 60px;
       }
 
       &__img {
+        img {
+          @include md-max {
+            width: 100%;
+          }
+        }
       }
 
       &:nth-child(odd) {

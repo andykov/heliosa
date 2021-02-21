@@ -537,6 +537,14 @@
   }
 
   &__btns {
+    .btn--white {
+      &:hover {
+        background-color: #fff;
+        color: #1c1c1c;
+        border-color: transparent;
+        text-decoration: underline;
+      }
+    }
     @include md-max {
       display: flex;
       flex-direction: column-reverse;

@@ -11,7 +11,8 @@
     <link rel="stylesheet" href="css/app.min.css" />
   </head>
   <body>
-    <header class="header">
+    <div class="page-wrapper">
+      <header class="header">
   <div class="header-top">
     <div class="container">
       <div class="header-top__inner">
@@ -84,117 +85,117 @@
   </div>
 </header>
 
-    <main class="page">
-      <div class="page-head pb-0">
+      <main class="page">
+        <div class="page-head pb-0">
+          <div class="container">
+            <h1 class="page-head__title">Корзина</h1>
+          </div>
+        </div>
         <div class="container">
-          <h1 class="page-head__title">Корзина</h1>
-        </div>
-      </div>
-      <div class="container">
-        <div class="cart-order">
-          <div class="cart-order__head">
-            <span>Товар</span>
-            <span>Цена</span>
-            <span>Количество</span>
-            <span>Итог</span>
-          </div>
-          <div class="cart-order__list">
-            <div class="cart-order__item">
-              <div class="cart-order__product">
-                <div class="cart-order__preview">
-                  <img src="img/content/product-order.png" alt="" />
-                  <span class="cart-order__discount">-15%</span>
+          <div class="cart-order">
+            <div class="cart-order__head">
+              <span>Товар</span>
+              <span>Цена</span>
+              <span>Количество</span>
+              <span>Итог</span>
+            </div>
+            <div class="cart-order__list">
+              <div class="cart-order__item">
+                <div class="cart-order__product">
+                  <div class="cart-order__preview">
+                    <img src="img/content/product-order.png" alt="" />
+                    <span class="cart-order__discount">-15%</span>
+                  </div>
+                  <ul>
+                    <li>Heliosa 44 2kW/IPX5/WHT</li>
+                    <li>Белый</li>
+                  </ul>
                 </div>
-                <ul>
-                  <li>Heliosa 44 2kW/IPX5/WHT</li>
-                  <li>Белый</li>
-                </ul>
-              </div>
-              <div class="cart-order__price">
-                <span>14 500 ₽</span>
-                <span class="old-price">24 500 ₽</span>
-              </div>
-              <div class="cart-order__amount">
-                <div class="field-quantity">
-                  <input
-                    class="field-quantity__minus"
-                    type="button"
-                    value="-"
-                    data-field="quantity"
-                  />
-                  <input
-                    class="field-quantity__input"
-                    type="number"
-                    step="1"
-                    max=""
-                    value="1"
-                    name="quantity"
-                  />
-                  <input
-                    class="field-quantity__plus"
-                    type="button"
-                    value="+"
-                    data-field="quantity"
-                  />
+                <div class="cart-order__price">
+                  <span>14 500 ₽</span>
+                  <span class="old-price">24 500 ₽</span>
+                </div>
+                <div class="cart-order__amount">
+                  <div class="field-quantity">
+                    <input
+                      class="field-quantity__minus"
+                      type="button"
+                      value="-"
+                      data-field="quantity"
+                    />
+                    <input
+                      class="field-quantity__input"
+                      type="number"
+                      step="1"
+                      max=""
+                      value="1"
+                      name="quantity"
+                    />
+                    <input
+                      class="field-quantity__plus"
+                      type="button"
+                      value="+"
+                      data-field="quantity"
+                    />
+                  </div>
+                </div>
+                <div class="cart-order__total">
+                  <span>114 500 ₽</span>
+                  <button class="btn-remove">Удалить</button>
                 </div>
               </div>
-              <div class="cart-order__total">
-                <span>114 500 ₽</span>
-                <button class="btn-remove">Удалить</button>
+              <div class="cart-order__item">
+                <div class="cart-order__product">
+                  <div class="cart-order__preview">
+                    <img src="img/content/product-order.png" alt="" />
+                  </div>
+                  <ul>
+                    <li>Heliosa 44 2kW/IPX5/WHT</li>
+                    <li>Белый</li>
+                  </ul>
+                </div>
+                <div class="cart-order__price"><span>14 500 ₽</span></div>
+                <div class="cart-order__amount">
+                  <div class="field-quantity">
+                    <input
+                      class="field-quantity__minus"
+                      type="button"
+                      value="-"
+                      data-field="quantity"
+                    />
+                    <input
+                      class="field-quantity__input"
+                      type="number"
+                      step="1"
+                      max=""
+                      value="1"
+                      name="quantity"
+                    />
+                    <input
+                      class="field-quantity__plus"
+                      type="button"
+                      value="+"
+                      data-field="quantity"
+                    />
+                  </div>
+                </div>
+                <div class="cart-order__total">
+                  <span>14 500 ₽</span>
+                  <button class="btn-remove">Удалить</button>
+                </div>
               </div>
             </div>
-            <div class="cart-order__item">
-              <div class="cart-order__product">
-                <div class="cart-order__preview">
-                  <img src="img/content/product-order.png" alt="" />
-                </div>
-                <ul>
-                  <li>Heliosa 44 2kW/IPX5/WHT</li>
-                  <li>Белый</li>
-                </ul>
+            <div class="cart-order__bottom">
+              <span>Сумма заказа: 58 000 ₽</span>
+              <div class="cart-order__btns">
+                <a href="" class="btn btn--white">Продолжить покупки</a>
+                <a href="" class="btn">Оформить заказ</a>
               </div>
-              <div class="cart-order__price"><span>14 500 ₽</span></div>
-              <div class="cart-order__amount">
-                <div class="field-quantity">
-                  <input
-                    class="field-quantity__minus"
-                    type="button"
-                    value="-"
-                    data-field="quantity"
-                  />
-                  <input
-                    class="field-quantity__input"
-                    type="number"
-                    step="1"
-                    max=""
-                    value="1"
-                    name="quantity"
-                  />
-                  <input
-                    class="field-quantity__plus"
-                    type="button"
-                    value="+"
-                    data-field="quantity"
-                  />
-                </div>
-              </div>
-              <div class="cart-order__total">
-                <span>14 500 ₽</span>
-                <button class="btn-remove">Удалить</button>
-              </div>
-            </div>
-          </div>
-          <div class="cart-order__bottom">
-            <span>Сумма заказа: 58 000 ₽</span>
-            <div class="cart-order__btns">
-              <a href="" class="btn btn--white">Продолжить покупки</a>
-              <a href="" class="btn">Оформить заказ</a>
             </div>
           </div>
         </div>
-      </div>
-    </main>
-    <footer class="footer">
+      </main>
+      <footer class="footer">
   <div class="container">
     <div class="footer__inner">
       <div class="footer__contacts">
@@ -484,6 +485,7 @@
 <script src="js/vendor/tabbis.min.js"></script>
 <script src="js/vendor/splide.min.js"></script>
 
+    </div>
     <script src="js/main.min.js"></script>
   </body>
 </html>
