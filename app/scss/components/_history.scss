@@ -1,8 +1,8 @@
 .history {
-  padding: 0 10px;
+  // padding: 0 10px;
   overflow: hidden;
   @include md {
-    padding: 0 20px;
+    // padding: 0 20px;
   }
   @include lg {
     padding-right: 0;
@@ -16,9 +16,14 @@
   .splide__arrows {
     margin-left: -10px;
     margin-right: -10px;
+    padding: 0 10px;
     @include md {
       margin-left: -20px;
       margin-right: -20px;
+      padding: 0 20px;
+    }
+    @include lg {
+      padding: 0;
     }
   }
   &__item {
