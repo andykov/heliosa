@@ -1,4 +1,4 @@
-import { setCurrentIndexSLide, optimizedResize } from '../utils/helpers';
+import { setCurrentIndexSLide } from '../utils/helpers';
 
 const sliderHistoryElem = document.querySelector('.js-history');
 if (sliderHistoryElem) {
